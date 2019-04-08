@@ -1,6 +1,6 @@
 def GIT_URL = 'https://github.com/Talend/karaf.git'
 def DEFAULT_BRANCH = 'tesb/karaf-4.2.4.x'
-def DEFAULT_MVN_MODULES = 'org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules'
+def DEFAULT_MVN_MODULES = 'org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.config:org.apache.karaf.config.core'
 
 pipeline {
 
@@ -31,7 +31,7 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
         disableConcurrentBuilds()
-        timeout(time: 15, unit: 'MINUTES')
+        timeout(time: 24, unit: 'HOURS')
     }
 
     parameters {

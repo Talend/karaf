@@ -140,7 +140,7 @@
 					<dependency>
 						<groupId>org.apache.karaf.config</groupId>
 						<artifactId>org.apache.karaf.config.core</artifactId>
-						<version>${upstream.version}</version>
+						<version>${org.apache.karaf.config.core.tesb.version}</version>
 					</dependency>
 					<dependency>
 						<groupId>org.apache.karaf.http</groupId>
