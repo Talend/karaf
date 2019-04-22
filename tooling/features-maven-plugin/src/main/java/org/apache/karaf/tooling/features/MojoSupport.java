@@ -440,6 +440,33 @@ public abstract class MojoSupport extends AbstractMojo {
         if (version == null || version.length() == 0) {
             throw new MojoExecutionException("Cannot find version for: " + resourceLocation);
         }
+        
+
+        int token = project.getArtifactId().endsWith("-feature") ? project.getArtifactId().lastIndexOf("-feature")
+                : project.getArtifactId().length();
+        String featureArtifactId = project.getArtifactId().substring(0, token); // remove suffix
+        if (artifactId.equals(featureArtifactId)) {
+            // is route bundle version
+            version = project.getVersion();
+        } else if (artifactId.endsWith("-control-bundle")) {
+            version = project.getVersion();
+        } else if (artifactId.endsWith("-bundle")) {
+            version = project.getVersion();
+        } else if (artifactId.startsWith(featureArtifactId + "_")) {
+            // routelet/cTalendJob version
+            String dependencyArtifactId = artifactId.substring((featureArtifactId + "_").length());
+            List<Dependency> dependencies = project.getParent().getDependencies();
+            for (Dependency d : dependencies) {
+                String tmpId = d.getArtifactId().endsWith("-bundle")
+                        ? d.getArtifactId().substring(0, d.getArtifactId().length() - 7)
+                        : d.getArtifactId();
+                if (tmpId.equals(dependencyArtifactId)) {
+                    version = d.getVersion();
+                    break;
+                }
+            }
+        }
+        
         Artifact artifact = factory.createArtifactWithClassifier(groupId, artifactId, version, type, classifier);
         artifact.setRepository(repo);
         return artifact;

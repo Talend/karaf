@@ -19,6 +19,16 @@
 
 package org.apache.karaf.tooling.features;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
 import org.apache.karaf.deployer.kar.KarArtifactInstaller;
 import org.apache.karaf.features.BundleInfo;
 import org.apache.karaf.features.ConfigFileInfo;
@@ -32,10 +42,9 @@ import org.apache.maven.artifact.repository.layout.DefaultRepositoryLayout;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.codehaus.plexus.archiver.jar.JarArchiver;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  * Assembles and creates a KAR archive.
@@ -125,6 +134,7 @@ public class CreateKarMojo extends MojoSupport {
     private List<Artifact> readResources() throws MojoExecutionException {
         List<Artifact> resources = new ArrayList<Artifact>();
         try {
+            updateFeatureBundleVersion();
             RepositoryImpl featuresRepo = new RepositoryImpl(featuresFile.toURI());
             Feature[] features = featuresRepo.getFeatures();
             for (Feature feature : features) {
@@ -144,7 +154,41 @@ public class CreateKarMojo extends MojoSupport {
             throw new MojoExecutionException("Could not interpret features XML file", e);
         }
     }
+    
+    private void updateFeatureBundleVersion() {
+	try {
+	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	    Document doc = factory.newDocumentBuilder().parse(featuresFile.toURL().openStream());
+	    NodeList nodes = doc.getDocumentElement().getChildNodes();
+	    for (int i = 0; i < nodes.getLength(); i++) {
+		org.w3c.dom.Node node = nodes.item(i);
+		if (!(node instanceof Element) || !"feature".equals(node.getNodeName())) {
+		    continue;
+		}
+		Element e = (Element) nodes.item(i);
 
+		NodeList bundleNodes = e.getElementsByTagName("bundle");
+		for (int j = 0; j < bundleNodes.getLength(); j++) {
+		    Element b = (Element) bundleNodes.item(j);
+		    Artifact bundle = resourceToArtifact(b.getTextContent(), false);
+
+		    b.setTextContent(String.format("mvn:%s/%s/%s", bundle.getGroupId(), bundle.getArtifactId(),
+			    bundle.getBaseVersion()));
+		}
+	    }
+	    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+	    Transformer transformer;
+	    transformer = transformerFactory.newTransformer();
+	    DOMSource source = new DOMSource(doc);
+	    StreamResult streamResult = new StreamResult(featuresFile.toURL().getFile());
+	    transformer.transform(source, streamResult);
+
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+
+    }
+    
     private File createArchive(List<Artifact> bundles) throws MojoExecutionException {
         ArtifactRepositoryLayout layout = new DefaultRepositoryLayout();
         File archiveFile = getArchiveFile(outputDirectory, finalName, null);
