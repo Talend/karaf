@@ -39,6 +39,7 @@ import org.apache.maven.archiver.MavenArchiver;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.artifact.repository.layout.ArtifactRepositoryLayout;
 import org.apache.maven.artifact.repository.layout.DefaultRepositoryLayout;
+import org.apache.maven.model.Dependency;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.codehaus.plexus.archiver.jar.JarArchiver;
@@ -123,6 +124,16 @@ public class CreateKarMojo extends MojoSupport {
         artifact.setFile(archive);
 
         project.addAttachedArtifact(artifact);
+        
+        for(Artifact bundle : resources) {
+	    if (!(bundle.getArtifactId() + "-feature").equals(project.getArtifactId())
+		    && !(bundle.getArtifactId() + "-control-bundle").equals(project.getArtifactId())) {
+		// Attach cTalendJob and routelet bundles
+                Artifact attachedArtifact = factory.createArtifact(bundle.getGroupId(), bundle.getArtifactId(), bundle.getVersion(), null, bundle.getType());
+                attachedArtifact.setFile(bundle.getFile());
+                project.addAttachedArtifact(attachedArtifact);
+            }
+        }
     }
 
     /**
@@ -204,7 +215,27 @@ public class CreateKarMojo extends MojoSupport {
             jarArchiver.addFile(featuresFile, repositoryPath + layout.pathOf(featureArtifact));
 
             for (Artifact artifact : bundles) {
+        	String artifactId = artifact.getArtifactId();
+                int token = project.getArtifactId().endsWith("-feature") ? project.getArtifactId().lastIndexOf("-feature")
+                        : project.getArtifactId().length();
+                String featureName = project.getArtifactId().substring(0, token); // remove suffix
+        	if (artifactId.startsWith(featureName + "_")) {
+                    // It is a routelet/cTalendJob version
+                    String bundleName = artifactId.substring((featureName + "_").length());
+                    List<Dependency> dependencies = project.getParent().getDependencies();
+                    for (Dependency d : dependencies) {
+                        String subName = d.getArtifactId().endsWith("-bundle")
+                                ? d.getArtifactId().substring(0, d.getArtifactId().lastIndexOf("-bundle"))
+                                : d.getArtifactId();
+                        if (subName.equals(bundleName)) {
+                            artifact.setArtifactId(d.getArtifactId());
+                            break;
+                        }
+                    }
+        	}
                 resolver.resolve(artifact, remoteRepos, localRepo);
+                // Fix artifact Id
+                artifact.setArtifactId(artifactId);
                 File localFile = artifact.getFile();
                 // TODO this may not be reasonable, but... resolved snapshot artifacts have timestamped versions
                 // which do not work in startup.properties
