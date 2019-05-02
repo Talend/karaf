@@ -67,7 +67,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            ${project.artifactId};version=${project.version}
+                            ${project.artifactId};version=${upstream.version}
                         </Export-Package>
                         <Import-Package>
                             !${project.artifactId},

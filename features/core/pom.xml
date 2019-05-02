@@ -32,6 +32,7 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Features :: Core</name>
     <description>This bundle is the core implementation of the Karaf features support.</description>
+    <version>4.2.4.tesb1</version>
 
     <properties>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
@@ -111,7 +112,7 @@
             <artifactId>tinybundles</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
