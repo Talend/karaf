@@ -142,6 +142,7 @@
 
     <properties>
         <upstream.version>4.2.4</upstream.version>
+        <karaf-jaas-modules.tesb.version>4.2.4.tesb1</karaf-jaas-modules.tesb.version>
 
         <activemq.version>5.15.8</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
