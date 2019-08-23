@@ -292,7 +292,7 @@
         <pax.base.version>1.5.0</pax.base.version>
         <pax.swissbox.version>1.8.3</pax.swissbox.version>
         <pax.url.version>2.6.1</pax.url.version>
-        <pax.web.version>7.2.8</pax.web.version>
+        <pax.web.version>7.2.10</pax.web.version>
         <pax.tinybundle.version>3.0.0</pax.tinybundle.version>
         <pax.jdbc.version>1.3.4</pax.jdbc.version>
         <pax.jms.version>1.0.3</pax.jms.version>
@@ -504,7 +504,7 @@
             <dependency>
                 <groupId>org.apache.karaf.config</groupId>
                 <artifactId>org.apache.karaf.config.core</artifactId>
-                <version>${upstream.version}</version>
+                <version>${org.apache.karaf.config.core.tesb.version}</version>
             </dependency>
 
             <dependency>
