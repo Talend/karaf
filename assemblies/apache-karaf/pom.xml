@@ -73,7 +73,7 @@
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>demos</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -118,7 +118,7 @@
                         <artifactItem>
                             <groupId>org.apache.karaf</groupId>
                             <artifactId>demos</artifactId>
-                            <version>${project.version}</version>
+                            <version>${upstream.version}</version>
                         </artifactItem>
                     </artifactItems>
                     <outputDirectory>${project.build.directory}/demos/demos</outputDirectory>
