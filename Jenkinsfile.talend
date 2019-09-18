@@ -55,7 +55,7 @@ pipeline {
                     script {
                         configFileProvider([configFile(fileId: 'maven-settings-nexus-zl', variable: 'MAVEN_SETTINGS')]) {
                             sh """
-                            mvn clean package -s ${MAVEN_SETTINGS} -B -pl ${MVN_MODULES} -DskipTests
+                            mvn clean install -s ${MAVEN_SETTINGS} -B -pl ${MVN_MODULES} -DskipTests
                             """
                         }
                     }
