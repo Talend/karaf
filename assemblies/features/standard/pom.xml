@@ -33,6 +33,7 @@
     <packaging>pom</packaging>
     <name>Apache Karaf :: Assemblies :: Features :: Standard</name>
     <description>Standard providing core Karaf features</description>
+    <version>${standard.features.tesb.version}</version>
 
     <properties>
         <appendedResourcesDirectory>${basedir}/../../../../etc/appended-resources</appendedResourcesDirectory>

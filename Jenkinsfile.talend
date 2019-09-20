@@ -1,6 +1,6 @@
 def GIT_URL = 'https://github.com/Talend/karaf.git'
 def DEFAULT_BRANCH = 'tesb/karaf-4.2.4.x'
-def DEFAULT_MVN_MODULES = 'org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.config:org.apache.karaf.config.core'
+def DEFAULT_MVN_MODULES = 'org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.config:org.apache.karaf.config.core,:standard'
 
 pipeline {
 
@@ -55,7 +55,7 @@ pipeline {
                     script {
                         configFileProvider([configFile(fileId: 'maven-settings-nexus-zl', variable: 'MAVEN_SETTINGS')]) {
                             sh """
-                            mvn clean package -s ${MAVEN_SETTINGS} -B -pl ${MVN_MODULES} -DskipTests
+                            mvn clean install -s ${MAVEN_SETTINGS} -B -pl ${MVN_MODULES} -DskipTests
                             """
                         }
                     }
