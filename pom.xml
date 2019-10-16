@@ -143,6 +143,7 @@
     <properties>
         <upstream.version>4.2.4</upstream.version>
         <org.apache.karaf.features.core.tesb.version>4.2.4.tesb1</org.apache.karaf.features.core.tesb.version>
+        <framework.features.tesb.version>4.2.4.tesb1</framework.features.tesb.version>
         <standard.features.tesb.version>4.2.4.tesb1</standard.features.tesb.version>
         <org.apache.karaf.jaas.modules.tesb.version>4.2.4.tesb1</org.apache.karaf.jaas.modules.tesb.version>
         <org.apache.karaf.config.core.tesb.version>4.2.4.tesb1</org.apache.karaf.config.core.tesb.version>
