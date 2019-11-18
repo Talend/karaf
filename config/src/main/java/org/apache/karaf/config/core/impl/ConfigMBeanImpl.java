@@ -54,7 +54,7 @@ public class ConfigMBeanImpl extends StandardMBean implements ConfigMBean {
         return configuration;
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @SuppressWarnings({"unchecked", "rawtypes"})
     private TypedProperties getConfigProperties(String pid) throws IOException, InvalidSyntaxException {
         return configRepo.getConfig(pid);
     }
@@ -65,9 +65,7 @@ public class ConfigMBeanImpl extends StandardMBean implements ConfigMBean {
     @Override
     public List<String> getConfigs() throws MBeanException {
         try {
-            return Arrays.stream(configRepo.getConfigAdmin().listConfigurations(null))
-                    .map(Configuration::getPid)
-                    .collect(Collectors.toList());
+            return Arrays.stream(configRepo.getConfigAdmin().listConfigurations(null)).map(Configuration::getPid).collect(Collectors.toList());
         } catch (Exception e) {
             throw new MBeanException(null, e.toString());
         }
@@ -206,6 +204,17 @@ public class ConfigMBeanImpl extends StandardMBean implements ConfigMBean {
     @Override
     public void update(String pid, Map<String, String> properties) throws MBeanException {
         try {
+            TypedProperties props = new TypedProperties();
+            props.putAll(properties);
+            configRepo.update(pid, props);
+        } catch (Exception e) {
+            throw new MBeanException(null, e.toString());
+        }
+    }
+
+    @Override
+    public void append(String pid, Map<String, String> properties) throws MBeanException {
+        try {
             TypedProperties props = configRepo.getConfig(pid);
             props.putAll(properties);
             configRepo.update(pid, props);
@@ -214,22 +223,34 @@ public class ConfigMBeanImpl extends StandardMBean implements ConfigMBean {
         }
     }
 
-	private Dictionary<String, Object> toDictionary(
-			Map<String, String> properties) {
-		Dictionary<String, Object> dictionary = new Hashtable<>();
-		for (String key : properties.keySet()) {
-		    dictionary.put(key, properties.get(key));
-		}
-		return dictionary;
-	}
+    @Override
+    public void delete(String pid, List<String> properties) throws MBeanException {
+        try {
+            TypedProperties props = configRepo.getConfig(pid);
+            for (String property : properties) {
+                props.remove(property);
+            }
+            configRepo.update(pid, props);
+        } catch (Exception e) {
+            throw new MBeanException(null, e.toString());
+        }
+    }
+
+    private Dictionary<String, Object> toDictionary(Map<String, String> properties) {
+        Dictionary<String, Object> dictionary = new Hashtable<>();
+        for (String key : properties.keySet()) {
+            dictionary.put(key, properties.get(key));
+        }
+        return dictionary;
+    }
 
 
     public void setConfigRepo(ConfigRepository configRepo) {
         this.configRepo = configRepo;
     }
 
-	@Override
-	public String createFactoryConfiguration(String factoryPid, Map<String, String> properties) throws MBeanException {
+    @Override
+    public String createFactoryConfiguration(String factoryPid, Map<String, String> properties) throws MBeanException {
         try {
             TypedProperties props = new TypedProperties();
             props.putAll(properties);
@@ -237,6 +258,6 @@ public class ConfigMBeanImpl extends StandardMBean implements ConfigMBean {
         } catch (Exception e) {
             throw new MBeanException(null, e.toString());
         }
-	}
+    }
 
 }
