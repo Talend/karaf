@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.apache.karaf.itests</groupId>
             <artifactId>common</artifactId>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- Define the Apache Karaf version to download and use for the test -->

@@ -56,7 +56,7 @@
             <artifactId>karaf-docker-example-app</artifactId>
             <type>xml</type>
             <classifier>features</classifier>
-            <version>${project.version}</version>
+            <version>${upstream.version}</version>
         </dependency>
     </dependencies>
 
