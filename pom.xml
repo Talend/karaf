@@ -141,6 +141,7 @@
     </prerequisites>
 
     <properties>
+        <!-- DON'T FORGET TO ADD THESE CUSTOM PROPERTIES INTO resolved-pom-maven-plugin BELOW in pluginManagement -->
         <upstream.version>4.2.4</upstream.version>
         <org.apache.karaf.features.core.tesb.version>4.2.4.tesb1</org.apache.karaf.features.core.tesb.version>
         <framework.features.tesb.version>4.2.4.tesb1</framework.features.tesb.version>
@@ -2070,6 +2071,31 @@
                         </execution>
                     </executions>
                 </plugin>
+                <plugin>
+                    <groupId>io.paradoxical</groupId>
+                    <artifactId>resolved-pom-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <properties>
+                            <revision>${revision}</revision>
+                            <upstream.version>${upstream.version}</upstream.version>
+                            <org.apache.karaf.features.core.tesb.version>${org.apache.karaf.features.core.tesb.version}</org.apache.karaf.features.core.tesb.version>
+                            <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
+                            <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
+                            <org.apache.karaf.jaas.modules.tesb.version>${org.apache.karaf.jaas.modules.tesb.version}</org.apache.karaf.jaas.modules.tesb.version>
+                            <org.apache.karaf.config.core.tesb.version>${org.apache.karaf.config.core.tesb.version}</org.apache.karaf.config.core.tesb.version>
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>resolve-my-pom</id>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>resolve-pom</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -2156,6 +2182,10 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.paradoxical</groupId>
+                <artifactId>resolved-pom-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

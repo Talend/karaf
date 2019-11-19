@@ -60,11 +60,13 @@
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.util</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.karaf.shell</groupId>
             <artifactId>org.apache.karaf.shell.core</artifactId>
+            <version>${upstream.version}</version>
             <optional>true</optional>
         </dependency>
 
