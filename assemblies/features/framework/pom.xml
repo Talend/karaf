@@ -43,26 +43,31 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>base</artifactId>
+            <version>${upstream.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.main</artifactId>
+            <version>${upstream.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.client</artifactId>
+            <version>${upstream.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.jaas</groupId>
             <artifactId>org.apache.karaf.jaas.boot</artifactId>
+            <version>${upstream.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.diagnostic</groupId>
             <artifactId>org.apache.karaf.diagnostic.boot</artifactId>
+            <version>${upstream.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -158,10 +163,12 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>org.apache.karaf.features.extension</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>org.apache.karaf.features.core</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
 
     </dependencies>
@@ -225,7 +232,7 @@
                                     <artifactId>base</artifactId>
                                 </artifactItem>
                             </artifactItems>
-                            <outputDirectory>target/classes</outputDirectory>
+                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -239,12 +246,12 @@
                                 <artifactItem>
                                     <groupId>org.jline</groupId>
                                     <artifactId>jline</artifactId>
-                                    <outputDirectory>target/classes/resources/system/org/jline/jline/${jline.version}</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/classes/resources/system/org/jline/jline/${jline.version}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.slf4j</groupId>
                                     <artifactId>slf4j-api</artifactId>
-                                    <outputDirectory>target/classes/resources/system/org/slf4j/slf4j-api/${slf4j.version}</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/classes/resources/system/org/slf4j/slf4j-api/${slf4j.version}</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -277,7 +284,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>target/feature/feature.xml</file>
+                                    <file>${project.build.directory}/feature/feature.xml</file>
                                     <classifier>features</classifier>
                                     <type>xml</type>
                                 </artifact>

@@ -127,7 +127,7 @@
                                 resources/instances,resources/instances/*,
                                 resources/etc/system.properties
                             </excludes>
-                            <outputDirectory>target/classes</outputDirectory>
+                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -141,7 +141,7 @@
                                 <artifactItem>
                                     <groupId>org.apache.felix</groupId>
                                     <artifactId>org.apache.felix.framework</artifactId>
-                                    <outputDirectory>target/classes/resources/system/org/apache/felix/org.apache.felix.framework/${felix.framework.version}</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/classes/resources/system/org/apache/felix/org.apache.felix.framework/${felix.framework.version}</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -174,7 +174,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>target/feature/feature.xml</file>
+                                    <file>${project.build.directory}/feature/feature.xml</file>
                                     <classifier>features</classifier>
                                     <type>xml</type>
                                 </artifact>

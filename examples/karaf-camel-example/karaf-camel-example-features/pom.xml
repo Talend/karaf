@@ -85,7 +85,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>target/feature/feature.xml</file>
+                                    <file>${project.build.directory}/feature/feature.xml</file>
                                     <type>xml</type>
                                 </artifact>
                             </artifacts>
