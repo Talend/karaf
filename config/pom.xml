@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: ConfigAdmin :: Core</name>
     <description>This bundle provides Karaf services</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${org.apache.karaf.config.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -49,7 +51,7 @@
             <artifactId>osgi.cmpn</artifactId>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -58,11 +60,13 @@
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.util</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.karaf.shell</groupId>
             <artifactId>org.apache.karaf.shell.core</artifactId>
+            <version>${upstream.version}</version>
             <optional>true</optional>
         </dependency>
 
