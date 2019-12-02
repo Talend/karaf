@@ -143,6 +143,7 @@
     <properties>
         <upstream.version>4.2.7</upstream.version>
         <standard.features.tesb.version>4.2.7.tesb1</standard.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.7.tesb1</spring-legacy.features.tesb.version>
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <activemq.version>5.15.9</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
@@ -290,7 +291,7 @@
         <pax.base.version>1.5.0</pax.base.version>
         <pax.swissbox.version>1.8.3</pax.swissbox.version>
         <pax.url.version>2.6.1</pax.url.version>
-        <pax.web.version>7.2.11</pax.web.version>
+        <pax.web.version>7.2.12</pax.web.version>
         <pax.tinybundle.version>3.0.0</pax.tinybundle.version>
         <pax.jdbc.version>1.4.0</pax.jdbc.version>
         <pax.jms.version>1.0.5</pax.jms.version>
@@ -2084,12 +2085,13 @@
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
                             <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
+                            <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <org.apache.karaf.config.core.tesb.version>${org.apache.karaf.config.core.tesb.version}</org.apache.karaf.config.core.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
                         <execution>
-                            <id>resolve-my-pom</id>
+                            <id>resolve-pom</id>
                             <phase>initialize</phase>
                             <goals>
                                 <goal>resolve-pom</goal>

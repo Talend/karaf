@@ -1,6 +1,6 @@
 def GIT_URL = 'https://github.com/Talend/karaf.git'
 def DEFAULT_BRANCH = 'tesb/karaf-4.2.7.x'
-def DEFAULT_MVN_MODULES = 'org.apache.karaf.config:org.apache.karaf.config.core,:standard'
+def DEFAULT_MVN_MODULES = 'org.apache.karaf.config:org.apache.karaf.config.core,:standard,:spring-legacy'
 
 pipeline {
 
