@@ -533,7 +533,10 @@ public class FeaturesServiceImpl implements FeaturesService, Deployer.DeployCall
             repos = getRepositoryClosure(repo);
             List<Repository> required = new ArrayList<>();
             for (String r : state.repositories) {
-                required.add(repositoryCache.get(r));
+                Repository rp = repositoryCache.get(r);
+                if (rp != null) {
+                    required.add(rp);
+                }
             }
             required.remove(repo);
             for (Repository rep : required) {
