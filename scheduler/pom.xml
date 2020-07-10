@@ -61,7 +61,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.apache.karaf.scheduler;version=${project.version};-noimport:=true
+                            org.apache.karaf.scheduler;version=${upstream.version};-noimport:=true
                         </Export-Package>
                         <Import-Package>
                             !com.mchange.*,

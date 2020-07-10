@@ -53,10 +53,10 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Bundle-Version>${upstream.version}</Bundle-Version>
                         <Bundle-Activator>org.apache.karaf.demos.deployer.bundle.Activator</Bundle-Activator>
                         <Export-Package>
-                            org.apache.karaf.demos.deployer.bundle*;version=${project.version}
+                            org.apache.karaf.demos.deployer.bundle*;version=${upstream.version}
                         </Export-Package>
                         <Import-Package>
                             *
