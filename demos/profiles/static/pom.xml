@@ -123,7 +123,7 @@
                     <useReferenceUrls>true</useReferenceUrls>
                     <environment>static</environment>
                     <profilesUri>
-                        jar:mvn:org.apache.karaf.demos.profiles/registry/${project.version}!/
+                        jar:mvn:org.apache.karaf.demos.profiles/registry/${upstream.version}!/
                     </profilesUri>
                     <startupProfiles>
                         <profile>karaf</profile>
