@@ -36,7 +36,7 @@
     <version>${revision}</version>
 
     <properties>
-        <revision>${standard.tesb.version}</revision>
+        <revision>${standard.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../../etc/appended-resources</appendedResourcesDirectory>
         <dependency.jetty.version>9.3.21.v20170918</dependency.jetty.version>
         <javax.annotation.version>1.2</javax.annotation.version>
