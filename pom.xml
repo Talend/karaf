@@ -1669,6 +1669,7 @@
                             <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
                             <org.apache.aries.blueprint.core.tesb.version>${org.apache.aries.blueprint.core.tesb.version}</org.apache.aries.blueprint.core.tesb.version>
                             <jline.tesb.version>${jline.tesb.version}</jline.tesb.version>
+                            <pax-logging-log4j2.tesb.version>${pax-logging-log4j2.tesb.version}</pax-logging-log4j2.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
