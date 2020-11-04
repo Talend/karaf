@@ -1257,7 +1257,7 @@
             <dependency>
                 <groupId>org.ops4j.pax.logging</groupId>
                 <artifactId>pax-logging-log4j2</artifactId>
-                <version>${pax.logging.version}</version>
+                <version>${pax-logging-log4j2.tesb.version}</version>
             </dependency>
 
             <dependency>
