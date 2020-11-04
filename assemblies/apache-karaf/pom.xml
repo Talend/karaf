@@ -214,7 +214,7 @@
                             <replacements>
                                 <replacement>
                                     <token>href="bundle-report.xslt"</token>
-                                    <value>href="${project.artifactId}-${project.version}-bundle-report.xslt"</value>
+                                    <value>href="${project.artifactId}-${upstream.version}-bundle-report.xslt"</value>
                                 </replacement>
                             </replacements>
                         </configuration>
