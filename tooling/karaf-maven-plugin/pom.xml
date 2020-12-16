@@ -30,9 +30,11 @@
 
     <artifactId>karaf-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
+    <version>${revision}</version>
     <name>Apache Karaf :: Tooling :: Maven Karaf Plugin</name>
 
     <properties>
+        <revision>${karaf-maven-plugin.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
         <mvn.opts />
         <invoker.skip />
@@ -105,6 +107,7 @@
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.util</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.tooling</groupId>
@@ -168,6 +171,7 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>org.apache.karaf.features.core</artifactId>
+            <version>${upstream.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>org.apache.karaf.shell.console</artifactId>
@@ -178,6 +182,7 @@
         <dependency>
             <groupId>org.apache.karaf.profile</groupId>
             <artifactId>org.apache.karaf.profile.core</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
@@ -206,34 +211,42 @@
         <dependency>
             <groupId>org.apache.karaf.deployer</groupId>
             <artifactId>org.apache.karaf.deployer.spring</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.deployer</groupId>
             <artifactId>org.apache.karaf.deployer.blueprint</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.deployer</groupId>
             <artifactId>org.apache.karaf.deployer.features</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.deployer</groupId>
             <artifactId>org.apache.karaf.deployer.kar</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.kar</groupId>
             <artifactId>org.apache.karaf.kar.core</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.shell</groupId>
             <artifactId>org.apache.karaf.shell.console</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.main</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.diagnostic</groupId>
             <artifactId>org.apache.karaf.diagnostic.boot</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -251,6 +264,26 @@
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.jaas</groupId>
+            <artifactId>org.apache.karaf.jaas.boot</artifactId>
+            <version>${upstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.jaas</groupId>
+            <artifactId>org.apache.karaf.jaas.modules</artifactId>
+            <version>${upstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.jaas</groupId>
+            <artifactId>org.apache.karaf.jaas.config</artifactId>
+            <version>${upstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.shell</groupId>
+            <artifactId>org.apache.karaf.shell.core</artifactId>
+            <version>${upstream.version}</version>
         </dependency>
     </dependencies>
 
