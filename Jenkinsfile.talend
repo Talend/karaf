@@ -1,5 +1,5 @@
 @Library('esb') _
 
 Fork(
-        MVN_MODULES: ':karaf-maven-plugin,org.apache.karaf.features:framework,org.apache.karaf.features:static'
+        MVN_MODULES: ':karaf-maven-plugin,org.apache.karaf.features:standard,org.apache.karaf.features:framework,org.apache.karaf.features:static,:org.apache.karaf.shell.ssh'
 )

@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Shell :: SSH</name>
     <description>This bundle provides SSH support to the Karaf console.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${org.apache.karaf.shell.ssh.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

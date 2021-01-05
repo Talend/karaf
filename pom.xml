@@ -138,10 +138,12 @@
 
     <properties>
         <upstream.version>4.2.10</upstream.version>
+        <standard.features.tesb.version>4.2.10.tesb1</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.10.tesb1</framework.features.tesb.version>
         <static.features.tesb.version>4.2.10.tesb1</static.features.tesb.version>
         <karaf-maven-plugin.tesb.version>4.2.10.tesb1</karaf-maven-plugin.tesb.version>
         <pax-logging-log4j2.tesb.version>1.11.7.tesb1</pax-logging-log4j2.tesb.version>
+        <org.apache.karaf.shell.ssh.tesb.version>4.2.10.tesb1</org.apache.karaf.shell.ssh.tesb.version>
         <activemq.version>5.15.11</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
         <aspectj.bundle.version>1.9.5_1</aspectj.bundle.version>
@@ -616,7 +618,7 @@
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.ssh</artifactId>
-                <version>${upstream.version}</version>
+                <version>${org.apache.karaf.shell.ssh.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
@@ -1854,10 +1856,12 @@
                             <!-- something like :
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
+                            <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
                             <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
                             <static.features.tesb.version>${static.features.tesb.version}</static.features.tesb.version>
                             <pax-logging-log4j2.tesb.version>${pax-logging-log4j2.tesb.version}</pax-logging-log4j2.tesb.version>
                             <karaf-maven-plugin.tesb.version>${karaf-maven-plugin.tesb.version}</karaf-maven-plugin.tesb.version>
+                            <org.apache.karaf.shell.ssh.tesb.version>${org.apache.karaf.shell.ssh.tesb.version}</org.apache.karaf.shell.ssh.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
