@@ -35,7 +35,7 @@
         <!-- file install -->
         <bundle start="true" start-level="11">mvn:org.apache.felix/org.apache.felix.fileinstall/${felix.fileinstall.version}</bundle>
         <!-- features service -->
-        <bundle start="true" start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${upstream.version}</bundle>
+        <bundle start="true" start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${org.apache.karaf.features.core.tesb.version}</bundle>
     </feature>
 
     <feature version="${upstream.version}" description="Karaf core feature" name="framework-logback" hidden="true">
@@ -51,7 +51,7 @@
         <!-- file install -->
         <bundle start="true" start-level="11">mvn:org.apache.felix/org.apache.felix.fileinstall/${felix.fileinstall.version}</bundle>
         <!-- features service -->
-        <bundle start="true" start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${upstream.version}</bundle>
+        <bundle start="true" start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${org.apache.karaf.features.core.tesb.version}</bundle>
     </feature>
 
 </features>
