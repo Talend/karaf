@@ -31,10 +31,11 @@
     <artifactId>org.apache.karaf.features.core</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Features :: Core</name>
-    <version>4.1.6.tesb1</version>
+    <version>${revision}</version>
     <description>This bundle is the core implementation of the Karaf features support.</description>
 
     <properties>
+        <revision>${org.apache.karaf.features.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
