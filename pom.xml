@@ -138,7 +138,7 @@
 
     <properties>
         <upstream.version>4.2.10</upstream.version>
-        <standard.features.tesb.version>4.2.10.tesb1</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.10.tesb2</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.10.tesb1</framework.features.tesb.version>
         <static.features.tesb.version>4.2.10.tesb1</static.features.tesb.version>
         <karaf-maven-plugin.tesb.version>4.2.10.tesb1</karaf-maven-plugin.tesb.version>
@@ -271,7 +271,7 @@
         <httpclient.version>4.5.6</httpclient.version>
         <jansi.version>1.18</jansi.version>
         <javassist.version>3.9.0.GA</javassist.version>
-        <jetty.version>9.4.31.v20200723</jetty.version>
+        <jetty.version>9.4.35.v20201120</jetty.version>
         <jline.version>3.16.0</jline.version>
         <junit.version>4.13</junit.version>
         <jsw.version>3.2.3</jsw.version>
