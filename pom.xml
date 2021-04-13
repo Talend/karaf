@@ -147,7 +147,7 @@
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb2</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.2.7.tesb1</spring-legacy.features.tesb.version>
-        <enterprise.features.tesb.version>4.2.7.tesb1</enterprise.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.7.tesb2</enterprise.features.tesb.version>
 
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <pax-logging-log4j2.tesb.version>1.11.2.tesb1</pax-logging-log4j2.tesb.version>
