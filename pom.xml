@@ -141,6 +141,7 @@
         <standard.features.tesb.version>4.2.10.tesb2</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.10.tesb1</framework.features.tesb.version>
         <static.features.tesb.version>4.2.10.tesb1</static.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.10.tesb1</enterprise.features.tesb.version>
         <karaf-maven-plugin.tesb.version>4.2.10.tesb1</karaf-maven-plugin.tesb.version>
         <pax-logging-log4j2.tesb.version>1.11.7.tesb1</pax-logging-log4j2.tesb.version>
         <org.apache.karaf.shell.ssh.tesb.version>4.2.10.tesb1</org.apache.karaf.shell.ssh.tesb.version>
@@ -1859,6 +1860,7 @@
                             <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
                             <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
                             <static.features.tesb.version>${static.features.tesb.version}</static.features.tesb.version>
+                            <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
                             <pax-logging-log4j2.tesb.version>${pax-logging-log4j2.tesb.version}</pax-logging-log4j2.tesb.version>
                             <karaf-maven-plugin.tesb.version>${karaf-maven-plugin.tesb.version}</karaf-maven-plugin.tesb.version>
                             <org.apache.karaf.shell.ssh.tesb.version>${org.apache.karaf.shell.ssh.tesb.version}</org.apache.karaf.shell.ssh.tesb.version>
