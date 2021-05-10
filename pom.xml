@@ -2114,6 +2114,7 @@
                             <aries.spifly.tesb.version>${aries.spifly.tesb.version}</aries.spifly.tesb.version>
                             <javax.mail.tesb.version>${javax.mail.tesb.version}</javax.mail.tesb.version>
                             <spring-context.tesb.version>${spring-context.tesb.version}</spring-context.tesb.version>
+                            <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
