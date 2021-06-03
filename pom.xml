@@ -138,7 +138,7 @@
 
     <properties>
         <upstream.version>4.2.10</upstream.version>
-        <standard.features.tesb.version>4.2.10.tesb3</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.10.tesb4</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.10.tesb1</framework.features.tesb.version>
         <static.features.tesb.version>4.2.10.tesb1</static.features.tesb.version>
         <enterprise.features.tesb.version>4.2.10.tesb1</enterprise.features.tesb.version>
