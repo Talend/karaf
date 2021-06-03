@@ -142,12 +142,13 @@
 
     <properties>
         <upstream.version>4.2.7</upstream.version>
-        <standard.features.tesb.version>4.2.7.tesb6</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.7.tesb7</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.7.tesb1</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb2</spring.features.tesb.version>
-        <spring-legacy.features.tesb.version>4.2.7.tesb1</spring-legacy.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.7.tesb2</spring-legacy.features.tesb.version>
         <enterprise.features.tesb.version>4.2.7.tesb2</enterprise.features.tesb.version>
+        <pax-web.features.tesb.version>7.2.21</pax-web.features.tesb.version>
 
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <pax-logging-log4j2.tesb.version>1.11.2.tesb1</pax-logging-log4j2.tesb.version>
@@ -303,7 +304,7 @@
         <pax.base.version>1.5.0</pax.base.version>
         <pax.swissbox.version>1.8.3</pax.swissbox.version>
         <pax.url.version>2.6.1</pax.url.version>
-        <pax.web.version>7.2.12</pax.web.version>
+        <pax.web.version>7.2.21</pax.web.version>
         <pax.tinybundle.version>3.0.0</pax.tinybundle.version>
         <pax.jdbc.version>1.4.0</pax.jdbc.version>
         <pax.jms.version>1.0.5</pax.jms.version>
@@ -2108,6 +2109,7 @@
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
+                            <pax-web.features.tesb.version>${pax-web.features.tesb.version}</pax-web.features.tesb.version>
                             <org.apache.karaf.config.core.tesb.version>${org.apache.karaf.config.core.tesb.version}</org.apache.karaf.config.core.tesb.version>
                             <pax-logging-log4j2.tesb.version>${pax-logging-log4j2.tesb.version}</pax-logging-log4j2.tesb.version>
                             <hibernate.validator.tesb.version>${hibernate.validator.tesb.version}</hibernate.validator.tesb.version>
