@@ -33,8 +33,10 @@
     <packaging>pom</packaging>
     <name>Apache Karaf :: Assemblies :: Features :: Spring Legacy</name>
     <description>Spring Support</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${spring-legacy.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
