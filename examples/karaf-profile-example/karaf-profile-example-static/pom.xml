@@ -37,7 +37,7 @@
             <dependency>
                 <groupId>org.apache.karaf</groupId>
                 <artifactId>karaf-bom</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -134,7 +134,7 @@
                     <useReferenceUrls>true</useReferenceUrls>
                     <environment>static</environment>
                     <profilesUris>
-                        <uri>jar:mvn:org.apache.karaf.examples/karaf-profile-example-registry/${project.version}!/</uri>
+                        <uri>jar:mvn:org.apache.karaf.examples/karaf-profile-example-registry/${upstream.version}!/</uri>
                     </profilesUris>
                     <startupProfiles>
                         <profile>karaf</profile>
