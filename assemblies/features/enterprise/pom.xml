@@ -32,8 +32,10 @@
     <artifactId>enterprise</artifactId>
     <packaging>pom</packaging>
     <name>Apache Karaf :: Assemblies :: Features :: Enterprise</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${enterprise.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

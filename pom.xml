@@ -139,6 +139,11 @@
 
     <properties>
         <upstream.version>4.2.11</upstream.version>
+        <enterprise.features.tesb.version>4.2.11.tesb1</enterprise.features.tesb.version>
+        <enterprise-legacy.features.tesb.version>4.2.11.tesb1</enterprise-legacy.features.tesb.version>
+        <spring.features.tesb.version>4.2.11.tesb1</spring.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.11.tesb1</spring-legacy.features.tesb.version>
+        <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         
         <activemq.version>5.15.11</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
@@ -409,6 +414,11 @@
                             <!-- something like :
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
+                            <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
+                            <enterprise-legacy.features.tesb.version>${enterprise-legacy.features.tesb.version}</enterprise-legacy.features.tesb.version>
+                            <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
+                            <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
+                            <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
                         </properties>
                     </configuration>
                     <executions>
