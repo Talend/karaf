@@ -1338,7 +1338,7 @@ objectName = connector:name=rmi
         </config>
         <feature>jaas</feature>
         <bundle dependency="true" start-level="20">mvn:org.apache.aries/org.apache.aries.util/${aries.util.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.management/org.apache.karaf.management.server/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.management/org.apache.karaf.management.server/${org.apache.karaf.management.server.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.api/${aries.jmx.api.version}</bundle>
         <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.core/${aries.jmx.core.version}</bundle>
         <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.whiteboard/${aries.jmx.whiteboard.version}</bundle>

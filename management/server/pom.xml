@@ -31,10 +31,12 @@
     <artifactId>org.apache.karaf.management.server</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Management</name>
+    <version>${revision}</version>
     <description>This bundle starts the Karaf embedded MBean server and RMI registry allowing users
     to use JMX to manage Karaf.</description>
 
     <properties>
+        <revision>${org.apache.karaf.management.server.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
