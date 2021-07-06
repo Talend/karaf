@@ -420,6 +420,14 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>Knopflerfish 6 Repository</id>
+            <name>Knopflerfish 6 Releases Repository</name>
+            <url>https://resources.knopflerfish.org/repo/maven2/release/</url> 
+        </repository>
+    </repositories>
+
     <build>
         <resources>
             <resource>
@@ -482,7 +490,7 @@
                             <artifacts>
                                 <artifact>
                                     <file>${project.build.directory}/feature/feature.xml</file>
-									<classifier>features</classifier>
+                                    <classifier>features</classifier>
                                     <type>xml</type>
                                 </artifact>
                             </artifacts>
