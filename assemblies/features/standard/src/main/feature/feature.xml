@@ -18,7 +18,7 @@
 -->
 <features name="standard-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
-	<repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.version}/xml/features</repository>
+<!--	<repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.version}/xml/features</repository>-->
 
     <feature version="${upstream.version}" description="OSGi Security for Karaf" name="framework-security">
         <bundle start="false" start-level="1">mvn:org.apache.felix/org.apache.felix.framework.security/${felix.framework.security.version}</bundle>
@@ -1029,8 +1029,8 @@ role=${env:ORG_APACHE_KARAF_WEBCONSOLE_ROLE:-admin}
         <bundle start-level="30">mvn:org.apache.sshd/sshd-scp/${sshd.version}</bundle>
         <bundle start-level="30">mvn:org.apache.sshd/sshd-sftp/${sshd.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.not-yet-commons-ssl/0.3.11_1</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk15on/1.66</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk15on/1.66</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/${upstream.version}</bundle>
     </feature>
 

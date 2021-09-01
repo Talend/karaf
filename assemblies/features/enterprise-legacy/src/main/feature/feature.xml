@@ -20,9 +20,9 @@
 
     <!-- NB: this file is not the one really used. This file is used by the karaf-maven-plugin to define the start-level of bundles in the generated feature.xml -->
 
-    <repository>mvn:org.apache.karaf.features/standard/${upstream.version}/xml/features</repository>
-    <repository>mvn:org.apache.karaf.features/enterprise/${upstream.version}/xml/features</repository>
-    <repository>mvn:org.hibernate/hibernate-osgi/${hibernate52.version}/xml/karaf</repository>
+<!--    <repository>mvn:org.apache.karaf.features/standard/${upstream.version}/xml/features</repository>-->
+<!--    <repository>mvn:org.apache.karaf.features/enterprise/${upstream.version}/xml/features</repository>-->
+<!--    <repository>mvn:org.hibernate/hibernate-osgi/${hibernate52.version}/xml/karaf</repository>-->
 
     <feature name="transaction-api" version="1.1.0">
         <bundle>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
