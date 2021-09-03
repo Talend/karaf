@@ -145,7 +145,7 @@
         <upstream.version>4.2.4</upstream.version>
         <org.apache.karaf.features.core.tesb.version>4.2.4.tesb1</org.apache.karaf.features.core.tesb.version>
         <framework.features.tesb.version>4.2.4.tesb2</framework.features.tesb.version>
-        <standard.features.tesb.version>4.2.4.tesb2</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.4.tesb3</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.2.4.tesb1</enterprise.features.tesb.version>
         <org.apache.karaf.jaas.modules.tesb.version>4.2.4.tesb1</org.apache.karaf.jaas.modules.tesb.version>
         <org.apache.karaf.config.core.tesb.version>4.2.4.tesb2</org.apache.karaf.config.core.tesb.version>
@@ -183,7 +183,7 @@
         <dom4j.bundle.version>1.6.1_5</dom4j.bundle.version>
         <eclipselink.version>2.7.4</eclipselink.version>
         <jasypt.bundle.version>1.9.2_1</jasypt.bundle.version>
-        <jolokia.version>1.5.0</jolokia.version>
+        <jolokia.version>1.6.2</jolokia.version>
         <serp.bundle.version>1.14.1_1</serp.bundle.version>
         <servlet.spec.groupId>javax.servlet</servlet.spec.groupId>
         <servlet.spec.artifactId>javax.servlet-api</servlet.spec.artifactId>
