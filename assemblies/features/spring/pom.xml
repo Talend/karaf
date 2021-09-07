@@ -157,6 +157,7 @@
                         <configuration>
                             <descriptors>
                                 <descriptor>mvn:org.apache.karaf.features/framework/${upstream.version}/xml/features</descriptor>
+                                <descriptor>file:${project.build.directory}/feature/verify.xml</descriptor>
                                 <descriptor>file:${project.build.directory}/feature/feature.xml</descriptor>
                             </descriptors>
                             <distribution>org.apache.karaf.features:framework</distribution>

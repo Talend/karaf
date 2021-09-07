@@ -139,10 +139,11 @@
 
     <properties>
         <upstream.version>4.2.11</upstream.version>
-        <enterprise.features.tesb.version>4.2.11.tesb1</enterprise.features.tesb.version>
-        <enterprise-legacy.features.tesb.version>4.2.11.tesb1</enterprise-legacy.features.tesb.version>
-        <spring.features.tesb.version>4.2.11.tesb1</spring.features.tesb.version>
-        <spring-legacy.features.tesb.version>4.2.11.tesb1</spring-legacy.features.tesb.version>
+        <standard.features.tesb.version>4.2.11.tesb1</standard.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.11.tesb2</enterprise.features.tesb.version>
+        <enterprise-legacy.features.tesb.version>4.2.11.tesb2</enterprise-legacy.features.tesb.version>
+        <spring.features.tesb.version>4.2.11.tesb2</spring.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.11.tesb2</spring-legacy.features.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         
         <activemq.version>5.15.11</activemq.version>
@@ -153,7 +154,7 @@
         <asm.version>9.1</asm.version>
         <javax.annotation.version>1.3.1</javax.annotation.version>
         <awaitility.version>3.1.6</awaitility.version>
-        <bouncycastle.version>1.66</bouncycastle.version>
+        <bouncycastle.version>1.69</bouncycastle.version>
         <camel.version>3.6.0</camel.version>
         <cglib.bundle.version>3.2.9_1</cglib.bundle.version>
         <cxf.version>3.4.0</cxf.version>
@@ -414,6 +415,7 @@
                             <!-- something like :
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
+                            <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
                             <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
                             <enterprise-legacy.features.tesb.version>${enterprise-legacy.features.tesb.version}</enterprise-legacy.features.tesb.version>
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
