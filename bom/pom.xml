@@ -884,17 +884,17 @@
             <dependency>
                 <groupId>org.ops4j.pax.logging</groupId>
                 <artifactId>pax-logging-api</artifactId>
-                <version>${pax.logging.version}</version>
+                <version>${pax-logging.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ops4j.pax.logging</groupId>
                 <artifactId>pax-logging-service</artifactId>
-                <version>${pax.logging.version}</version>
+                <version>${pax-logging.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ops4j.pax.logging</groupId>
                 <artifactId>pax-logging-log4j2</artifactId>
-                <version>${pax.logging.version}</version>
+                <version>${pax-logging.tesb.version}</version>
             </dependency>
 
             <dependency>

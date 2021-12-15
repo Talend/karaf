@@ -33,8 +33,10 @@
     <packaging>pom</packaging>
     <!--<packaging>kar</packaging>-->
     <name>Apache Karaf :: Assemblies :: Features :: Framework</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${framework.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -55,6 +57,7 @@
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>base</artifactId>
             <scope>runtime</scope>
+            <version>${upstream.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf</groupId>
