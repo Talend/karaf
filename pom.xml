@@ -144,12 +144,12 @@
         <!-- DON'T FORGET TO ADD THESE CUSTOM PROPERTIES INTO resolved-pom-maven-plugin BELOW in pluginManagement -->
         <upstream.version>4.2.4</upstream.version>
         <org.apache.karaf.features.core.tesb.version>4.2.4.tesb1</org.apache.karaf.features.core.tesb.version>
-        <framework.features.tesb.version>4.2.4.tesb2</framework.features.tesb.version>
+        <framework.features.tesb.version>4.2.4.tesb3</framework.features.tesb.version>
         <standard.features.tesb.version>4.2.4.tesb3</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.2.4.tesb1</enterprise.features.tesb.version>
         <org.apache.karaf.jaas.modules.tesb.version>4.2.4.tesb1</org.apache.karaf.jaas.modules.tesb.version>
         <org.apache.karaf.config.core.tesb.version>4.2.4.tesb2</org.apache.karaf.config.core.tesb.version>
-        <pax-logging-log4j2.tesb.version>1.10.1/jar/TESB</pax-logging-log4j2.tesb.version>
+        <pax-logging-log4j2.tesb.version>1.10.1.tesb1</pax-logging-log4j2.tesb.version>
         <jackson.version>2.9.9</jackson.version>
 
         <activemq.version>5.15.8</activemq.version>
