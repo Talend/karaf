@@ -1,5 +1,5 @@
 @Library('esb') _
 
 Fork(
-        MVN_MODULES: ':standard,:enterprise,:enterprise-legacy,:spring,:spring-legacy'
+        MVN_MODULES: ':standard,:framework,:enterprise,:enterprise-legacy,:spring,:spring-legacy'
 )

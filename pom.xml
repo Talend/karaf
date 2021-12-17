@@ -140,11 +140,13 @@
     <properties>
         <upstream.version>4.2.11</upstream.version>
         <standard.features.tesb.version>4.2.11.tesb1</standard.features.tesb.version>
+        <framework.features.tesb.version>4.2.11.20211217</framework.features.tesb.version>
         <enterprise.features.tesb.version>4.2.11.tesb2</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.11.tesb2</enterprise-legacy.features.tesb.version>
         <spring.features.tesb.version>4.2.11.tesb2</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.2.11.tesb2</spring-legacy.features.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
+        <pax-logging.tesb.version>1.11.11</pax-logging.tesb.version>
         
         <activemq.version>5.15.11</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
@@ -416,11 +418,13 @@
                             <my.custom.property>${my.custom.property}</my.custom.property>
                             -->
                             <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
+                            <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
                             <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
                             <enterprise-legacy.features.tesb.version>${enterprise-legacy.features.tesb.version}</enterprise-legacy.features.tesb.version>
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
+                            <pax-logging.tesb.version>${pax-logging.tesb.version}</pax-logging.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
