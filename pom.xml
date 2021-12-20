@@ -139,11 +139,11 @@
     <properties>
         <upstream.version>4.1.6</upstream.version>
         <standard.features.tesb.version>4.1.6.tesb5</standard.features.tesb.version>
-        <framework.features.tesb.version>4.1.6.tesb2</framework.features.tesb.version>
+        <framework.features.tesb.version>4.1.6.tesb3</framework.features.tesb.version>
         <org.apache.karaf.features.core.tesb.version>4.1.6.tesb1</org.apache.karaf.features.core.tesb.version>
         <org.apache.karaf.shell.ssh.tesb.version>4.1.6.tesb1</org.apache.karaf.shell.ssh.tesb.version>
         <org.apache.aries.blueprint.core.tesb.version>1.8.3/jar/TESB</org.apache.aries.blueprint.core.tesb.version>
-        <pax-logging-log4j2.tesb.version>1.10.1/jar/TESB</pax-logging-log4j2.tesb.version>
+        <pax-logging-log4j2.tesb.version>1.10.1.tesb1</pax-logging-log4j2.tesb.version>
         <jetty-io.tesb.version>9.3.24.v20180605tesb1</jetty-io.tesb.version>
 
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
