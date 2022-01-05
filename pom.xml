@@ -143,7 +143,7 @@
     <properties>
         <upstream.version>4.2.7</upstream.version>
         <standard.features.tesb.version>4.2.7.tesb10</standard.features.tesb.version>
-        <framework.features.tesb.version>4.2.7.tesb2</framework.features.tesb.version>
+        <framework.features.tesb.version>4.2.7.tesb3</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb2</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.2.7.tesb2</spring-legacy.features.tesb.version>
@@ -152,7 +152,7 @@
 
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <org.apache.karaf.management.server.tesb.version>4.2.7.tesb1</org.apache.karaf.management.server.tesb.version>
-        <pax-logging.tesb.version>1.11.11</pax-logging.tesb.version>
+        <pax-logging.tesb.version>1.11.13</pax-logging.tesb.version>
         <pax-logging-log4j2.tesb.version>${pax-logging.tesb.version}</pax-logging-log4j2.tesb.version>
         <hibernate.validator.tesb.version>6.0.17.Final</hibernate.validator.tesb.version>
         <aries.spifly.tesb.version>1.2.3</aries.spifly.tesb.version>
@@ -2323,7 +2323,7 @@
                                 <!-- test wiring resource files -->
                                 <exclude>**/src/test/resources/wirings/1</exclude>
                                 <!-- SSH keys -->
-				                <exclude>**/*.key</exclude>
+                                <exclude>**/*.key</exclude>
                                 <exclude>**/*.id_rsa</exclude>
                                 <!-- For Jenkins, ignore the .repository -->
                                 <exclude>.repository/**</exclude>
