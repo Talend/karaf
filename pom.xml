@@ -139,7 +139,7 @@
 
     <properties>
         <upstream.version>4.2.11</upstream.version>
-        <standard.features.tesb.version>4.2.11.tesb1</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.11.20220222</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.11.20220121</framework.features.tesb.version>
         <enterprise.features.tesb.version>4.2.11.tesb2</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.11.tesb2</enterprise-legacy.features.tesb.version>
@@ -147,7 +147,9 @@
         <spring-legacy.features.tesb.version>4.2.11.tesb2</spring-legacy.features.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         <pax-logging.tesb.version>1.11.13</pax-logging.tesb.version>
-        
+        <pax-web.tesb.version>7.2.29</pax-web.tesb.version>
+        <jetty.tesb.version>9.4.43.v20210629</jetty.tesb.version>
+
         <activemq.version>5.15.11</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
         <aspectj.bundle.version>1.9.5_1</aspectj.bundle.version>
@@ -425,6 +427,8 @@
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
                             <pax-logging.tesb.version>${pax-logging.tesb.version}</pax-logging.tesb.version>
+                            <pax-web.tesb.version>${pax-web.tesb.version}</pax-web.tesb.version>
+                            <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                         </properties>
                     </configuration>
                     <executions>

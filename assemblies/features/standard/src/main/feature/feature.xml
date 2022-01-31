@@ -887,7 +887,7 @@ org.osgi.service.http.port=${env:ORG_APACHE_FELIX_HTTP_ORG_OSGI_SERVICE_HTTP_POR
         <bundle start-level="30">mvn:org.apache.karaf.web/org.apache.karaf.web.core/${upstream.version}</bundle>
     </feature>
 
-    <feature name="jetty" version="${jetty.version}">
+    <feature name="jetty" version="${jetty.tesb.version}">
         <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/${servicemix-spec.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:${servlet.spec.groupId}/${servlet.spec.artifactId}/${servlet.spec.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:javax.mail/mail/${javax.mail.version}</bundle>
@@ -900,33 +900,33 @@ org.osgi.service.http.port=${env:ORG_APACHE_FELIX_HTTP_ORG_OSGI_SERVICE_HTTP_POR
         <bundle dependency="true" start-level="30">mvn:org.ow2.asm/asm-tree/${asm.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.ow2.asm/asm-analysis/${asm.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries.spifly.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-continuation/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-http/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-io/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-jaspi/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-plus/${jetty.version}</bundle>
-       	<bundle start-level="30">mvn:org.eclipse.jetty/jetty-jndi/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-rewrite/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-security/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-server/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-servlet/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-servlets/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-util/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-util-ajax/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-webapp/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-jaas/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-xml/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-client/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-deploy/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-jmx/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-proxy/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-server/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-client/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-common/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-servlet/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-api/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/javax-websocket-server-impl/${jetty.version}</bundle>
-        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/javax-websocket-client-impl/${jetty.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-continuation/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-http/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-io/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-jaspi/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-plus/${jetty.tesb.version}</bundle>
+       	<bundle start-level="30">mvn:org.eclipse.jetty/jetty-jndi/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-rewrite/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-security/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-server/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-servlet/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-servlets/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-util/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-util-ajax/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-webapp/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-jaas/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-xml/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-client/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-deploy/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-jmx/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty/jetty-proxy/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-server/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-client/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-common/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-servlet/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/websocket-api/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/javax-websocket-server-impl/${jetty.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.eclipse.jetty.websocket/javax-websocket-client-impl/${jetty.tesb.version}</bundle>
         <bundle start-level="30">mvn:javax.websocket/javax.websocket-api/${websocket.version}</bundle>
     </feature>
 
