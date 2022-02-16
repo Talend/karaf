@@ -35,7 +35,7 @@
     <name>Apache Karaf :: Assemblies :: Features :: Enterprise Legacy</name>
 
     <properties>
-        <revision>${enterprise-legacy.feature.tesb.version}</revision>
+        <revision>${enterprise-legacy.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
