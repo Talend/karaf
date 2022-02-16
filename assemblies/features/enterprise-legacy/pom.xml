@@ -31,9 +31,11 @@
     <groupId>org.apache.karaf.features</groupId>
     <artifactId>enterprise-legacy</artifactId>
     <packaging>pom</packaging>
+    <version>${revision}</version>
     <name>Apache Karaf :: Assemblies :: Features :: Enterprise Legacy</name>
 
     <properties>
+        <revision>${enterprise-legacy.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
