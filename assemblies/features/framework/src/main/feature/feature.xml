@@ -25,14 +25,14 @@
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: and wrap: url handlers -->
-        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax.url.version}</bundle>
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax-url.tesb.version}</bundle>
         <!-- logging -->
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-api/${pax-logging.tesb.version}</bundle>
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-log4j2/${pax-logging.tesb.version}</bundle>
         <bundle start-level="8">mvn:org.fusesource.jansi/jansi/${jansi.version}</bundle>
         <!-- config admin -->
-        <bundle start-level="9">mvn:org.osgi/org.osgi.util.function/1.1.0</bundle>
-        <bundle start-level="9">mvn:org.osgi/org.osgi.util.promise/1.1.1</bundle>
+        <bundle start-level="9">mvn:org.osgi/org.osgi.util.function/${org.osgi.util.function.tesb.version}</bundle>
+        <bundle start-level="9">mvn:org.osgi/org.osgi.util.promise/${org.osgi.util.promise.tesb.version}</bundle>
         <bundle start-level="9">mvn:org.apache.felix/org.apache.felix.coordinator/${felix.coordinator.version}</bundle>
         <bundle start-level="10">mvn:org.apache.felix/org.apache.felix.configadmin/${felix.configadmin.version}</bundle>
         <!-- file install -->
@@ -47,7 +47,7 @@
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: and wrap: url handlers -->
-        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax.url.version}</bundle>
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax-url.tesb.version}</bundle>
         <!-- logging -->
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-api/${pax-logging.tesb.version}</bundle>
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-logback/${pax-logging.tesb.version}</bundle>
