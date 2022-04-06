@@ -165,7 +165,7 @@
         <spring53.tesb.version>5.3.18_1</spring53.tesb.version>
         <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
         <spring.security56.tesb.version>5.6.2_1</spring.security56.tesb.version>
-        <jackson.tesb.version>2.12.3</jackson.tesb.version>
+        <jackson.tesb.version>2.13.2.1</jackson.tesb.version>
 
         <activemq.version>5.15.9</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
