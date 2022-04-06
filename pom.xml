@@ -158,7 +158,7 @@
         <hibernate.validator.tesb.version>6.0.17.Final</hibernate.validator.tesb.version>
         <aries.spifly.tesb.version>1.2.3</aries.spifly.tesb.version>
         <javax.mail.tesb.version>1.6.1</javax.mail.tesb.version>
-        <spring-context.tesb.version>5.1.14.RELEASE_1.tesb1</spring-context.tesb.version>
+        <spring-context.tesb.version>${spring53.tesb.version}</spring-context.tesb.version>
         <commons-io.tesb.version>2.8.0</commons-io.tesb.version>
         <jetty.tesb.version>9.4.43.v20210629</jetty.tesb.version>
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
@@ -387,6 +387,17 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>Knopflerfish 6 Repository</id>
+            <name>Knopflerfish 6 Releases Repository</name>
+            <url>https://resources.knopflerfish.org/repo/maven2/release</url> 
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
     </repositories>
     <pluginRepositories>
