@@ -39,6 +39,8 @@
         </conditional>
     </feature>
 
+    <feature name="spring-dm-web" description="Spring DM Web support" version="${spring.osgi.version}">
+    </feature>
     <!-- <feature name="spring-dm-web" description="Spring DM Web support" version="${spring.osgi.version}">
         <feature>spring-dm</feature>
         <feature version="[2.5.6,4)">spring-web</feature>
@@ -81,6 +83,8 @@
         <bundle start-level="30">mvn:org.springframework/spring-jms/${spring31.version}</bundle>
     </feature>
 
+    <feature name="spring-struts" description="Spring 3.1.x Struts support" version="${spring31.version}">
+    </feature>
     <!-- <feature name="spring-struts" description="Spring 3.1.x Struts support" version="${spring31.version}">
         <feature version="[${spring31.version},3.2)">spring-web</feature>
         <feature>war</feature>
@@ -110,6 +114,8 @@
         <bundle start-level="30">mvn:org.springframework/spring-tx/${spring31.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 3.1.x Web support" version="${spring31.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 3.1.x Web support" version="${spring31.version}">
         <feature version="[${spring31.version},3.2)">spring</feature>
         <feature>http</feature>
@@ -117,6 +123,8 @@
         <bundle start-level="30">mvn:org.springframework/spring-webmvc/${spring31.version}</bundle>
     </feature> -->
 
+    <feature name="spring-web-portlet" description="Spring 3.1.x Web Portlet support" version="${spring31.version}">
+    </feature>
     <!-- <feature name="spring-web-portlet" description="Spring 3.1.x Web Portlet support" version="${spring31.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="[${spring31.version},3.2)">spring-web</feature>
@@ -158,6 +166,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring32.version}</bundle>
     </feature>
 
+    <feature name="spring-struts" description="Spring 3.2.x Struts support" version="${spring32.version}">
+    </feature>
     <!-- <feature name="spring-struts" description="Spring 3.2.x Struts support" version="${spring32.version}">
         <feature version="[${spring32.version},3.3)">spring-web</feature>
         <feature>war</feature>
@@ -187,6 +197,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring32.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 3.2.x Web support" version="${spring32.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 3.2.x Web support" version="${spring32.version}">
         <feature version="[${spring32.version},3.3)">spring</feature>
         <feature>http</feature>
@@ -194,6 +206,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring32.version}</bundle>
     </feature> -->
 
+    <feature name="spring-web-portlet" description="Spring 3.2.x Web Portlet support" version="${spring32.version}">
+    </feature>
     <!-- <feature name="spring-web-portlet" description="Spring 3.2.x Web Portlet support" version="${spring32.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="[${spring32.version},3.3)">spring-web</feature>
@@ -255,6 +269,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring40.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 4.0.x Web support" version="${spring40.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 4.0.x Web support" version="${spring40.version}">
         <feature version="[${spring40.version},4.1)">spring</feature>
         <feature>http</feature>
@@ -262,6 +278,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring40.version}</bundle>
     </feature> -->
 
+    <feature name="spring-web-portlet" description="Spring 4.0.x Web Portlet support" version="${spring40.version}">
+    </feature>
     <!-- <feature name="spring-web-portlet" description="Spring 4.0.x Web Portlet support" version="${spring40.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="[${spring40.version},4.1)">spring-web</feature>
@@ -269,6 +287,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/${spring40.version}</bundle>
     </feature> -->
 
+    <feature name="spring-websocket" description="Spring 4.0.x WebSocket support" version="${spring40.version}">
+    </feature>
     <!-- <feature name="spring-websocket" description="Spring 4.0.x WebSocket support" version="${spring40.version}">
         <feature version="[${spring40.version},4.1)">spring-web</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/${spring40.version}</bundle>
@@ -328,6 +348,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring41.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 4.1.x Web support" version="${spring41.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 4.1.x Web support" version="${spring41.version}">
         <feature version="[${spring41.version},4.2)">spring</feature>
         <feature>http</feature>
@@ -335,6 +357,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring41.version}</bundle>
     </feature> -->
 
+    <feature name="spring-web-portlet" description="Spring 4.1.x Web Portlet support" version="${spring41.version}">
+    </feature>
     <!-- <feature name="spring-web-portlet" description="Spring 4.1.x Web Portlet support" version="${spring41.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="[${spring41.version},4.2)">spring-web</feature>
@@ -342,6 +366,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/${spring41.version}</bundle>
     </feature> -->
 
+    <feature name="spring-websocket" description="Spring 4.1.x WebSocket support" version="${spring41.version}">
+    </feature>
     <!-- <feature name="spring-websocket" description="Spring 4.1.x WebSocket support" version="${spring41.version}">
         <feature version="[${spring41.version},4.2)">spring-web</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/${spring41.version}</bundle>
@@ -406,6 +432,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring42.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 4.2.x Web support" version="${spring42.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 4.2.x Web support" version="${spring42.version}">
         <feature version="[${spring42.version},4.3)">spring</feature>
         <feature>http</feature>
@@ -413,6 +441,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring42.version}</bundle>
     </feature> -->
 
+    <feature name="spring-web-portlet" description="Spring 4.2.x Web Portlet support" version="${spring42.version}">
+    </feature>
     <!-- <feature name="spring-web-portlet" description="Spring 4.2.x Web Portlet support" version="${spring42.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="[${spring42.version},4.3)">spring-web</feature>
@@ -420,6 +450,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/${spring42.version}</bundle>
     </feature> -->
 
+    <feature name="spring-websocket" description="Spring 4.2.x WebSocket support" version="${spring42.version}">
+    </feature>
     <!-- <feature name="spring-websocket" description="Spring 4.2.x WebSocket support" version="${spring42.version}">
         <feature version="[${spring42.version},4.3)">spring-web</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/${spring42.version}</bundle>
@@ -487,6 +519,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring43.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 4.3.x Web support" version="${spring43.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 4.3.x Web support" version="${spring43.version}">
         <feature version="[${spring43.version},4.4)">spring</feature>
         <feature>http</feature>
@@ -494,6 +528,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring43.version}</bundle>
     </feature> -->
 
+    <feature name="spring-web-portlet" description="Spring 4.3.x Web Portlet support" version="${spring43.version}">
+    </feature>
     <!-- <feature name="spring-web-portlet" description="Spring 4.3.x Web Portlet support" version="${spring43.version}">
         <feature prerequisite="true">wrap</feature>
         <feature version="[${spring43.version},4.4)">spring-web</feature>
@@ -501,6 +537,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/${spring43.version}</bundle>
     </feature> -->
 
+    <feature name="spring-websocket" description="Spring 4.3.x WebSocket support" version="${spring43.version}">
+    </feature>
     <!-- <feature name="spring-websocket" description="Spring 4.3.x WebSocket support" version="${spring43.version}">
         <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
         <feature version="[${spring43.version},4.4)">spring-web</feature>
@@ -569,6 +607,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring50.version}</bundle>
     </feature>
 
+    <feature name="spring-web" description="Spring 5.0.x Web support" version="${spring50.version}">
+    </feature>
     <!-- <feature name="spring-web" description="Spring 5.0.x Web support" version="${spring50.version}">
         <feature version="[${spring50.version},5.1)">spring</feature>
         <feature>http</feature>
@@ -576,6 +616,8 @@
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring50.version}</bundle>
     </feature> -->
 
+    <feature name="spring-websocket" description="Spring 5.0.x WebSocket support" version="${spring50.version}">
+    </feature>
     <!-- <feature name="spring-websocket" description="Spring 5.0.x WebSocket support" version="${spring50.version}">
         <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
         <feature version="[${spring50.version},5.1)">spring-web</feature>
@@ -584,6 +626,8 @@
 
     <!-- Spring Security support -->
 
+    <feature name="spring-security" description="Spring Security 3.1.x support" version="${spring.security31.version}">
+    </feature>
     <!-- <feature name="spring-security" description="Spring Security 3.1.x support" version="${spring.security31.version}">
         <feature>war</feature>
         <feature version="[3,4)">spring-web</feature>
@@ -595,6 +639,8 @@
         <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/${spring.security31.version}</bundle>
     </feature> -->
 
+    <feature name="spring-security" description="Spring Security 4.2.x support" version="${spring.security42.version}">
+    </feature>
     <!-- <feature name="spring-security" description="Spring Security 4.2.x support" version="${spring.security42.version}">
         <feature>war</feature>
         <feature version="[4,5)">spring-web</feature>
