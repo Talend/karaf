@@ -45,24 +45,24 @@
     </feature>
 
     <feature name="spring-jdbc" description="Spring 5.3.x JDBC support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring-tx</feature>
+        <feature version="${spring53.tesb.version.range}">spring-tx</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jdbc/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-jms" description="Spring 5.3.x JMS support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring-tx</feature>
+        <feature version="${spring53.tesb.version.range}">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/${geronimo.jms-spec.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-messaging" description="Spring 5.3.x Messaging support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-messaging/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-test" description="Spring 5.3.x Test support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
         <bundle dependency="true">mvn:org.apache.httpcomponents/httpcore-osgi/4.4.6</bundle>
         <bundle dependency="true">mvn:org.apache.httpcomponents/httpclient-osgi/4.5.2</bundle>
