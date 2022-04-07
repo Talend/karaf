@@ -35,12 +35,12 @@
     </feature>
 
     <feature name="spring-aspects" description="Spring 5.3.x AOP support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aspects/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-instrument" description="Spring 5.3.x Instrument support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-instrument/${spring53.tesb.version}</bundle>
     </feature>
 
@@ -70,22 +70,22 @@
     </feature>
 
     <feature name="spring-orm" description="Spring 5.3.x ORM support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring-jdbc</feature>
+        <feature version="${spring53.tesb.version.range}">spring-jdbc</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-orm/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-oxm" description="Spring 5.3.x OXM support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-oxm/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-tx" description="Spring 5.3.x Transaction (TX) support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring53.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-web" description="Spring 5.3.x Web support" version="${spring53.tesb.version}">
-        <feature version="[${spring53.tesb.version},5.4)">spring</feature>
+        <feature version="${spring53.tesb.version.range}">spring</feature>
         <feature>http</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-web/${spring53.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${spring53.tesb.version}</bundle>
@@ -93,7 +93,7 @@
 
     <feature name="spring-websocket" description="Spring 5.3.x WebSocket support" version="${spring53.tesb.version}">
         <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
-        <feature version="[${spring53.tesb.version},5.4)">spring-web</feature>
+        <feature version="${spring53.tesb.version.range}">spring-web</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/${spring53.tesb.version}</bundle>
     </feature>
 
