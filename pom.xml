@@ -145,9 +145,9 @@
         <standard.features.tesb.version>4.2.7.tesb11</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.7.tesb4</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
-        <spring.features.tesb.version>4.2.7.tesb2</spring.features.tesb.version>
-        <spring-legacy.features.tesb.version>4.2.7.tesb2</spring-legacy.features.tesb.version>
-        <enterprise.features.tesb.version>4.2.7.tesb2</enterprise.features.tesb.version>
+        <spring.features.tesb.version>4.2.7.tesb3</spring.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.7.tesb3</spring-legacy.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.7.tesb3</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.7.tesb1</enterprise-legacy.features.tesb.version>
         <pax-web.features.tesb.version>7.2.21</pax-web.features.tesb.version>
 
@@ -158,10 +158,15 @@
         <hibernate.validator.tesb.version>6.0.17.Final</hibernate.validator.tesb.version>
         <aries.spifly.tesb.version>1.2.3</aries.spifly.tesb.version>
         <javax.mail.tesb.version>1.6.1</javax.mail.tesb.version>
-        <spring-context.tesb.version>5.1.14.RELEASE_1.tesb1</spring-context.tesb.version>
+        <spring-context.tesb.version>${spring53.tesb.version}</spring-context.tesb.version>
         <commons-io.tesb.version>2.8.0</commons-io.tesb.version>
         <jetty.tesb.version>9.4.43.v20210629</jetty.tesb.version>
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
+        <spring53.tesb.version>5.3.18_1</spring53.tesb.version>
+        <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
+        <spring.security56.tesb.version>5.6.2_1</spring.security56.tesb.version>
+        <jackson.tesb.version>2.13.2</jackson.tesb.version>
+        <jackson-databind.tesb.version>2.13.2.2</jackson-databind.tesb.version>
 
         <activemq.version>5.15.9</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
@@ -382,6 +387,17 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>Knopflerfish 6 Repository</id>
+            <name>Knopflerfish 6 Releases Repository</name>
+            <url>https://resources.knopflerfish.org/repo/maven2/release</url> 
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -2127,6 +2143,11 @@
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <ant.bundle.tesb.version>${ant.bundle.tesb.version}</ant.bundle.tesb.version>
+                            <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
+                            <spring53.tesb.version.range>${spring53.tesb.version.range}</spring53.tesb.version.range>
+                            <spring.security56.tesb.version>${spring.security56.tesb.version}</spring.security56.tesb.version>
+                            <jackson.tesb.version>${jackson.tesb.version>}</jackson.tesb.version>
+                            <jackson-databind.tesb.version>${jackson-databind.tesb.version>}</jackson-databind.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
