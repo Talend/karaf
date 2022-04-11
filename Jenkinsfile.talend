@@ -1,5 +1,5 @@
 @Library('esb') _
 
 Fork(
-        MVN_MODULES: 'org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.config:org.apache.karaf.config.core,:standard,:framework,org.apache.karaf.features:enterprise'
+        MVN_MODULES: 'org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.config:org.apache.karaf.config.core,:standard,:framework,org.apache.karaf.features:enterprise,org.apache.karaf.features:spring'
 )
