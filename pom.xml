@@ -318,7 +318,7 @@
         <spring43.version>4.3.22.RELEASE_2</spring43.version>
         <spring50.version>5.0.12.RELEASE_1</spring50.version>
         <spring51.version>5.1.5.RELEASE_1</spring51.version>
-        <spring52.version>5.2.20_1</spring52.version>
+        <spring52.version>5.2.20.RELEASE_1</spring52.version>
         <spring52.version.range>[${spring52.version},5.3)</spring52.version.range>
         <spring53.version>5.3.18_1</spring53.version>
         <spring53.version.range>[${spring53.version},5.4)</spring53.version.range>
