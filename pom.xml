@@ -141,9 +141,9 @@
         <upstream.version>4.2.11</upstream.version>
         <standard.features.tesb.version>4.2.11.20220422</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.11.20220422</framework.features.tesb.version>
-        <enterprise.features.tesb.version>4.2.11.20220318</enterprise.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.11.20220422</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.11.20220318</enterprise-legacy.features.tesb.version>
-        <spring.features.tesb.version>4.2.11.20220318</spring.features.tesb.version>
+        <spring.features.tesb.version>4.2.11.20220422</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.2.11.20220422</spring-legacy.features.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         <pax-logging.tesb.version>1.11.15</pax-logging.tesb.version>
@@ -154,6 +154,13 @@
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
         <org.osgi.util.function.tesb.version>1.2.0</org.osgi.util.function.tesb.version>
         <org.osgi.util.promise.tesb.version>1.2.0</org.osgi.util.promise.tesb.version>
+        <spring52.tesb.version>5.2.20.RELEASE_1</spring52.tesb.version>
+        <spring52.tesb.version.range>[${spring52.tesb.version},5.3)</spring52.tesb.version.range>
+        <spring53.tesb.version>5.3.18_1</spring53.tesb.version>
+        <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
+        <spring.security56.tesb.version>5.6.2_1</spring.security56.tesb.version>
+        <jackson.tesb.version>2.13.2</jackson.tesb.version>
+        <jackson-databind.tesb.version>2.13.2.2</jackson-databind.tesb.version>
 
         <activemq.version>5.15.11</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
@@ -439,6 +446,13 @@
                             <ant.bundle.tesb.version>${ant.bundle.tesb.version}</ant.bundle.tesb.version>
                             <org.osgi.util.function.tesb.version>${org.osgi.util.function.tesb.version>}</org.osgi.util.function.tesb.version>
                             <org.osgi.util.promise.tesb.version>${org.osgi.util.promise.tesb.version>}</org.osgi.util.promise.tesb.version>
+                            <spring52.tesb.version>${spring52.tesb.version}</spring52.tesb.version>
+                            <spring52.tesb.version.range>${spring52.tesb.version.range}</spring52.tesb.version.range>
+                            <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
+                            <spring53.tesb.version.range>${spring53.tesb.version.range}</spring53.tesb.version.range>
+                            <spring.security56.tesb.version>${spring.security56.tesb.version}</spring.security56.tesb.version>
+                            <jackson.tesb.version>${jackson.tesb.version>}</jackson.tesb.version>
+                            <jackson-databind.tesb.version>${jackson-databind.tesb.version>}</jackson-databind.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
