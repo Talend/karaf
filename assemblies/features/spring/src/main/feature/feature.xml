@@ -99,7 +99,7 @@
 
     <!-- Spring Security -->
 
-    <feature name="spring-security" description="Spring Security 5.6.x support" version="${spring.security54.version}">
+    <feature name="spring-security" description="Spring Security 5.6.x support" version="${spring.security56.version}">
         <feature>war</feature>
         <feature version="[5.2,6)">spring-jdbc</feature>
         <feature version="[5.2,6)">spring-tx</feature>
@@ -107,7 +107,7 @@
         <bundle dependency="true">mvn:javax.annotation/javax.annotation-api/1.3</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databine.tesb.version}</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-core/${spring.security56.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-config/${spring.security56.tesb.version}</bundle>
