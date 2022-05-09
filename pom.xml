@@ -151,6 +151,8 @@
         <org.apache.karaf.jaas.modules.tesb.version>4.2.4.tesb1</org.apache.karaf.jaas.modules.tesb.version>
         <org.apache.karaf.config.core.tesb.version>4.2.4.tesb2</org.apache.karaf.config.core.tesb.version>
         <pax-logging-log4j2.tesb.version>1.10.1.tesb1</pax-logging-log4j2.tesb.version>
+        <pax.url.tesb.version>2.6.11</pax.url.tesb.version>
+        <pax.url.wrap.tesb.version>2.6.11.tesb1</pax.url.wrap.tesb.version>
         <jackson.version>2.13.2</jackson.version>
         <jackson-databind.version>2.13.2.2</jackson-databind.version>
 
@@ -2097,6 +2099,8 @@
                             <org.apache.karaf.jaas.modules.tesb.version>${org.apache.karaf.jaas.modules.tesb.version}</org.apache.karaf.jaas.modules.tesb.version>
                             <org.apache.karaf.config.core.tesb.version>${org.apache.karaf.config.core.tesb.version}</org.apache.karaf.config.core.tesb.version>
                             <pax-logging-log4j2.tesb.version>${pax-logging-log4j2.tesb.version}</pax-logging-log4j2.tesb.version>
+                            <pax.url.tesb.version>${pax.url.tesb.version}</pax.url.tesb.version>
+                            <pax.url.wrap.tesb.version>${pax.url.wrap.tesb.version}</pax.url.wrap.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
