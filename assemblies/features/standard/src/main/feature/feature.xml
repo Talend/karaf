@@ -1462,6 +1462,13 @@ org.apache.felix.eventadmin.AddSubject=true
         <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.2.0</bundle>
     </feature>
 
+    <feature name="wrap" description="Wrap URL handler" version="${pax.url.version}">
+        <!-- transitional feature declaration -->
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.wrap.tesb.version}/jar/uber</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/1.2.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.2.0</bundle>
+    </feature>
+
     <feature name="profile" description="Profiles support" version="${upstream.version}">
         <config name="org.apache.karaf.profile">
 ################################################################################
