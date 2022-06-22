@@ -162,7 +162,7 @@
         <commons-io.tesb.version>2.8.0</commons-io.tesb.version>
         <jetty.tesb.version>9.4.43.v20210629</jetty.tesb.version>
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
-        <spring53.tesb.version>5.3.21_1</spring53.tesb.version>
+        <spring53.tesb.version>5.3.20_1</spring53.tesb.version>
         <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
         <spring.security56.tesb.version>5.6.2_1</spring.security56.tesb.version>
         <jackson.tesb.version>2.13.2</jackson.tesb.version>
