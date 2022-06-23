@@ -892,7 +892,7 @@ org.osgi.service.http.port=8181
         <bundle dependency="true" start-level="30">mvn:${servlet.spec.groupId}/${servlet.spec.artifactId}/${servlet.spec.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:com.sun.mail/javax.mail/${javax.mail.tesb.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="30">>mvn:jakarta.annotation/jakarta.annotation-api/${javax.annotation.tesb.version}</bundle>
+        <bundle dependency="true" start-level="30">mvn:jakarta.annotation/jakarta.annotation-api/${javax.annotation.tesb.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/${geronimo.jaspic-spec.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries.spifly.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.eclipse.jetty/jetty-continuation/${jetty.tesb.version}</bundle>
