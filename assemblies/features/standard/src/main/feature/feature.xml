@@ -18,7 +18,7 @@
 -->
 <features name="standard-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
-	<repository>mvn:org.ops4j.pax.web/pax-web-features/${pax-web.features.tesb.version}/xml/features</repository>
+    <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax-web.features.tesb.version}/xml/features</repository>
 
     <feature version="${upstream.version}" description="OSGi Security for Karaf" name="framework-security">
         <bundle start="false" start-level="1">mvn:org.apache.felix/org.apache.felix.framework.security/${felix.framework.security.version}</bundle>
@@ -408,7 +408,7 @@ completionMode = GLOBAL
         <bundle start-level="30">mvn:org.apache.felix/org.osgi.service.obr/${felix.obr.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.bundlerepository/${felix.bundlerepository.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.obr/org.apache.karaf.obr.core/${upstream.version}</bundle>
-        <bundle start-level="30">mvn:org.ops4j.pax.url/pax-url-obr/${pax.url.version}/jar/uber</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.url/pax-url-obr/${pax-url.tesb.version}/jar/uber</bundle>
     </feature>
 
     <feature name="bundle" description="Provide Bundle support" version="${upstream.version}">
@@ -866,7 +866,7 @@ org.osgi.service.http.port=8181
         </conditional>
     </feature>
 
-    <feature name="pax-http-service" description="Pax-Web OSGi HTTP Service" version="${pax.web.version}">
+    <feature name="pax-http-service" description="Pax-Web OSGi HTTP Service" version="${pax-web.tesb.version}">
         <feature>pax-http</feature>
         <bundle start-level="30">mvn:org.apache.karaf.http/org.apache.karaf.http.core/${upstream.version}</bundle>
         <capability>http-service;provider:=pax-http</capability>
@@ -1444,8 +1444,8 @@ org.apache.felix.eventadmin.AddSubject=true
     </feature>
 
     <feature name="scr" description="Declarative Service support" version="${upstream.version}">
-        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/1.0.0</bundle>
-        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.0.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/${org.osgi.util.function.tesb.version}</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/${org.osgi.util.promise.tesb.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.felix/org.apache.felix.metatype/${felix.metatype.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.scr/${felix.scr.version}</bundle>
         <conditional>
@@ -1474,8 +1474,10 @@ org.apache.felix.eventadmin.AddSubject=true
         <bundle>mvn:org.apache.aries.blueprint/org.apache.aries.blueprint.webosgi/${aries.blueprint.webosgi.version}</bundle>
     </feature>
 
-    <feature name="wrap" description="Wrap URL handler" version="${pax.url.version}">
-        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.version}/jar/uber</bundle>
+    <feature name="wrap" description="Wrap URL handler" version="${pax-url.tesb.version}">
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-wrap/${pax-url.tesb.version}/jar/uber</bundle>
+        <bundle dependency="true" start-level="5" >mvn:org.osgi/org.osgi.util.function/${org.osgi.util.function.tesb.version}</bundle>
+        <bundle dependency="true" start-level="5" >mvn:org.osgi/org.osgi.util.promise/${org.osgi.util.promise.tesb.version}</bundle>
     </feature>
 
     <feature name="profile" description="Profiles support" version="${upstream.version}">
