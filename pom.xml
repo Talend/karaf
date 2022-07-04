@@ -164,7 +164,7 @@
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
         <spring53.tesb.version>5.3.20_1</spring53.tesb.version>
         <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
-        <spring.security56.tesb.version>5.7.1_1</spring.security56.tesb.version>
+        <spring.security56.tesb.version>5.6.1_1</spring.security56.tesb.version>
         <jackson.tesb.version>2.13.2</jackson.tesb.version>
         <jackson-databind.tesb.version>2.13.2.2</jackson-databind.tesb.version>
         <pax-cdi.tesb.version>1.1.4</pax-cdi.tesb.version>
