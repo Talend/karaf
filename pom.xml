@@ -145,7 +145,7 @@
         <standard.features.tesb.version>4.2.7.tesb12</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.7.tesb5</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
-        <spring.features.tesb.version>4.2.7.tesb4</spring.features.tesb.version>
+        <spring.features.tesb.version>4.2.7.tesb5</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.2.7.tesb3</spring-legacy.features.tesb.version>
         <enterprise.features.tesb.version>4.2.7.tesb4</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.7.tesb1</enterprise-legacy.features.tesb.version>
@@ -164,7 +164,7 @@
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
         <spring53.tesb.version>5.3.20_1</spring53.tesb.version>
         <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
-        <spring.security56.tesb.version>5.6.2_1</spring.security56.tesb.version>
+        <spring.security56.tesb.version>5.7.1_1</spring.security56.tesb.version>
         <jackson.tesb.version>2.13.2</jackson.tesb.version>
         <jackson-databind.tesb.version>2.13.2.2</jackson-databind.tesb.version>
         <pax-cdi.tesb.version>1.1.4</pax-cdi.tesb.version>
