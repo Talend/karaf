@@ -146,11 +146,15 @@
         <org.apache.karaf.features.core.tesb.version>4.2.4.tesb1</org.apache.karaf.features.core.tesb.version>
         <framework.features.tesb.version>4.2.4.tesb3</framework.features.tesb.version>
         <standard.features.tesb.version>4.2.4.tesb3</standard.features.tesb.version>
-        <enterprise.features.tesb.version>4.2.4.tesb1</enterprise.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.4.tesb2</enterprise.features.tesb.version>
+        <spring.features.tesb.version>4.2.4.tesb1</spring.features.tesb.version>
         <org.apache.karaf.jaas.modules.tesb.version>4.2.4.tesb1</org.apache.karaf.jaas.modules.tesb.version>
         <org.apache.karaf.config.core.tesb.version>4.2.4.tesb2</org.apache.karaf.config.core.tesb.version>
         <pax-logging-log4j2.tesb.version>1.10.1.tesb1</pax-logging-log4j2.tesb.version>
-        <jackson.version>2.9.9</jackson.version>
+        <pax.url.tesb.version>2.6.11</pax.url.tesb.version>
+        <pax.url.wrap.tesb.version>2.6.11.tesb1</pax.url.wrap.tesb.version>
+        <jackson.version>2.13.2</jackson.version>
+        <jackson-databind.version>2.13.2.2</jackson-databind.version>
 
         <activemq.version>5.15.8</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
@@ -316,9 +320,14 @@
         <spring43.version>4.3.22.RELEASE_2</spring43.version>
         <spring50.version>5.0.12.RELEASE_1</spring50.version>
         <spring51.version>5.1.5.RELEASE_1</spring51.version>
+        <spring52.version>5.2.20.RELEASE_1</spring52.version>
+        <spring52.version.range>[${spring52.version},5.3)</spring52.version.range>
+        <spring53.version>5.3.18_1</spring53.version>
+        <spring53.version.range>[${spring53.version},5.4)</spring53.version.range>
         <spring.security31.version>3.1.4.RELEASE</spring.security31.version>
         <spring.security42.version>4.2.4.RELEASE_1</spring.security42.version>
         <spring.security51.version>5.1.3.RELEASE_1</spring.security51.version>
+        <spring.security56.version>5.6.2_1</spring.security56.version>
 
         <sshd.version>1.7.0</sshd.version>
         <derby-version>10.12.1.1</derby-version>
@@ -2086,9 +2095,12 @@
                             <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
                             <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
                             <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
+                            <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <org.apache.karaf.jaas.modules.tesb.version>${org.apache.karaf.jaas.modules.tesb.version}</org.apache.karaf.jaas.modules.tesb.version>
                             <org.apache.karaf.config.core.tesb.version>${org.apache.karaf.config.core.tesb.version}</org.apache.karaf.config.core.tesb.version>
                             <pax-logging-log4j2.tesb.version>${pax-logging-log4j2.tesb.version}</pax-logging-log4j2.tesb.version>
+                            <pax.url.tesb.version>${pax.url.tesb.version}</pax.url.tesb.version>
+                            <pax.url.wrap.tesb.version>${pax.url.wrap.tesb.version}</pax.url.wrap.tesb.version>
                         </properties>
                     </configuration>
                     <executions>

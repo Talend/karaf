@@ -399,7 +399,7 @@ completionMode = GLOBAL
         <bundle start-level="30">mvn:org.apache.felix/org.osgi.service.obr/${felix.obr.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.bundlerepository/${felix.bundlerepository.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.obr/org.apache.karaf.obr.core/${upstream.version}</bundle>
-        <bundle start-level="30">mvn:org.ops4j.pax.url/pax-url-obr/${pax.url.version}/jar/uber</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.url/pax-url-obr/${pax.url.tesb.version}/jar/uber</bundle>
     </feature>
 
     <feature name="bundle" description="Provide Bundle support" version="${upstream.version}">
@@ -1426,8 +1426,8 @@ org.apache.felix.eventadmin.AddSubject=true
     </feature>
 
     <feature name="scr" description="Declarative Service support" version="${upstream.version}">
-        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/1.0.0</bundle>
-        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.0.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/1.2.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.2.0</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.felix/org.apache.felix.metatype/${felix.metatype.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.scr/${felix.scr.version}</bundle>
         <conditional>
@@ -1456,8 +1456,17 @@ org.apache.felix.eventadmin.AddSubject=true
         <bundle>mvn:org.apache.aries.blueprint/org.apache.aries.blueprint.webosgi/${aries.blueprint.webosgi.version}</bundle>
     </feature>
 
+    <feature name="wrap" description="Wrap URL handler" version="${pax.url.tesb.version}">
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.wrap.tesb.version}/jar/uber</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/1.2.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.2.0</bundle>
+    </feature>
+
     <feature name="wrap" description="Wrap URL handler" version="${pax.url.version}">
-        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.version}/jar/uber</bundle>
+        <!-- transitional feature declaration -->
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.wrap.tesb.version}/jar/uber</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.function/1.2.0</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.osgi/org.osgi.util.promise/1.2.0</bundle>
     </feature>
 
     <feature name="profile" description="Profiles support" version="${upstream.version}">
