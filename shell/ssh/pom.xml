@@ -29,11 +29,13 @@
     </parent>
 
     <artifactId>org.apache.karaf.shell.ssh</artifactId>
+    <version>${revision}</version>
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Shell :: SSH</name>
     <description>This bundle provides SSH support to the Karaf console.</description>
 
     <properties>
+        <revision>${org.apache.karaf.shell.ssh.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -82,14 +84,17 @@
         <dependency>
             <groupId>org.apache.sshd</groupId>
             <artifactId>sshd-osgi</artifactId>
+            <version>${sshd.tesb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.sshd</groupId>
             <artifactId>sshd-sftp</artifactId>
+            <version>${sshd.tesb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.sshd</groupId>
             <artifactId>sshd-scp</artifactId>
+            <version>${sshd.tesb.version}</version>
         </dependency>
 
         <dependency>
