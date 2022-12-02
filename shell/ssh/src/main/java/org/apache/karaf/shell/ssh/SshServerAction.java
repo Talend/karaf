@@ -18,11 +18,14 @@
  */
 package org.apache.karaf.shell.ssh;
 
+import java.time.Duration;
+
 import org.apache.karaf.shell.api.action.Action;
 import org.apache.karaf.shell.api.action.Command;
 import org.apache.karaf.shell.api.action.Option;
 import org.apache.karaf.shell.api.action.lifecycle.Reference;
 import org.apache.karaf.shell.api.action.lifecycle.Service;
+import org.apache.sshd.core.CoreModuleProperties;
 import org.apache.sshd.server.SshServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -65,21 +68,21 @@ public class SshServerAction implements Action
         server.setPort(port);
 
         // idle timeout
-        server.getProperties().put(SshServer.IDLE_TIMEOUT, Long.toString(idleTimeout));
-        
+        CoreModuleProperties.IDLE_TIMEOUT.set(server, Duration.ofMillis(idleTimeout));
+
         // nio-workers
-        server.getProperties().put(SshServer.NIO_WORKERS, Integer.toString(nioWorkers));
+        CoreModuleProperties.NIO_WORKERS.set(server, nioWorkers);
 
         // max-concurrent-sessions
         if (maxConcurrentSessions != -1) {
-            server.getProperties().put(SshServer.MAX_CONCURRENT_SESSIONS, Integer.toString(maxConcurrentSessions));
+            CoreModuleProperties.MAX_CONCURRENT_SESSIONS.set(server, maxConcurrentSessions);
         }
-        
+
         // welcome banner
         if (welcomeBanner != null) {
-            server.getProperties().put(SshServer.WELCOME_BANNER, welcomeBanner);
+            CoreModuleProperties.WELCOME_BANNER.set(server, welcomeBanner);
         } 
-        
+
         // starting the SSHd server
         server.start();
 

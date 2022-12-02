@@ -35,8 +35,6 @@ import org.apache.sshd.agent.local.AgentImpl;
 import org.apache.sshd.agent.local.AgentServerProxy;
 import org.apache.sshd.agent.local.LocalAgentFactory;
 import org.apache.sshd.common.FactoryManager;
-import org.apache.sshd.common.NamedFactory;
-import org.apache.sshd.common.channel.Channel;
 import org.apache.sshd.common.channel.ChannelFactory;
 import org.apache.sshd.common.session.ConnectionService;
 import org.apache.sshd.common.session.Session;
@@ -62,7 +60,8 @@ public class KarafAgentFactory implements SshAgentFactory {
         return LocalAgentFactory.DEFAULT_FORWARDING_CHANNELS;
     }
 
-    public SshAgent createClient(FactoryManager manager) throws IOException {
+    @Override
+    public SshAgent createClient(Session session, FactoryManager manager) throws IOException {
         String proxyId = (String) manager.getProperties().get(SshAgent.SSH_AUTHSOCKET_ENV_NAME);
         if (proxyId == null) {
             throw new IllegalStateException("No " + SshAgent.SSH_AUTHSOCKET_ENV_NAME + " environment variable set");
@@ -133,4 +132,7 @@ public class KarafAgentFactory implements SshAgentFactory {
         }
     }
 
+    public SshAgent createClient(FactoryManager manager) throws IOException {
+        return createClient(null, manager);
+    }
 }
