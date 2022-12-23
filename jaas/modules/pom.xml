@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: JAAS :: Modules</name>
     <description>This bundle provides JAAS modules which can be used in Karaf (LDAP, JDBC, etc).</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${jaas.modules.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
