@@ -695,7 +695,7 @@ encryption.encoding = hexadecimal
         </config>
         <feature>jaas-boot</feature>
         <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.config/${upstream.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/${jaas.modules.tesb.version}</bundle>
         <conditional>
             <condition>aries-blueprint</condition>
             <bundle start-level="30">mvn:org.apache.karaf.jaas.blueprint/org.apache.karaf.jaas.blueprint.config/${upstream.version}</bundle>

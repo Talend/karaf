@@ -142,7 +142,7 @@
 
     <properties>
         <upstream.version>4.2.7</upstream.version>
-        <standard.features.tesb.version>4.2.7.tesb13</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.7.tesb14</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.7.tesb6</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb6</spring.features.tesb.version>
@@ -153,6 +153,7 @@
 
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <org.apache.karaf.management.server.tesb.version>4.2.7.tesb1</org.apache.karaf.management.server.tesb.version>
+        <jaas.modules.tesb.version>4.2.11.tesb1</jaas.modules.tesb.version>
         <pax-logging.tesb.version>1.11.17</pax-logging.tesb.version>
         <pax-logging-log4j2.tesb.version>${pax-logging.tesb.version}</pax-logging-log4j2.tesb.version>
         <hibernate.validator.tesb.version>6.0.17.Final</hibernate.validator.tesb.version>
@@ -2162,6 +2163,7 @@
                             <org.osgi.util.promise.tesb.version>${org.osgi.util.promise.tesb.version>}</org.osgi.util.promise.tesb.version>
                             <javax.annotation.tesb.version>${javax.annotation.tesb.version>}</javax.annotation.tesb.version>
                             <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
+                            <jaas.modules.tesb.version>${jaas.modules.tesb.version>}</jaas.modules.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
