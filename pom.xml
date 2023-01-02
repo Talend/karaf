@@ -139,19 +139,19 @@
 
     <properties>
         <upstream.version>4.2.11</upstream.version>
-        <standard.features.tesb.version>4.2.11.20221223</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.11.20221230</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.11.20221129</framework.features.tesb.version>
-        <enterprise.features.tesb.version>4.2.11.20221020</enterprise.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.11.20221230</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.11.20220318</enterprise-legacy.features.tesb.version>
-        <spring.features.tesb.version>4.2.11.20221020</spring.features.tesb.version>
-        <spring-legacy.features.tesb.version>4.2.11.20221020</spring-legacy.features.tesb.version>
+        <spring.features.tesb.version>4.2.11.20221230</spring.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.11.20221230</spring-legacy.features.tesb.version>
         <org.apache.karaf.shell.ssh.tesb.version>4.2.11.20221129</org.apache.karaf.shell.ssh.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         <pax-logging.tesb.version>1.11.17</pax-logging.tesb.version>
         <pax-url.tesb.version>2.6.11</pax-url.tesb.version>
         <pax-web.tesb.version>7.2.30</pax-web.tesb.version>
-        <pax-web.features.tesb.version>7.2.30.20220915</pax-web.features.tesb.version>
-        <jetty.tesb.version>9.4.48.v20220622</jetty.tesb.version>
+        <pax-web.features.tesb.version>7.2.30.20221230</pax-web.features.tesb.version>
+        <jetty.tesb.version>9.4.49.v20220914</jetty.tesb.version>
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
         <org.osgi.util.function.tesb.version>1.2.0</org.osgi.util.function.tesb.version>
         <org.osgi.util.promise.tesb.version>1.2.0</org.osgi.util.promise.tesb.version>
@@ -160,10 +160,10 @@
         <spring53.tesb.version>5.3.18_1</spring53.tesb.version>
         <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
         <spring.security56.tesb.version>5.6.2_1</spring.security56.tesb.version>
-        <jackson.tesb.version>2.13.4</jackson.tesb.version>
-        <jackson-databind.tesb.version>2.13.4.2</jackson-databind.tesb.version>
+        <jackson.tesb.version>2.14.1</jackson.tesb.version>
+        <jackson-databind.tesb.version>2.14.1</jackson-databind.tesb.version>
         <sshd.tesb.version>2.9.2</sshd.tesb.version>
-        <jaas.modules.tesb.version>4.2.11.20221223</jaas.modules.tesb.version>
+        <jaas.modules.tesb.version>4.2.11.20221230</jaas.modules.tesb.version>
 
         <activemq.version>5.15.11</activemq.version>
         <aopalliance.bundle.version>1.0_6</aopalliance.bundle.version>
