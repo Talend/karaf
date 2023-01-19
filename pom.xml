@@ -153,7 +153,7 @@
 
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <org.apache.karaf.management.server.tesb.version>4.2.7.tesb1</org.apache.karaf.management.server.tesb.version>
-        <jaas.modules.tesb.version>4.2.11.tesb1</jaas.modules.tesb.version>
+        <jaas.modules.tesb.version>4.2.7.tesb1</jaas.modules.tesb.version>
         <pax-logging.tesb.version>1.11.17</pax-logging.tesb.version>
         <pax-logging-log4j2.tesb.version>${pax-logging.tesb.version}</pax-logging-log4j2.tesb.version>
         <hibernate.validator.tesb.version>6.0.17.Final</hibernate.validator.tesb.version>
