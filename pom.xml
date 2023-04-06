@@ -144,7 +144,7 @@
         <enterprise.features.tesb.version>4.2.11.20221230</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.11.20220318</enterprise-legacy.features.tesb.version>
         <spring.features.tesb.version>4.2.11.20230406</spring.features.tesb.version>
-        <spring-legacy.features.tesb.version>4.2.11.20221230</spring-legacy.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.11.20230406</spring-legacy.features.tesb.version>
         <org.apache.karaf.shell.ssh.tesb.version>4.2.11.20221129</org.apache.karaf.shell.ssh.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         <pax-logging.tesb.version>1.11.17</pax-logging.tesb.version>
