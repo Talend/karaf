@@ -139,7 +139,7 @@
 
     <properties>
         <upstream.version>4.2.11</upstream.version>
-        <standard.features.tesb.version>4.2.11.20221230</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.11.20230905</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.11.20221129</framework.features.tesb.version>
         <enterprise.features.tesb.version>4.2.11.20221230</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.11.20220318</enterprise-legacy.features.tesb.version>
@@ -150,8 +150,8 @@
         <pax-logging.tesb.version>1.11.17</pax-logging.tesb.version>
         <pax-url.tesb.version>2.6.11</pax-url.tesb.version>
         <pax-web.tesb.version>7.2.30</pax-web.tesb.version>
-        <pax-web.features.tesb.version>7.2.30.20221230</pax-web.features.tesb.version>
-        <jetty.tesb.version>9.4.49.v20220914</jetty.tesb.version>
+        <pax-web.features.tesb.version>7.2.30.20230509</pax-web.features.tesb.version>
+        <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
         <org.osgi.util.function.tesb.version>1.2.0</org.osgi.util.function.tesb.version>
         <org.osgi.util.promise.tesb.version>1.2.0</org.osgi.util.promise.tesb.version>
