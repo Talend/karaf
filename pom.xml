@@ -146,10 +146,10 @@
         <framework.features.tesb.version>4.2.7.tesb6</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb8</spring.features.tesb.version>
-        <spring-legacy.features.tesb.version>4.2.7.tesb5</spring-legacy.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.2.7.tesb6</spring-legacy.features.tesb.version>
         <enterprise.features.tesb.version>4.2.7.tesb6</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.7.tesb1</enterprise-legacy.features.tesb.version>
-        <pax-web.features.tesb.version>7.2.30.tesb2</pax-web.features.tesb.version>
+        <pax-web.features.tesb.version>7.2.30.tesb3</pax-web.features.tesb.version>
 
         <org.apache.karaf.config.core.tesb.version>4.2.7.tesb1</org.apache.karaf.config.core.tesb.version>
         <org.apache.karaf.management.server.tesb.version>4.2.7.tesb1</org.apache.karaf.management.server.tesb.version>
