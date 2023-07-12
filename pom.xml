@@ -162,6 +162,8 @@
         <bouncycastle.tesb.version>1.73</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.26_1</spring53.tesb.version>
         <spring.security57.tesb.version>5.7.5_1</spring.security57.tesb.version>
+        <jackson.tesb.version>2.14.3</jackson.tesb.version>
+        <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
 
         <project.build.outputTimestamp>1</project.build.outputTimestamp>        
 
@@ -463,6 +465,8 @@
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
                             <spring.security57.tesb.version>${spring.security57.tesb.version}</spring.security57.tesb.version>
+                            <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
+                            <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
