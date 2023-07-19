@@ -1029,9 +1029,9 @@ role=${env:ORG_APACHE_KARAF_WEBCONSOLE_ROLE:-admin}
         <bundle start-level="30">mvn:org.apache.sshd/sshd-scp/${sshd.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.sshd/sshd-sftp/${sshd.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.not-yet-commons-ssl/0.3.11_1</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle.version}</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk15on/${bouncycastle.version}</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcutil-jdk15on/${bouncycastle.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/${org.apache.karaf.shell.ssh.tesb.version}</bundle>
     </feature>
 
@@ -1480,7 +1480,7 @@ org.apache.felix.eventadmin.AddSubject=${env:ORG_APACHE_FELIX_EVENTADMIN_IMPL_EV
 
     <feature name="spring-security-crypto-encryption" description="Advanced encryption support for Karaf security" version="${upstream.version}">
         <feature>jaas</feature>
-        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk15on/${bouncycastle.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-crypto/${spring.security53.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.spring-security-crypto/${upstream.version}</bundle>
     </feature>
