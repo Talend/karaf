@@ -165,6 +165,7 @@
         <jackson.tesb.version>2.14.3</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
+        <sshd.tesb.version>2.10.0</sshd.tesb.version>
 
         <project.build.outputTimestamp>1</project.build.outputTimestamp>        
 
@@ -345,7 +346,7 @@
         <spec.jaxws.version>2.3</spec.jaxws.version>
         <spec.jws.version>1.1.1</spec.jws.version>
         <spec.mail.version>1.6.5</spec.mail.version>
-	<spec.xjc.version>2.3.2_2</spec.xjc.version>
+        <spec.xjc.version>2.3.2_2</spec.xjc.version>
 
         <spring.osgi.version>1.2.1</spring.osgi.version>
         <spring31.version>3.1.4.RELEASE</spring31.version>
@@ -469,6 +470,7 @@
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
+                            <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
@@ -914,7 +916,7 @@
                                 <!-- test wiring resource files -->
                                 <exclude>**/src/test/resources/wirings/*</exclude>
                                 <!-- SSH keys -->
-				                <exclude>**/*.key</exclude>
+                                <exclude>**/*.key</exclude>
                                 <exclude>**/*.id_rsa</exclude>
                                 <!-- For Jenkins, ignore the .repository -->
                                 <exclude>.repository/**</exclude>
