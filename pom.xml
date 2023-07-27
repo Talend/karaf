@@ -156,6 +156,7 @@
         <enterprise.features.tesb.version>4.4.3.20230131</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.3.20230131</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.3.20230131</spring-legacy.features.tesb.version>
+        <karaf.webconsole.console.tesb.version>4.4.3.20230726</karaf.webconsole.console.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         <pax.web.tesb.version>8.0.20</pax.web.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
@@ -166,6 +167,7 @@
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
+        <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version>
 
         <project.build.outputTimestamp>1</project.build.outputTimestamp>        
 
@@ -461,6 +463,7 @@
                             <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
+                            <karaf.webconsole.console.tesb.version>${karaf.webconsole.console.tesb.version}</karaf.webconsole.console.tesb.version>
                             <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
                             <pax.web.tesb.version>${pax.web.tesb.version}</pax.web.tesb.version>
                             <spec.mail.tesb.version>${spec.mail.tesb.version}</spec.mail.tesb.version>
