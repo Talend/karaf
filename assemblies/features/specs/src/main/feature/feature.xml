@@ -70,20 +70,20 @@
     </feature>
 
     <!-- jackson -->
-    <feature name="jackson" version="${jackson.version}">
-        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.version}</bundle>
-        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.version}</bundle>
-        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.version}</bundle>
+    <feature name="jackson" version="${jackson.tesb.version}">
+        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
     </feature>
 
-    <feature name="jackson-jaxrs" version="${jackson.version}">
+    <feature name="jackson-jaxrs" version="${jackson.tesb.version}">
         <feature>jackson</feature>
         <feature>jaxrs</feature>
         <feature>jakarta.annotation</feature>
         <bundle start-level="35">mvn:org.yaml/snakeyaml/1.33</bundle>
-        <bundle start-level="35">mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson.version}</bundle>
-        <bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson.version}</bundle>
-        <bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson.tesb.version}</bundle>
     </feature>
 
     <!-- stax -->
