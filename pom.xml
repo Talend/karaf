@@ -168,6 +168,7 @@
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
+        <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
         <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version>
 
         <project.build.outputTimestamp>1</project.build.outputTimestamp>        
@@ -476,6 +477,8 @@
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
+                            <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
+                            <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
