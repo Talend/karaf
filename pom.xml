@@ -477,6 +477,7 @@
                             <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
                             <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version>
                             <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version>
+                            <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
                             <karaf.webconsole.console.tesb.version>${karaf.webconsole.console.tesb.version}</karaf.webconsole.console.tesb.version>
                             <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
                             <pax.web.tesb.version>${pax.web.tesb.version}</pax.web.tesb.version>
