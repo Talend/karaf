@@ -142,7 +142,7 @@
 
     <properties>
         <upstream.version>4.2.7</upstream.version>
-        <standard.features.tesb.version>4.2.7.tesb15</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.7.tesb16</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.7.tesb6</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb9</spring.features.tesb.version>
@@ -161,7 +161,7 @@
         <javax.mail.tesb.version>1.6.1</javax.mail.tesb.version>
         <spring-context.tesb.version>${spring53.tesb.version}</spring-context.tesb.version>
         <commons-io.tesb.version>2.8.0</commons-io.tesb.version>
-        <jetty.tesb.version>9.4.51.v20230217</jetty.tesb.version>
+        <jetty.tesb.version>9.4.53.v20231009</jetty.tesb.version>
         <ant.bundle.tesb.version>1.10.12_1</ant.bundle.tesb.version>
         <spring53.tesb.version>5.3.28_1</spring53.tesb.version>
         <spring53.tesb.version.range>[${spring53.tesb.version},5.4)</spring53.tesb.version.range>
