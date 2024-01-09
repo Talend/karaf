@@ -497,7 +497,7 @@
         <feature version="[${spring42.version},4.3)">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-messaging/${spring42.version}</bundle>
     </feature> -->
-    
+
     <feature name="spring-test" description="Spring 4.2.x Test support" version="${spring42.version}">
     </feature>
     <!-- <feature name="spring-test" description="Spring 4.2.x Test support" version="${spring42.version}">
@@ -611,7 +611,7 @@
         <bundle dependency="true">mvn:org.apache.httpcomponents/httpclient-osgi/4.5.2</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-test/${spring43.version}</bundle>
     </feature> -->
-    
+
     <feature name="spring-orm" description="Spring 4.3.x ORM support" version="${spring43.version}">
     </feature>
     <!-- <feature name="spring-orm" description="Spring 4.3.x ORM support" version="${spring43.version}">
@@ -733,7 +733,7 @@
         <feature version="[${spring50.version},5.1)">spring</feature>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-oxm/${spring50.version}</bundle>
     </feature> -->
-     
+
     <feature name="spring-tx" description="Spring 5.0.x Transaction (TX) support" version="${spring50.version}">
     </feature>
     <!-- <feature name="spring-tx" description="Spring 5.0.x Transaction (TX) support" version="${spring50.version}">
