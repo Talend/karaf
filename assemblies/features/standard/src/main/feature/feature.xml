@@ -1439,7 +1439,7 @@ org.apache.felix.eventadmin.AddSubject=true
 
     <feature name="jasypt-encryption" description="Advanced encryption support for Karaf security" version="${upstream.version}">
         <feature>jaas</feature>
-        <bundle dependency="true" start-level="30">mvn:commons-codec/commons-codec/${commons-codec.version}</bundle>
+        <bundle dependency="true" start-level="30">mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:commons-lang/commons-lang/${commons-lang.version}</bundle>
         <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.bundle.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.jasypt/${upstream.version}</bundle>
@@ -1564,7 +1564,7 @@ org.jolokia.authMode=jaas
     <feature name="maven" description="Commands for Maven configuration of services from pax-url-aether" version="${upstream.version}">
         <feature>shell</feature>
         <bundle start-level="30">mvn:org.apache.karaf.maven/org.apache.karaf.maven.core/${upstream.version}</bundle>
-        <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang3.version}</bundle>
+        <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <config name="org.apache.karaf.command.acl.maven">
 ################################################################################
 #

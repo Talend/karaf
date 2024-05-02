@@ -152,9 +152,9 @@
     <properties>
         <upstream.version>4.4.3</upstream.version>
         <specs.features.tesb.version>4.4.3.20240209</specs.features.tesb.version>
-        <standard.features.tesb.version>4.4.3.20240320</standard.features.tesb.version>
+        <standard.features.tesb.version>4.4.3.20240425</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.3.20240209</enterprise.features.tesb.version>
-        <spring.features.tesb.version>4.4.3.20240320</spring.features.tesb.version>
+        <spring.features.tesb.version>4.4.3.20240425</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.3.20240101</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.3.20230726</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.3.20230915</karaf.client.tesb.version>
@@ -167,20 +167,22 @@
         <pax.jdbc.tesb.version>1.5.6</pax.jdbc.tesb.version>
         <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
-        <bouncycastle.tesb.version>1.76</bouncycastle.tesb.version>
+        <bouncycastle.tesb.version>1.77</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.33</spring53.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.12</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.11</spring.security58.tesb.version>
-        <jackson.tesb.version>2.16.0</jackson.tesb.version>
+        <jackson.tesb.version>2.16.2</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>2.14.3</jackson-dataformat-yaml.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <groovy.tesb.version>3.0.8</groovy.tesb.version>
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
+        <commons-codec.tesb.version>1.16.0</commons-codec.tesb.version>
         <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version>
         <commons-io.tesb.version>2.14.0</commons-io.tesb.version>
+        <commons-lang3.tesb.version>3.14.0</commons-lang3.tesb.version>
         <jetty.tesb.version>9.4.54.v20240208</jetty.tesb.version>
         <xbean.tesb.version>4.24</xbean.tesb.version>
 
@@ -501,8 +503,10 @@
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
                             <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
+                            <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
                             <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
+                            <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version>
                         </properties>
