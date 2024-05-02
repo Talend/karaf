@@ -168,7 +168,7 @@
         <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
         <bouncycastle.tesb.version>1.77</bouncycastle.tesb.version>
-        <spring53.tesb.version>5.3.33</spring53.tesb.version>
+        <spring53.tesb.version>5.3.34</spring53.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.12</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.11</spring.security58.tesb.version>
