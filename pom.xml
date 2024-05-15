@@ -151,7 +151,7 @@
 
     <properties>
         <upstream.version>4.4.3</upstream.version>
-        <specs.features.tesb.version>4.4.3.20240209</specs.features.tesb.version>
+        <specs.features.tesb.version>4.4.3.20240515</specs.features.tesb.version>
         <standard.features.tesb.version>4.4.3.20240425</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.3.20240209</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.3.20240425</spring.features.tesb.version>
