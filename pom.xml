@@ -152,7 +152,7 @@
     <properties>
         <upstream.version>4.4.3</upstream.version>
         <specs.features.tesb.version>4.4.3.20240515</specs.features.tesb.version>
-        <standard.features.tesb.version>4.4.3.20240425</standard.features.tesb.version>
+        <standard.features.tesb.version>4.4.3.20240523</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.3.20240209</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.3.20240425</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.3.20240101</spring-legacy.features.tesb.version>
@@ -167,7 +167,7 @@
         <pax.jdbc.tesb.version>1.5.6</pax.jdbc.tesb.version>
         <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
-        <bouncycastle.tesb.version>1.77</bouncycastle.tesb.version>
+        <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.34</spring53.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.12</spring.security57.tesb.version>
