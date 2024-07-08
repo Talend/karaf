@@ -142,7 +142,7 @@
 
     <properties>
         <upstream.version>4.2.7</upstream.version>
-        <standard.features.tesb.version>4.2.7.tesb17</standard.features.tesb.version>
+        <standard.features.tesb.version>4.2.7.tesb18</standard.features.tesb.version>
         <framework.features.tesb.version>4.2.7.tesb6</framework.features.tesb.version>
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb91</spring.features.tesb.version>
@@ -157,7 +157,7 @@
         <pax-logging.tesb.version>1.11.17</pax-logging.tesb.version>
         <pax-logging-log4j2.tesb.version>${pax-logging.tesb.version}</pax-logging-log4j2.tesb.version>
         <hibernate.validator.tesb.version>6.0.17.Final</hibernate.validator.tesb.version>
-        <aries.spifly.tesb.version>1.2.3</aries.spifly.tesb.version>
+        <aries.spifly.tesb.version>1.2.4</aries.spifly.tesb.version>
         <javax.mail.tesb.version>1.6.1</javax.mail.tesb.version>
         <spring-context.tesb.version>${spring53.tesb.version}</spring-context.tesb.version>
         <commons-io.tesb.version>2.15.1</commons-io.tesb.version>
