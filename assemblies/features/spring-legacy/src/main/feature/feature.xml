@@ -16,10 +16,10 @@
       See the License for the specific language governing permissions and
       limitations under the License.
 -->
-<features name="spring-legacy-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
+<features name="spring-legacy-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
     <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.version}/xml/features</repository>
-    <repository>mvn:org.apache.karaf.features/standard/${project.version}/xml/features</repository>
+    <repository>mvn:org.apache.karaf.features/standard/${upstream.version}/xml/features</repository>
 
     <!-- Spring DM support (deprecated, user should use blueprint instead -->
 
@@ -32,11 +32,11 @@
         <bundle start-level="30">mvn:org.springframework.osgi/spring-osgi-annotation/${spring.osgi.version}</bundle>
         <conditional>
             <condition>deployer</condition>
-            <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.spring/${project.version}</bundle>
+            <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.spring/${upstream.version}</bundle>
         </conditional>
         <conditional>
             <condition>bundle</condition>
-            <bundle start-level="30">mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.springstate/${project.version}</bundle>
+            <bundle start-level="30">mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.springstate/${upstream.version}</bundle>
         </conditional>
     </feature>
 
