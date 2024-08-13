@@ -147,7 +147,7 @@
         <static.features.tesb.version>4.2.7.tesb1</static.features.tesb.version>
         <spring.features.tesb.version>4.2.7.tesb91</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.2.7.tesb7</spring-legacy.features.tesb.version>
-        <enterprise.features.tesb.version>4.2.7.tesb6</enterprise.features.tesb.version>
+        <enterprise.features.tesb.version>4.2.7.tesb7</enterprise.features.tesb.version>
         <enterprise-legacy.features.tesb.version>4.2.7.tesb1</enterprise-legacy.features.tesb.version>
         <pax-web.features.tesb.version>7.2.30.tesb4</pax-web.features.tesb.version>
 
