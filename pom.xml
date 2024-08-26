@@ -81,10 +81,10 @@
     </modules>
 
     <scm>
-        <connection>${scm.connection}</connection>
-        <developerConnection>${scm.developerConnection}</developerConnection>
-        <url>${scm.url}</url>
-        <tag>karaf-4.4.6</tag>
+        <connection>scm:git:http://github.com/Talend/karaf.git</connection>
+        <developerConnection>scm:git:https://github.com/Talend/karaf.git</developerConnection>
+        <url>https://github.com/Talend/karaf</url>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
@@ -150,6 +150,42 @@
     </developers>
 
     <properties>
+        <upstream.version>4.4.6</upstream.version>
+        <specs.features.tesb.version>4.4.6.20240820</specs.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20240820</standard.features.tesb.version>
+        <enterprise.features.tesb.version>4.4.6.20240820</enterprise.features.tesb.version>
+        <spring.features.tesb.version>4.4.6.20240820</spring.features.tesb.version>
+        <spring-legacy.features.tesb.version>4.4.6.20240820</spring-legacy.features.tesb.version>
+        <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
+        <!-- <karaf.client.tesb.version>4.4.6.20240820</karaf.client.tesb.version> -->
+        <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
+        <karaf.wrapper.tesb.version>4.4.6.20240820</karaf.wrapper.tesb.version>
+        <!-- <karaf.webconsole.console.tesb.version>4.4.6.20240820</karaf.webconsole.console.tesb.version> -->
+        <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
+        <pax.web.tesb.version>8.0.27</pax.web.tesb.version>
+        <!-- <pax.jms.tesb.version>1.1.3</pax.jms.tesb.version> -->
+        <!-- <pax.jdbc.tesb.version>1.5.7</pax.jdbc.tesb.version> -->
+        <!-- <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version> -->
+        <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
+        <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
+        <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <spring53.tesb.version>5.3.39</spring53.tesb.version>
+        <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
+        <spring.security57.tesb.version>5.7.12</spring.security57.tesb.version>
+        <spring.security58.tesb.version>5.8.11</spring.security58.tesb.version>
+        <jackson.tesb.version>2.16.2</jackson.tesb.version>
+        <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
+        <jackson-dataformat-yaml.tesb.version>2.14.3</jackson-dataformat-yaml.tesb.version>
+        <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
+        <!-- <sshd.tesb.version>2.12.1</sshd.tesb.version> -->
+        <groovy.tesb.version>3.0.8</groovy.tesb.version>
+        <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
+        <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
+        <!-- <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version> -->
+        <commons-io.tesb.version>2.16.1</commons-io.tesb.version>
+        <!-- <commons-lang3.tesb.version>3.14.0</commons-lang3.tesb.version> -->
+        <!-- <xbean.tesb.version>4.24</xbean.tesb.version> -->
+
         <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
 
         <scm.connection>scm:git:https://gitbox.apache.org/repos/asf/karaf.git</scm.connection>
@@ -431,6 +467,67 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>io.paradoxical</groupId>
+                    <artifactId>resolved-pom-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <configuration>
+                        <properties>
+                            <revision>${revision}</revision>
+                            <upstream.version>${upstream.version}</upstream.version>
+
+                            <!-- ADD HERE ALL THE CUSTOM PROPERTIES declared in the above <properties> part -->
+                            <!-- something like :
+                            <my.custom.property>${my.custom.property}</my.custom.property>
+                            -->
+                            <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
+                            <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
+                            <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
+                            <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
+                            <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
+                            <!-- <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version> -->
+                            <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
+                            <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
+                            <!-- <karaf.webconsole.console.tesb.version>${karaf.webconsole.console.tesb.version}</karaf.webconsole.console.tesb.version> -->
+                            <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
+                            <pax.web.tesb.version>${pax.web.tesb.version}</pax.web.tesb.version>
+                            <!-- <pax.jms.tesb.version>${pax.jms.tesb.version}</pax.jms.tesb.version> -->
+                            <!-- <pax.jdbc.tesb.version>${pax.jdbc.tesb.version}</pax.jdbc.tesb.version> -->
+                            <!-- <pax.transx.tesb.version>${pax.transx.tesb.version}</pax.transx.tesb.version> -->
+                            <spec.mail.tesb.version>${spec.mail.tesb.version}</spec.mail.tesb.version>
+                            <aspectj.bundle.tesb.version>${aspectj.bundle.tesb.version}</aspectj.bundle.tesb.version>
+                            <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
+                            <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
+                            <springmessaging53.tesb.version>${springmessaging53.tesb.version}</springmessaging53.tesb.version>
+                            <spring.security57.tesb.version>${spring.security57.tesb.version}</spring.security57.tesb.version>
+                            <spring.security58.tesb.version>${spring.security58.tesb.version}</spring.security58.tesb.version>
+                            <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
+                            <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
+                            <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
+                            <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
+                            <!-- <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version> -->
+                            <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
+                            <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
+                            <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
+                            <!-- <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version> -->
+                            <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
+                            <!-- <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version> -->
+                            <!-- <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version> -->
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>resolve-my-pom</id>
+                            <phase>initialize</phase>
+                            <goals>
+                                <goal>resolve-pom</goal>
+                            </goals>
+                            <configuration>
+                                <resolvedPomFile>.resolved-pom.xml</resolvedPomFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.13.0</version>
@@ -676,6 +773,10 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>io.paradoxical</groupId>
+                <artifactId>resolved-pom-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -857,7 +958,7 @@
                                 <!-- test wiring resource files -->
                                 <exclude>**/src/test/resources/wirings/*</exclude>
                                 <!-- SSH keys -->
-				                <exclude>**/*.key</exclude>
+                                <exclude>**/*.key</exclude>
                                 <exclude>**/*.id_rsa</exclude>
                                 <!-- For Jenkins, ignore the .repository -->
                                 <exclude>.repository/**</exclude>

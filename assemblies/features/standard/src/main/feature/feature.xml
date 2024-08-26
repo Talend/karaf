@@ -18,7 +18,7 @@
 -->
 <features name="standard-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
-	<repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.version}/xml/features</repository>
+    <!-- <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.tesb.version}/xml/features</repository> -->
 
     <feature version="${upstream.version}" description="OSGi Security for Karaf" name="framework-security">
         <bundle start="false" start-level="1">mvn:org.apache.felix/org.apache.felix.framework.security/${felix.framework.security.version}</bundle>
@@ -414,7 +414,7 @@ disableEofExit = false
     </feature>
 
     <feature name="wrapper" description="Provide OS integration" version="${upstream.version}">
-        <bundle start-level="30">mvn:org.apache.karaf.wrapper/org.apache.karaf.wrapper.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.wrapper/org.apache.karaf.wrapper.core/${karaf.wrapper.tesb.version}</bundle>
     </feature>
     <feature name="service-wrapper" description="Provide OS integration (alias to wrapper feature)" version="${upstream.version}">
         <feature>wrapper</feature>
@@ -878,7 +878,7 @@ org.osgi.service.http.port=8181
         </conditional>
     </feature>
 
-    <feature name="pax-web-http" description="Pax Web OSGi HTTP Service" version="${pax.web.version}">
+    <feature name="pax-web-http" description="Pax Web OSGi HTTP Service" version="${pax.web.tesb.version}">
         <feature>pax-web-http-jetty</feature>
         <bundle start-level="30">mvn:org.apache.karaf.http/org.apache.karaf.http.core/${upstream.version}</bundle>
         <capability>http-service;provider:=pax-http</capability>
@@ -887,16 +887,16 @@ org.osgi.service.http.port=8181
             <bundle start-level="30">mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.http/${upstream.version}</bundle>
         </conditional>
     </feature>
-    <feature name="http" description="Transition feature for backward compatibility" version="${pax.web.version}">
+    <feature name="http" description="Transition feature for backward compatibility" version="${pax.web.tesb.version}">
         <feature>pax-web-http</feature>
     </feature>
 
-    <feature name="pax-web-http-whiteboard" description="Pax Web OSGi HTTP Whiteboard support" version="${pax.web.version}">
+    <feature name="pax-web-http-whiteboard" description="Pax Web OSGi HTTP Whiteboard support" version="${pax.web.tesb.version}">
         <feature>pax-web-http</feature>
         <feature>pax-web-whiteboard</feature>
         <feature>pax-web-websockets</feature>
     </feature>
-    <feature name="http-whiteboard" description="Transition feature for backward compatibility" version="${pax.web.version}">
+    <feature name="http-whiteboard" description="Transition feature for backward compatibility" version="${pax.web.tesb.version}">
         <feature>pax-web-http-whiteboard</feature>
     </feature>
 
@@ -911,9 +911,11 @@ org.osgi.service.http.port=8181
         <feature>pax-web-http-war</feature>
     </feature>
 
+    <!--
     <feature name="jetty" description="Transition feature for backward compatibility" version="9.4.54.v20240208">
         <feature>pax-web-jetty</feature>
     </feature>
+    -->
 
     <feature name="kar" description="Provide KAR (KARaf archive) support" version="${upstream.version}">
         <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${upstream.version}</bundle>
@@ -1002,9 +1004,9 @@ role=admin
         <bundle start-level="30">mvn:org.apache.sshd/sshd-osgi/${sshd.version}</bundle>
         <bundle start-level="30">mvn:org.apache.sshd/sshd-scp/${sshd.version}</bundle>
         <bundle start-level="30">mvn:org.apache.sshd/sshd-sftp/${sshd.version}</bundle>
-	<bundle start-level="30">mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.version}</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.version}</bundle>
-        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/${upstream.version}</bundle>
     </feature>
 
@@ -1458,8 +1460,9 @@ org.apache.felix.eventadmin.AddSubject=true
 
     <feature name="spring-security-crypto-encryption" description="Advanced encryption support for Karaf security" version="${upstream.version}">
         <feature>jaas</feature>
-        <bundle dependency="true" start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.version}</bundle>
-        <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-crypto/${spring.security53.version}</bundle>
+        <bundle dependency="true" start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
+        <!-- <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-crypto/${spring.security53.version}</bundle> -->
+        <bundle dependency="true" start-level="30">wrap:mvn:org.springframework.security/spring-security-crypto/${spring.security57.tesb.version}$Bundle-SymbolicName=spring-security-crypto&amp;Bundle-Version=${spring.security57.tesb.version}&amp;Export-Package=org.springframework.security.crypto.*;version=${spring.security57.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.spring-security-crypto/${upstream.version}</bundle>
     </feature>
 
@@ -1531,7 +1534,7 @@ profilesDirectory = ${karaf.home}/profiles
         </config>
         <bundle>mvn:org.apache.karaf.profile/org.apache.karaf.profile.core/${upstream.version}</bundle>
         <bundle>mvn:org.apache.karaf.tooling/org.apache.karaf.tools.utils/${upstream.version}</bundle>
-        <bundle>mvn:commons-io/commons-io/${commons-io.version}</bundle>
+        <bundle>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
     </feature>
 
     <feature name="jolokia" description="Jolokia monitoring support" version="${jolokia.version}">

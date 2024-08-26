@@ -281,7 +281,7 @@ public class Main {
         for (String provider : config.securityProviders) {
             addSecurityProvider(provider);
         }
-        
+
         List<File> bundleDirs = getBundleRepos();
         ArtifactResolver resolver = new SimpleMavenResolver(bundleDirs);
 
@@ -314,7 +314,7 @@ public class Main {
 
         activatorManager = new KarafActivatorManager(classLoader, framework);
         activatorManager.startKarafActivators();
-        
+
         setStartLevel(config.lockStartLevel);
         // Progress bar
         if (config.delayConsoleStart) {
@@ -537,7 +537,9 @@ public class Main {
         if (factoryClass == null) {
             InputStream is = classLoader.getResourceAsStream("META-INF/services/" + FrameworkFactory.class.getName());
             BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
-            factoryClass = br.readLine();
+            do {
+                factoryClass = br.readLine();
+            } while (factoryClass != null && factoryClass.length() > 0 && factoryClass.charAt(0) == '#');
             br.close();
         }
         FrameworkFactory factory = (FrameworkFactory) classLoader.loadClass(factoryClass).newInstance();
@@ -567,7 +569,7 @@ public class Main {
             System.err.println("Unable to register security provider: " + t);
         }
     }
-    
+
     public List<BundleInfo> readBundlesFromStartupProperties(File startupPropsFile) {
         Properties startupProps = PropertiesLoader.loadPropertiesOrFail(startupPropsFile);
         List<BundleInfo> bundeList = new ArrayList<>();
@@ -725,7 +727,7 @@ public class Main {
             if (config.shutdownTimeout <= 0) {
                 timeout = Integer.MAX_VALUE;
             }
-            
+
             if (shutdownCallback != null) {
                 shutdownCallback.waitingForShutdown(timeout);
             }
@@ -742,7 +744,7 @@ public class Main {
                 }).start();
             }
 
-            int step = 5000;      
+            int step = 5000;
             while (timeout > 0) {
                 timeout -= step;
                 FrameworkEvent event = framework.waitForStop(step);
@@ -773,7 +775,7 @@ public class Main {
             }
         }
     }
-    
+
     private final class KarafLockCallback implements LockCallBack, FrameworkListener {
         private Object startLevelLock = new Object();
 
