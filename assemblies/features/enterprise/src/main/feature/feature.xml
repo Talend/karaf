@@ -203,7 +203,7 @@ com.atomikos.icatch.log_base_dir=${karaf.data}/atomikos
         <feature>pax-jms-pool-transx</feature>
         <feature>transaction</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle dependency="true">mvn:org.apache.commons/commons-pool2/${commons-pool2.version}</bundle>
         <bundle>mvn:org.apache.karaf.jms/org.apache.karaf.jms.core/${upstream.version}</bundle>
     </feature>

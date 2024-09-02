@@ -80,7 +80,7 @@
     <feature name="spring-jms" description="Spring 3.1.x JMS support" version="${spring31.version}">
         <feature version="[${spring31.version},3.2)">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle start-level="30">mvn:org.springframework/spring-jms/${spring31.version}</bundle>
     </feature>
 
@@ -159,7 +159,7 @@
     <feature name="spring-jms" description="Spring 4.3.x JMS support" version="${spring43.version}">
         <feature version="[${spring43.version},4.4)">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring43.version}</bundle>
     </feature>
 
@@ -243,7 +243,7 @@
     <feature name="spring-jms" description="Spring 5.2.x JMS support" version="${spring52.version}">
         <feature version="[${spring52.version},5.3)">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring52.version}</bundle>
     </feature>
 
@@ -319,7 +319,7 @@
     <feature name="spring-jms" description="Spring 5.3.x JMS support" version="${spring53.tesb.version}">
         <feature version="[${spring53.tesb.version},5.4)">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${spring53.tesb.version}$Bundle-SymbolicName=spring-jms&amp;Bundle-Version=${spring53.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring53.tesb.version}</bundle>
     </feature>
 
@@ -393,7 +393,7 @@
     <feature name="spring-jms" description="Spring 5.3.x JMS support" version="${spring53.version}">
         <feature version="[${spring53.version},5.4)">spring-tx</feature>
         <bundle dependency="true" start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo.jta-spec.version}</bundle>
-        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring53.version}</bundle>
     </feature>
 
