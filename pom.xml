@@ -161,7 +161,8 @@
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
         <karaf.wrapper.tesb.version>4.4.6.20240820</karaf.wrapper.tesb.version>
         <!-- <karaf.webconsole.console.tesb.version>4.4.6.20240820</karaf.webconsole.console.tesb.version> -->
-        <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
+        <geronimo.jms2-spec.tesb.version>1.0-alpha-2</geronimo.jms2-spec.tesb.version>
+        <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
         <pax.web.tesb.version>8.0.27</pax.web.tesb.version>
         <!-- <pax.jms.tesb.version>1.1.3</pax.jms.tesb.version> -->
         <!-- <pax.jdbc.tesb.version>1.5.7</pax.jdbc.tesb.version> -->
@@ -488,7 +489,8 @@
                             <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
                             <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
                             <!-- <karaf.webconsole.console.tesb.version>${karaf.webconsole.console.tesb.version}</karaf.webconsole.console.tesb.version> -->
-                            <geronimo.jms2-spec.version>${geronimo.jms2-spec.version}</geronimo.jms2-spec.version>
+                            <geronimo.jms2-spec.tesb.version>${geronimo.jms2-spec.tesb.version}</geronimo.jms2-spec.tesb.version>
+                            <geronimo-jms2-bundle-override.tesb.version>${geronimo-jms2-bundle-override.tesb.version}</geronimo-jms2-bundle-override.tesb.version>
                             <pax.web.tesb.version>${pax.web.tesb.version}</pax.web.tesb.version>
                             <!-- <pax.jms.tesb.version>${pax.jms.tesb.version}</pax.jms.tesb.version> -->
                             <!-- <pax.jdbc.tesb.version>${pax.jdbc.tesb.version}</pax.jdbc.tesb.version> -->
