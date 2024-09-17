@@ -911,11 +911,9 @@ org.osgi.service.http.port=8181
         <feature>pax-web-http-war</feature>
     </feature>
 
-    <!--
-    <feature name="jetty" description="Transition feature for backward compatibility" version="9.4.54.v20240208">
+    <feature name="jetty" description="Transition feature for backward compatibility" version="${jetty9.tesb.version}">
         <feature>pax-web-jetty</feature>
     </feature>
-    -->
 
     <feature name="kar" description="Provide KAR (KARaf archive) support" version="${upstream.version}">
         <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${upstream.version}</bundle>
