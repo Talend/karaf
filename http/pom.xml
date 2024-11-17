@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: HTTP :: Core</name>
     <description>This bundle provides HTTP core services</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.http.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../etc/appended-resources/</appendedResourcesDirectory>
     </properties>
 
@@ -61,22 +63,35 @@
             <artifactId>org.osgi.service.cm</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.service.http</artifactId>
             <scope>provided</scope>
-        </dependency>
+        </dependency> -->
 
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-spi</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>${servlet.spec.groupId}</groupId>
-			<artifactId>${servlet.spec.artifactId}</artifactId>
-			<scope>provided</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-api</artifactId>
+            <version>${pax.web.tesb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-spi</artifactId>
+            <version>${pax.web.tesb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${servlet.spec.tesb.groupId}</groupId>
+            <artifactId>${servlet.spec.tesb.artifactId}</artifactId>
+            <version>${servlet.spec.tesb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- <dependency>
+            <groupId>${servlet.spec.groupId}</groupId>
+            <artifactId>${servlet.spec.artifactId}</artifactId>
+            <scope>provided</scope>
+        </dependency> -->
         <dependency>
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.util</artifactId>
@@ -130,6 +145,7 @@
                         </Export-Package>
                         <Import-Package>
                             org.osgi.framework;version="[1,3)",
+                            org.ops4j.pax.web*;version="[8,10)",
                             *
                         </Import-Package>
                         <Private-Package>

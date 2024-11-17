@@ -16,7 +16,7 @@
  */
 package org.apache.karaf.webconsole.features;
 
-import javax.servlet.Servlet;
+import jakarta.servlet.Servlet;
 import java.util.Dictionary;
 import java.util.Hashtable;
 

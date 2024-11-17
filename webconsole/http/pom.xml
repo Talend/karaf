@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Web Console :: HTTP Plugin</name>
     <description>This bundle provides Karaf http plugin for the Web Console.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.webconsole.http.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -63,6 +65,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.webconsole</artifactId>
+            <version>5.0.8</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -71,15 +74,23 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>${servlet.spec.groupId}</groupId>
-            <artifactId>${servlet.spec.artifactId}</artifactId>
+            <groupId>${servlet.spec.tesb.groupId}</groupId>
+            <artifactId>${servlet.spec.tesb.artifactId}</artifactId>
+            <version>${servlet.spec.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-spi</artifactId>
-			<scope>provided</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-api</artifactId>
+            <version>${pax.web.tesb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-spi</artifactId>
+            <version>${pax.web.tesb.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.karaf.http</groupId>
             <artifactId>org.apache.karaf.http.core</artifactId>
@@ -123,8 +134,8 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-			                org.apache.felix.webconsole*;version="[3,5)",
-                            javax.servlet*;version=2.4,
+                            org.apache.felix.webconsole*;version="[5,6)",
+                            jakarta.servlet*;version="[5,6)",
                             *
                         </Import-Package>
                         <Private-Package>
