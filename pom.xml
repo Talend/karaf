@@ -161,6 +161,7 @@
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
         <karaf.wrapper.tesb.version>4.4.6.20240820</karaf.wrapper.tesb.version>
         <karaf.http.core.tesb.version>4.4.6.20240820</karaf.http.core.tesb.version>
+        <karaf.web.core.tesb.version>4.4.6.20240820</karaf.web.core.tesb.version>
         <karaf.webconsole.tesb.version>4.4.6.20240820</karaf.webconsole.tesb.version>
         <felix.webconsole.tesb.version>5.0.8</felix.webconsole.tesb.version>
         <felix.webconsole.api.tesb.version>5.0.0</felix.webconsole.api.tesb.version>
@@ -499,6 +500,7 @@
                             <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
                             <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
                             <karaf.http.core.tesb.version>${karaf.http.core.tesb.version}</karaf.http.core.tesb.version>
+                            <karaf.web.core.tesb.version>${karaf.web.core.tesb.version}</karaf.web.core.tesb.version>
                             <!-- <karaf.webconsole.console.tesb.version>${karaf.webconsole.console.tesb.version}</karaf.webconsole.console.tesb.version> -->
                             <karaf.webconsole.tesb.version>${karaf.webconsole.tesb.version}</karaf.webconsole.tesb.version>
                             <felix.webconsole.tesb.version>${felix.webconsole.tesb.version}</felix.webconsole.tesb.version>

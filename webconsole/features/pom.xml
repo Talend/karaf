@@ -118,7 +118,7 @@
                     <instructions>
                         <Import-Package>
                             org.apache.felix.webconsole*;version="[5,6)",
-                            jakarta.servlet*;version=[5,6),
+                            jakarta.servlet*;version="[5,6)",
                             *
                         </Import-Package>
                         <Private-Package>
