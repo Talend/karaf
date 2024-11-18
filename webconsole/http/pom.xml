@@ -35,7 +35,7 @@
     <version>${revision}</version>
 
     <properties>
-        <revision>${karaf.webconsole.http.tesb.version}</revision>
+        <revision>${karaf.webconsole.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
