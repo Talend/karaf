@@ -26,6 +26,7 @@ import org.apache.karaf.jaas.boot.principal.GroupPrincipal;
 import org.apache.karaf.jaas.boot.principal.RolePrincipal;
 import org.apache.karaf.jaas.boot.principal.UserPrincipal;
 import org.apache.karaf.jaas.modules.BackingEngine;
+import org.apache.karaf.jaas.modules.JAASUtils;
 import org.apache.karaf.jaas.modules.encryption.EncryptionSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -138,11 +139,10 @@ public class PropertiesBackingEngine implements BackingEngine {
         List<RolePrincipal> result = new ArrayList<>();
         String userInfo = users.get(name);
         String[] infos = userInfo.split(",");
-        for (int i = getFirstRoleIndex(name); i < infos.length; i++) {
+        for (int i = JAASUtils.getFirstRoleIndex(name); i < infos.length; i++) {
             String roleName = infos[i];
-            if(roleName.trim().isEmpty())
+            if (roleName.trim().isEmpty())
                 continue;
-
             if (roleName.startsWith(GROUP_PREFIX)) {
                 for (RolePrincipal rp : listRoles(roleName)) {
                     if (!result.contains(rp)) {
@@ -159,24 +159,15 @@ public class PropertiesBackingEngine implements BackingEngine {
         return result;
     }
 
-    private int getFirstRoleIndex(String name) {
-        if (name.trim().startsWith(PropertiesBackingEngine.GROUP_PREFIX)) {
-            return 0;
-        }
-        return 1;
-    }
-
     @Override
     public void addRole(String username, String role) {
         String userInfos = users.get(username);
         if (userInfos != null) {
-
             // for groups, empty info should be replaced with role
             // for users, empty info means empty password and role should be appended
-            if(userInfos.trim().isEmpty()
+            if (userInfos.trim().isEmpty()
                     && username.trim().startsWith(PropertiesBackingEngine.GROUP_PREFIX)) {
                 users.put(username, role);
-
             } else {
                 for (RolePrincipal rp : listRoles(username)) {
                     if (role.equals(rp.getName())) {
@@ -210,8 +201,8 @@ public class PropertiesBackingEngine implements BackingEngine {
         if (userInfos != null && userInfos.length() > 0) {
             infos = userInfos.split(",");
 
-            int firstRoleIndex = getFirstRoleIndex(username);
-            if(firstRoleIndex == 1) {// index 0 is password
+            int firstRoleIndex = JAASUtils.getFirstRoleIndex(username);
+            if (firstRoleIndex == 1) {// index 0 is password
                 String password = infos[0];
                 userInfoBuffer.append(password);
             }
@@ -245,7 +236,7 @@ public class PropertiesBackingEngine implements BackingEngine {
         String userInfo = users.get(userName);
         if (userInfo != null) {
             String[] infos = userInfo.split(",");
-            for (int i = getFirstRoleIndex(userName); i < infos.length; i++) {
+            for (int i = JAASUtils.getFirstRoleIndex(userName); i < infos.length; i++) {
                 String name = infos[i];
                 if (name.startsWith(GROUP_PREFIX)) {
                     result.add(new GroupPrincipal(name.substring(GROUP_PREFIX.length())));

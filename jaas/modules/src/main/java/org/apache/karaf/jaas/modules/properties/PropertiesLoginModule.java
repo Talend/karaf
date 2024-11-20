@@ -18,10 +18,8 @@ package org.apache.karaf.jaas.modules.properties;
 
 import java.io.File;
 import java.io.IOException;
-import java.security.Principal;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 import javax.security.auth.Subject;
 import javax.security.auth.callback.Callback;
@@ -34,7 +32,6 @@ import javax.security.auth.login.LoginException;
 
 import org.apache.felix.utils.properties.Properties;
 import org.apache.karaf.jaas.boot.principal.GroupPrincipal;
-import org.apache.karaf.jaas.boot.principal.RolePrincipal;
 import org.apache.karaf.jaas.boot.principal.UserPrincipal;
 import org.apache.karaf.jaas.modules.AbstractKarafLoginModule;
 import org.apache.karaf.jaas.modules.JAASUtils;
@@ -145,12 +142,12 @@ public class PropertiesLoginModule extends AbstractKarafLoginModule {
                 if (groupInfo != null) {
                     String[] roles = groupInfo.split(",");
                     for (int j = 0; j < roles.length; j++) {
-                        addRole(principals, roles[j].trim());
+                        JAASUtils.addRole(principals, roles[j]);
                     }
                 }
             } else {
                 // it's an user reference
-                addRole(principals, infos[i].trim());
+                JAASUtils.addRole(principals, infos[i]);
             }
         }
 
@@ -161,10 +158,5 @@ public class PropertiesLoginModule extends AbstractKarafLoginModule {
         }
         succeeded = true;
         return true;
-    }
-
-    private void addRole(Set<Principal> principals, String trimmedRole) {
-        if (!trimmedRole.isEmpty())
-            principals.add(new RolePrincipal(trimmedRole));
     }
 }
