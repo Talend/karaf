@@ -35,8 +35,10 @@
     <description>
         This bundle provide the core service to manipulate the web container/bundles.
     </description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.web.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -60,7 +62,14 @@
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-api</artifactId>
+            <version>${pax.web.tesb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
             <artifactId>pax-web-spi</artifactId>
+            <version>${pax.web.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

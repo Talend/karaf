@@ -39,6 +39,15 @@
         <feature>pax-transx-tm-api</feature>
     </feature>
 
+    <feature name="jakarta-transaction-api" version="2.0.1">
+        <bundle start-level="10" dependency="true">mvn:jakarta.transaction/jakarta.transaction-api/2.0.1</bundle>
+        <bundle start-level="10" dependency="true">mvn:jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1</bundle>
+        <bundle start-level="10" dependency="true">mvn:jakarta.enterprise/jakarta.enterprise.lang-model/4.0.1</bundle>
+        <bundle start-level="10" dependency="true">mvn:jakarta.inject/jakarta.inject-api/2.0.1</bundle>
+        <bundle start-level="10" dependency="true">mvn:jakarta.interceptor/jakarta.interceptor-api/2.1.0</bundle>
+        <bundle start-level="10" dependency="true">mvn:jakarta.el/jakarta.el-api/5.0.1</bundle>
+    </feature>
+
     <feature name="transaction-manager-geronimo" description="Geronimo Transaction Manager" version="${geronimo.transaction.manager.version}">
         <details>JTA implementation provided by Apache Aries Transaction</details>
         <config name="org.ops4j.pax.transx.tm.geronimo">
@@ -206,6 +215,11 @@ com.atomikos.icatch.log_base_dir=${karaf.data}/atomikos
         <bundle dependency="true" start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/${geronimo.jms2-spec.tesb.version}$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
         <bundle dependency="true">mvn:org.apache.commons/commons-pool2/${commons-pool2.version}</bundle>
         <bundle>mvn:org.apache.karaf.jms/org.apache.karaf.jms.core/${upstream.version}</bundle>
+    </feature>
+
+    <feature name="jakarta-jms-api" version="2.0.1">
+        <feature version="[2,3)">jakarta-transaction-api</feature>
+        <bundle start-level="10" dependency="true">mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
     </feature>
 
     <feature name="application-without-isolation" description="Provide EBA archive support" version="${aries.application.version}">

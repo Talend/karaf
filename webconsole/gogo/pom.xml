@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Web Console :: Gogo Plugin</name>
     <description>This bundle provides Gogo plugin for the Karaf Web console.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.webconsole.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -70,6 +72,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.webconsole</artifactId>
+            <version>${felix.webconsole.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -78,8 +81,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>${servlet.spec.groupId}</groupId>
-            <artifactId>${servlet.spec.artifactId}</artifactId>
+            <groupId>${servlet.spec.tesb.groupId}</groupId>
+            <artifactId>${servlet.spec.tesb.artifactId}</artifactId>
+            <version>${servlet.spec.tesb.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -132,8 +136,8 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-			                org.apache.felix.webconsole*;version="[3,5)",
-                            javax.servlet*;version=2.4,
+                            org.apache.felix.webconsole*;version="[5,6)",
+                            jakarta.servlet*;version="[5,6)",
                             *
                         </Import-Package>
                         <Private-Package>

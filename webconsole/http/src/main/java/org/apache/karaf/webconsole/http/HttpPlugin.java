@@ -26,12 +26,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.felix.utils.json.JSONWriter;
-import org.apache.felix.webconsole.AbstractWebConsolePlugin;
 import org.apache.felix.webconsole.WebConsoleConstants;
+import org.apache.felix.webconsole.servlet.AbstractServlet;
 import org.apache.karaf.http.core.Proxy;
 import org.apache.karaf.http.core.ProxyService;
 import org.ops4j.pax.web.service.WebContainer;
@@ -46,7 +46,9 @@ import org.slf4j.LoggerFactory;
 /**
  * WebConsole plugin to use with HTTP service.
  */
-public class HttpPlugin extends AbstractWebConsolePlugin {
+public class HttpPlugin extends AbstractServlet {
+
+    private static final long serialVersionUID = 1L;
 
     private final Logger log = LoggerFactory.getLogger(HttpPlugin.class);
 
@@ -58,22 +60,18 @@ public class HttpPlugin extends AbstractWebConsolePlugin {
     private BundleContext bundleContext;
     private ProxyService proxyService;
 
-    @Override
-    protected boolean isHtmlRequest(HttpServletRequest request) {
-        return true;
-    }
-
     public void start() {
-        super.activate(bundleContext);
+        // super.activate(bundleContext);
         this.classLoader = this.getClass().getClassLoader();
         this.log.info(LABEL + " plugin activated");
     }
 
     public void stop() {
         this.log.info(LABEL + " plugin deactivated");
-        super.deactivate();
+        // super.deactivate();
     }
 
+    /*
     @Override
     public String getLabel() {
         return NAME;
@@ -83,9 +81,10 @@ public class HttpPlugin extends AbstractWebConsolePlugin {
     public String getTitle() {
         return LABEL;
     }
+    */
 
     @Override
-    protected void renderContent(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void renderContent(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         // get request info from request attribute
         final PrintWriter pw = response.getWriter();
@@ -299,6 +298,10 @@ public class HttpPlugin extends AbstractWebConsolePlugin {
 
     public void setWebContainer(WebContainer webContainer) {
         this.webContainer = webContainer;
+    }
+
+    public BundleContext getBundleContext() {
+        return bundleContext;
     }
 
     public void setBundleContext(BundleContext bundleContext) {
