@@ -151,7 +151,7 @@
 
     <properties>
         <upstream.version>4.4.3</upstream.version>
-        <specs.features.tesb.version>4.4.3.20240515</specs.features.tesb.version>
+        <specs.features.tesb.version>4.4.3.20250110</specs.features.tesb.version>
         <framework.features.tesb.version>4.4.3.20250110</framework.features.tesb.version>
         <standard.features.tesb.version>4.4.3.20250110</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.3.20240209</enterprise.features.tesb.version>
@@ -175,7 +175,7 @@
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.14</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
-        <jackson.tesb.version>2.16.2</jackson.tesb.version>
+        <jackson.tesb.version>2.17.2</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>2.14.3</jackson-dataformat-yaml.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
