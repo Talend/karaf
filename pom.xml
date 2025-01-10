@@ -173,8 +173,8 @@
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.39</spring53.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
-        <spring.security57.tesb.version>5.7.12</spring.security57.tesb.version>
-        <spring.security58.tesb.version>5.8.11</spring.security58.tesb.version>
+        <spring.security57.tesb.version>5.7.14</spring.security57.tesb.version>
+        <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
         <jackson.tesb.version>2.16.2</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>2.14.3</jackson-dataformat-yaml.tesb.version>
