@@ -420,7 +420,7 @@ disableEofExit = false
         <bundle start-level="30">mvn:org.apache.felix/org.osgi.service.obr/${felix.obr.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.bundlerepository/${felix.bundlerepository.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.obr/org.apache.karaf.obr.core/${upstream.version}</bundle>
-        <bundle start-level="30">mvn:org.ops4j.pax.url/pax-url-obr/${pax.url.version}/jar/uber</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.url/pax-url-obr/${pax.url.tesb.version}/jar/uber</bundle>
     </feature>
 
     <feature name="bundle" description="Provide Bundle support" version="${upstream.version}">
@@ -1492,16 +1492,16 @@ org.apache.felix.eventadmin.AddSubject=true
         <requirement>osgi.implementation;osgi.implementation="osgi.http";version:Version="1.1"</requirement>
     </feature>
 
-    <feature name="pax-url-wrap" description="Wrap URL handler" version="${pax.url.version}">
-        <bundle start-level="10">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.version}/jar/uber</bundle>
+    <feature name="pax-url-wrap" description="Wrap URL handler" version="${pax.url.tesb.version}">
+        <bundle start-level="10">mvn:org.ops4j.pax.url/pax-url-wrap/${pax.url.tesb.version}/jar/uber</bundle>
     </feature>
 
-    <feature name="wrap" description="Transition feature to pax-url-wrap" version="${pax.url.version}">
-        <feature version="${pax.url.version}">pax-url-wrap</feature>
+    <feature name="wrap" description="Transition feature to pax-url-wrap" version="${pax.url.tesb.version}">
+        <feature version="${pax.url.tesb.version}">pax-url-wrap</feature>
     </feature>
 
-    <feature name="pax-url-classpath" description="Classpath URL handler" version="${pax.url.version}">
-        <bundle start-level="10">mvn:org.ops4j.pax.url/pax-url-classpath/${pax.url.version}</bundle>
+    <feature name="pax-url-classpath" description="Classpath URL handler" version="${pax.url.tesb.version}">
+        <bundle start-level="10">mvn:org.ops4j.pax.url/pax-url-classpath/${pax.url.tesb.version}</bundle>
     </feature>
 
     <feature name="profile" description="Profiles support" version="${upstream.version}">
