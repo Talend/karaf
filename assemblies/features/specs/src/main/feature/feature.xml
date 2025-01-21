@@ -70,19 +70,18 @@
     </feature>
 
     <!-- jackson -->
-    <feature name="jackson" version="${jackson.tesb.version}">
+    <feature name="jackson-base" version="${jackson.tesb.version}">
         <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
         <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
         <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
     </feature>
 
     <feature name="jackson-jaxrs" version="${jackson.tesb.version}">
-        <feature>jackson</feature>
+        <feature>jackson-base</feature>
         <feature>jaxrs</feature>
         <feature>jakarta.annotation</feature>
-        <bundle start-level="35">mvn:org.yaml/snakeyaml/1.33</bundle>
-        <!-- <bundle start-level="35">mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson-dataformat-yaml.tesb.version}</bundle> -->
-        <bundle start-level="35">wrap:mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson-dataformat-yaml.tesb.version}$Bundle-SymbolicName=com.fasterxml.jackson.dataformat.jackson-dataformat-yaml&amp;Bundle-Version=${jackson-dataformat-yaml.tesb.version}.99&amp;overwrite=merge&amp;Export-Package=com.fasterxml.jackson.dataformat.yaml;version=${jackson.tesb.version},com.fasterxml.jackson.dataformat.yaml.*;version=${jackson.tesb.version}&amp;Import-Package=com.fasterxml.jackson.*;version="[${jackson.tesb.version},3.0)",*</bundle>
+        <bundle start-level="35">mvn:org.yaml/snakeyaml/${snakeyaml.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson-dataformat-yaml.tesb.version}</bundle>
         <bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson.tesb.version}</bundle>
         <bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson.tesb.version}</bundle>
     </feature>
