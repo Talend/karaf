@@ -15,14 +15,11 @@
 package org.apache.karaf.jaas.spring_security_crypto.impl;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import javax.xml.bind.DatatypeConverter;
+import java.util.function.Supplier;
 
 import org.apache.karaf.jaas.modules.Encryption;
 import org.apache.karaf.jaas.modules.EncryptionService;
@@ -42,16 +39,17 @@ import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder;
 public class SpringSecurityCryptoEncryption implements Encryption {
 
     private static final Logger log = LoggerFactory.getLogger(SpringSecurityCryptoEncryption.class);
-    private static final Map<String, Class<? extends PasswordEncoder>> PASSWORD_ENCODERS;
+    private static final Map<String, Supplier<PasswordEncoder>> PASSWORD_ENCODERS;
     private PasswordEncoder passwordEncoder;
     private String encoding;
 
     static {
-        Map<String, Class<? extends PasswordEncoder>> passwordEncoders = new HashMap<>();
-        passwordEncoders.put("pbkdf2", Pbkdf2PasswordEncoder.class);
-        passwordEncoders.put("bcrypt", BCryptPasswordEncoder.class);
-        passwordEncoders.put("scrypt", SCryptPasswordEncoder.class);
-        passwordEncoders.put("argon2", Argon2PasswordEncoder.class);
+        Map<String, Supplier<PasswordEncoder>> passwordEncoders = new HashMap<>();
+        passwordEncoders.put("pbkdf2", () -> new Pbkdf2PasswordEncoder("", 8, 185000,
+                Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1));
+        passwordEncoders.put("bcrypt", () -> new BCryptPasswordEncoder());
+        passwordEncoders.put("scrypt", () -> new SCryptPasswordEncoder(16384, 8, 1, 32, 64));
+        passwordEncoders.put("argon2", () -> new Argon2PasswordEncoder(16, 32, 1, 4196, 3));
         PASSWORD_ENCODERS = Collections.unmodifiableMap(passwordEncoders);
     }
 
@@ -68,11 +66,7 @@ public class SpringSecurityCryptoEncryption implements Encryption {
                 if (!PASSWORD_ENCODERS.containsKey(entry.getValue())) {
                     throw new IllegalArgumentException("Unsupported algorithm parameter: " + entry.getValue());
                 }
-                try {
-                    passwordEncoder = PASSWORD_ENCODERS.get(entry.getValue()).newInstance();
-                } catch (InstantiationException | IllegalAccessException e) {
-                    throw new IllegalArgumentException("Unsupported encryption parameter: " + entry.getKey());
-                }
+                passwordEncoder = PASSWORD_ENCODERS.get(entry.getValue()).get();
             } else if (EncryptionService.ENCODING.equalsIgnoreCase(entry.getKey())) {
                 encoding = entry.getValue();
             }
