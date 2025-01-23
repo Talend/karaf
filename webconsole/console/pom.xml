@@ -98,6 +98,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
+            <version>${commons-io.tesb.version}</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
