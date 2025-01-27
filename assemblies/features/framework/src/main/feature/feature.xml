@@ -22,6 +22,7 @@
               including the correct start-level for the generation of the startup.propertie file -->
 
     <feature version="${upstream.version}" description="Karaf core feature" name="framework" hidden="true">
+        <feature prerequisite="true">spifly</feature>
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: url handlers -->
@@ -39,7 +40,8 @@
         <bundle start-level="10">mvn:org.apache.felix/org.apache.felix.configadmin/${felix.configadmin.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.configadmin.plugin.interpolation/${felix.configadmin.interpolation.plugin.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.cm.json/${felix.cm.json.version}</bundle>
-        <bundle start-level="11">mvn:org.apache.sling/org.apache.sling.commons.johnzon/${sling.commons.johnzon.version}</bundle>
+        <bundle start-level="11">mvn:org.glassfish/javax.json/${javax.json.tesb.version}</bundle>
+        <bundle start-level="11">mvn:org.apache.johnzon/johnzon-core/${johnzon.core.tesb.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.configurator/${felix.configurator.version}</bundle>
         <bundle start-level="11">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${upstream.version}</bundle>
         <!-- file install -->
@@ -50,6 +52,7 @@
     </feature>
 
     <feature version="${upstream.version}" description="Karaf core feature" name="framework-logback" hidden="true">
+        <feature prerequisite="true">spifly</feature>
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: url handlers -->
@@ -66,7 +69,8 @@
         <bundle start-level="10">mvn:org.apache.felix/org.apache.felix.configadmin/${felix.configadmin.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.configadmin.plugin.interpolation/${felix.configadmin.interpolation.plugin.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.cm.json/${felix.cm.json.version}</bundle>
-        <bundle start-level="11">mvn:org.apache.sling/org.apache.sling.commons.johnzon/${sling.commons.johnzon.version}</bundle>
+        <bundle start-level="11">mvn:org.glassfish/javax.json/${javax.json.tesb.version}</bundle>
+        <bundle start-level="11">mvn:org.apache.johnzon/johnzon-core/${johnzon.core.tesb.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.configurator/${felix.configurator.version}</bundle>
         <bundle start-level="11">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${upstream.version}</bundle>
         <!-- file install -->

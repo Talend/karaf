@@ -189,6 +189,8 @@
         <jackson.tesb.version>2.18.2</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>${jackson.tesb.version}</jackson-dataformat-yaml.tesb.version>
+        <javax.json.tesb.version>1.1.4</javax.json.tesb.version>
+        <johnzon.core.tesb.version>1.2.21</johnzon.core.tesb.version>
         <snakeyaml.tesb.version>2.3</snakeyaml.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <!-- <sshd.tesb.version>2.12.1</sshd.tesb.version> -->
@@ -532,6 +534,8 @@
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
+                            <javax.json.tesb.version>${javax.json.tesb.version}</javax.json.tesb.version>
+                            <johnzon.core.tesb.version>${johnzon.core.tesb.version}</johnzon.core.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
                             <!-- <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version> -->
