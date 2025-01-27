@@ -179,6 +179,7 @@
         <!-- <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version> -->
         <jetty9.tesb.version>9.4.56.v20240826</jetty9.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
+        <asm.tesb.version>9.7.1</asm.tesb.version>
         <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.39</spring53.tesb.version>
@@ -524,6 +525,7 @@
                             <!-- <pax.transx.tesb.version>${pax.transx.tesb.version}</pax.transx.tesb.version> -->
                             <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
                             <spec.mail.tesb.version>${spec.mail.tesb.version}</spec.mail.tesb.version>
+                            <asm.tesb.version>9.7.1</asm.tesb.version>
                             <aspectj.bundle.tesb.version>${aspectj.bundle.tesb.version}</aspectj.bundle.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
