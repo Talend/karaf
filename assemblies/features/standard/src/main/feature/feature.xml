@@ -64,7 +64,9 @@
 
     <feature name="feature" description="Features Support" version="${upstream.version}">
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
-        <bundle start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${upstream.version}</bundle>
+        <bundle start-level="15">mvn:org.apache.felix/org.apache.felix.cm.json/${felix.cm.json.tesb.version}</bundle>
+        <bundle start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${karaf.features.core.tesb.version}</bundle>
+        <bundle start-level="15">mvn:jakarta.json/jakarta.json-api/${jakarta-json-api.tesb.version}</bundle>
         <config name="org.apache.karaf.features.repos">
 ################################################################################
 #

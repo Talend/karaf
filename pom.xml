@@ -157,6 +157,8 @@
         <enterprise.features.tesb.version>4.4.6.20240820</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.6.20240820</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20240820</spring-legacy.features.tesb.version>
+        <karaf.config.core.tesb.version>4.4.6.20240820</karaf.config.core.tesb.version>
+        <karaf.features.core.tesb.version>4.4.6.20240820</karaf.features.core.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <!-- <karaf.client.tesb.version>4.4.6.20240820</karaf.client.tesb.version> -->
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
@@ -165,6 +167,8 @@
         <karaf.http.core.tesb.version>4.4.6.20240820</karaf.http.core.tesb.version>
         <karaf.web.core.tesb.version>4.4.6.20240820</karaf.web.core.tesb.version>
         <karaf.webconsole.tesb.version>4.4.6.20240820</karaf.webconsole.tesb.version>
+        <felix.cm.json.tesb.version>2.0.0</felix.cm.json.tesb.version>
+        <felix.configurator.tesb.version>1.0.18</felix.configurator.tesb.version>
         <felix.webconsole.tesb.version>5.0.8</felix.webconsole.tesb.version>
         <felix.webconsole.api.tesb.version>5.0.0</felix.webconsole.api.tesb.version>
         <felix.eventadmin.webconsole.plugin.tesb.version>1.2.0</felix.eventadmin.webconsole.plugin.tesb.version>
@@ -189,6 +193,8 @@
         <jackson.tesb.version>2.18.2</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>${jackson.tesb.version}</jackson-dataformat-yaml.tesb.version>
+        <johnzon.core.tesb.version>2.0.0</johnzon.core.tesb.version>
+        <jakarta-json-api.tesb.version>2.1.3</jakarta-json-api.tesb.version>
         <snakeyaml.tesb.version>2.3</snakeyaml.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <!-- <sshd.tesb.version>2.12.1</sshd.tesb.version> -->
@@ -202,6 +208,7 @@
         <servlet.spec.tesb.groupId>jakarta.servlet</servlet.spec.tesb.groupId>
         <servlet.spec.tesb.artifactId>jakarta.servlet-api</servlet.spec.tesb.artifactId>
         <servlet.spec.tesb.version>6.1.0</servlet.spec.tesb.version>
+        <sling.commons.johnzon.tesb.version>2.0.0</sling.commons.johnzon.tesb.version>
 
         <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
 
@@ -502,6 +509,8 @@
                             <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
+                            <karaf.config.core.tesb.version>${karaf.config.core.tesb.version}</karaf.config.core.tesb.version>
+                            <karaf.features.core.tesb.version>${karaf.features.core.tesb.version}</karaf.features.core.tesb.version>
                             <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
                             <!-- <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version> -->
                             <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
@@ -511,6 +520,8 @@
                             <karaf.web.core.tesb.version>${karaf.web.core.tesb.version}</karaf.web.core.tesb.version>
                             <!-- <karaf.webconsole.console.tesb.version>${karaf.webconsole.console.tesb.version}</karaf.webconsole.console.tesb.version> -->
                             <karaf.webconsole.tesb.version>${karaf.webconsole.tesb.version}</karaf.webconsole.tesb.version>
+                            <felix.cm.json.tesb.version>${felix.cm.json.tesb.version}</felix.cm.json.tesb.version>
+                            <felix.configurator.tesb.version>${felix.configurator.tesb.version}</felix.configurator.tesb.version>
                             <felix.webconsole.tesb.version>${felix.webconsole.tesb.version}</felix.webconsole.tesb.version>
                             <felix.webconsole.api.tesb.version>${felix.webconsole.api.tesb.version}</felix.webconsole.api.tesb.version>
                             <geronimo.jms2-spec.tesb.version>${geronimo.jms2-spec.tesb.version}</geronimo.jms2-spec.tesb.version>
@@ -532,6 +543,8 @@
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
+                            <johnzon.core.tesb.version>${johnzon.core.tesb.version}</johnzon.core.tesb.version>
+                            <jakarta-json-api.tesb.version>${jakarta-json-api.tesb.version}</jakarta-json-api.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
                             <!-- <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version> -->
@@ -542,6 +555,7 @@
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <!-- <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version> -->
                             <!-- <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version> -->
+                            <sling.commons.johnzon.tesb.version>${sling.commons.johnzon.tesb.version}</sling.commons.johnzon.tesb.version>
                         </properties>
                     </configuration>
                     <executions>

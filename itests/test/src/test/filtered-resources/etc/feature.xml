@@ -60,7 +60,7 @@
 
     <feature name="feature" description="Features Support" version="${upstream.version}">
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
-        <bundle start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${upstream.version}</bundle>
+        <bundle start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${karaf.features.core.tesb.version}</bundle>
         <config name="org.apache.karaf.features.repos">
             #
             # This file describes the features repository URL
@@ -357,7 +357,7 @@
     </feature>
 
     <feature name="config" description="Provide OSGi ConfigAdmin support" version="${upstream.version}">
-        <bundle start-level="30" start="true">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${upstream.version}</bundle>
+        <bundle start-level="30" start="true">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${karaf.config.core.tesb.version}</bundle>
         <conditional>
             <condition>management</condition>
             <config name="jmx.acl.org.apache.karaf.config">

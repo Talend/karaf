@@ -624,12 +624,12 @@
             <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.cm.json</artifactId>
-                <version>${felix.cm.json.version}</version>
+                <version>${felix.cm.json.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.configurator</artifactId>
-                <version>${felix.configurator.version}</version>
+                <version>${felix.configurator.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
@@ -639,7 +639,7 @@
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.commons.johnzon</artifactId>
-                <version>${sling.commons.johnzon.version}</version>
+                <version>${sling.commons.johnzon.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
