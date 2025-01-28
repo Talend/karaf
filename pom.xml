@@ -525,7 +525,7 @@
                             <!-- <pax.transx.tesb.version>${pax.transx.tesb.version}</pax.transx.tesb.version> -->
                             <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
                             <spec.mail.tesb.version>${spec.mail.tesb.version}</spec.mail.tesb.version>
-                            <asm.tesb.version>9.7.1</asm.tesb.version>
+                            <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
                             <aspectj.bundle.tesb.version>${aspectj.bundle.tesb.version}</aspectj.bundle.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
