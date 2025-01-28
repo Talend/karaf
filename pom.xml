@@ -152,13 +152,13 @@
     <properties>
         <upstream.version>4.4.6</upstream.version>
         <specs.features.tesb.version>4.4.6.20240820</specs.features.tesb.version>
-        <framework.features.tesb.version>4.4.6.20240820</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.6.20240820</standard.features.tesb.version>
+        <framework.features.tesb.version>4.4.6.20250128</framework.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20250128</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.6.20240820</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.6.20240820</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20240820</spring-legacy.features.tesb.version>
-        <karaf.config.core.tesb.version>4.4.6.20240820</karaf.config.core.tesb.version>
-        <karaf.features.core.tesb.version>4.4.6.20240820</karaf.features.core.tesb.version>
+        <karaf.config.core.tesb.version>4.4.6.20250128</karaf.config.core.tesb.version>
+        <karaf.features.core.tesb.version>4.4.6.20250128</karaf.features.core.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <!-- <karaf.client.tesb.version>4.4.6.20240820</karaf.client.tesb.version> -->
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
