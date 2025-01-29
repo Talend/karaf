@@ -1544,7 +1544,7 @@ profilesDirectory = ${karaf.home}/profiles
         <bundle>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
     </feature>
 
-    <feature name="jolokia" description="Jolokia monitoring support" version="${jolokia.version}">
+    <feature name="jolokia" description="Jolokia monitoring support" version="${jolokia.tesb.version}">
         <config name="org.jolokia.osgi">
 ################################################################################
 #
@@ -1569,7 +1569,7 @@ org.jolokia.user=karaf
 org.jolokia.realm=karaf
 org.jolokia.authMode=jaas
         </config>
-        <bundle>mvn:org.jolokia/jolokia-osgi/${jolokia.version}</bundle>
+        <bundle>mvn:org.jolokia/jolokia-agent-osgi/${jolokia.tesb.version}</bundle>
         <requirement>osgi.implementation;osgi.implementation="osgi.http";version:Version="1.1"</requirement>
     </feature>
 
