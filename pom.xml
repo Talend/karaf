@@ -205,6 +205,7 @@
         <servlet.spec.tesb.groupId>jakarta.servlet</servlet.spec.tesb.groupId>
         <servlet.spec.tesb.artifactId>jakarta.servlet-api</servlet.spec.tesb.artifactId>
         <servlet.spec.tesb.version>6.1.0</servlet.spec.tesb.version>
+        <jolokia.tesb.version>2.2.1</jolokia.tesb.version>
 
         <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
 
