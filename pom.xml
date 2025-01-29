@@ -179,6 +179,7 @@
         <!-- <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version> -->
         <jetty9.tesb.version>9.4.56.v20240826</jetty9.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
+        <asm.tesb.version>9.7.1</asm.tesb.version>
         <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
         <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.39</spring53.tesb.version>
@@ -189,6 +190,8 @@
         <jackson.tesb.version>2.18.2</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>${jackson.tesb.version}</jackson-dataformat-yaml.tesb.version>
+        <javax.json.tesb.version>1.1.4</javax.json.tesb.version>
+        <johnzon.core.tesb.version>1.2.21</johnzon.core.tesb.version>
         <snakeyaml.tesb.version>2.3</snakeyaml.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <!-- <sshd.tesb.version>2.12.1</sshd.tesb.version> -->
@@ -522,6 +525,7 @@
                             <!-- <pax.transx.tesb.version>${pax.transx.tesb.version}</pax.transx.tesb.version> -->
                             <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
                             <spec.mail.tesb.version>${spec.mail.tesb.version}</spec.mail.tesb.version>
+                            <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
                             <aspectj.bundle.tesb.version>${aspectj.bundle.tesb.version}</aspectj.bundle.tesb.version>
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
@@ -532,6 +536,8 @@
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
+                            <javax.json.tesb.version>${javax.json.tesb.version}</javax.json.tesb.version>
+                            <johnzon.core.tesb.version>${johnzon.core.tesb.version}</johnzon.core.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
                             <!-- <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version> -->

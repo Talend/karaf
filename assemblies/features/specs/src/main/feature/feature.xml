@@ -19,12 +19,12 @@
 <features name="specs-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
     <!-- asm -->
-    <feature name="asm" version="${asm.version}">
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm/${asm.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-util/${asm.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-tree/${asm.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-analysis/${asm.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-commons/${asm.version}</bundle>
+    <feature name="asm" version="${asm.tesb.version}">
+        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-util/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-tree/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-analysis/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-commons/${asm.tesb.version}</bundle>
     </feature>
 
     <!-- spifly -->
