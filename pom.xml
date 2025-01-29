@@ -539,6 +539,7 @@
                             <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
                             <javax.json.tesb.version>${javax.json.tesb.version}</javax.json.tesb.version>
                             <johnzon.core.tesb.version>${johnzon.core.tesb.version}</johnzon.core.tesb.version>
+                            <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
                             <snakeyaml.tesb.version>${snakeyaml.tesb.version}</snakeyaml.tesb.version>
                             <cdi-api.tesb.version>${cdi-api.tesb.version}</cdi-api.tesb.version>
                             <!-- <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version> -->
