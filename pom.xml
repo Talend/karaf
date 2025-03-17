@@ -165,7 +165,7 @@
         <karaf.http.core.tesb.version>4.4.6.20240820</karaf.http.core.tesb.version>
         <karaf.web.core.tesb.version>4.4.6.20240820</karaf.web.core.tesb.version>
         <karaf.webconsole.tesb.version>4.4.6.20240820</karaf.webconsole.tesb.version>
-        <felix.webconsole.tesb.version>5.0.8</felix.webconsole.tesb.version>
+        <felix.webconsole.tesb.version>5.0.10</felix.webconsole.tesb.version>
         <felix.webconsole.api.tesb.version>5.0.0</felix.webconsole.api.tesb.version>
         <felix.eventadmin.webconsole.plugin.tesb.version>1.2.0</felix.eventadmin.webconsole.plugin.tesb.version>
         <felix.memoryusage.webconsole.plugin.tesb.version>1.1.0</felix.memoryusage.webconsole.plugin.tesb.version>
