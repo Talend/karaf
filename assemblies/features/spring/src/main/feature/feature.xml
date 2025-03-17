@@ -80,7 +80,7 @@
     <!-- Waiting https://issues.apache.org/jira/browse/SM-5703 fix
     <feature name="spring-oxm" description="Spring 6.1.x OXM support" version="${spring61.tesb.version}">
         <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.0</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40</bundle>
         <bundle start-level="30">wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-oxm/${spring61.tesb.version}</bundle>
     </feature>
     -->
