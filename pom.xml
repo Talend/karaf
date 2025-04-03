@@ -182,6 +182,7 @@
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <groovy.tesb.version>3.0.8</groovy.tesb.version>
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
+        <cbp.tesb.version>1.0.9</cbp.tesb.version>
         <cbpagent.tesb.version>1.0.2</cbpagent.tesb.version>
         <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
         <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version>
@@ -509,6 +510,7 @@
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
                             <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
+                            <cbp.tesb.version>${cbp.tesb.version}</cbp.tesb.version>
                             <cbpagent.tesb.version>${cbpagent.tesb.version}</cbpagent.tesb.version>
                             <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
                             <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version>
