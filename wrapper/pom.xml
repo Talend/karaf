@@ -98,6 +98,7 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>**/*.info</include>
+                    <include>**/karaf-wrapper-java11.conf</include>
                 </includes>
             </resource>
         </resources>
