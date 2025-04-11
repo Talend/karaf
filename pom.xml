@@ -153,14 +153,14 @@
         <upstream.version>4.4.3</upstream.version>
         <specs.features.tesb.version>4.4.3.20250110</specs.features.tesb.version>
         <framework.features.tesb.version>4.4.3.20250110</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.3.20250123</standard.features.tesb.version>
+        <standard.features.tesb.version>4.4.3.20250403</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.3.20240209</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.3.20250110</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.3.20240101</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.3.20230726</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.3.20230915</karaf.client.tesb.version>
         <karaf.shell.ssh.tesb.version>4.4.3.20230915</karaf.shell.ssh.tesb.version>
-        <karaf.wrapper.tesb.version>4.4.3.20230925</karaf.wrapper.tesb.version>
+        <karaf.wrapper.tesb.version>4.4.3.20250403</karaf.wrapper.tesb.version>
         <karaf.webconsole.console.tesb.version>4.4.3.20250123</karaf.webconsole.console.tesb.version>
         <geronimo.jms2-spec.version>1.0-alpha-2</geronimo.jms2-spec.version>
         <pax.web.tesb.version>8.0.29</pax.web.tesb.version>
@@ -182,6 +182,8 @@
         <sshd.tesb.version>2.10.0</sshd.tesb.version>
         <groovy.tesb.version>3.0.8</groovy.tesb.version>
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
+        <cbp.tesb.version>1.0.9</cbp.tesb.version>
+        <cbpagent.tesb.version>1.0.2</cbpagent.tesb.version>
         <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
         <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version>
         <commons-io.tesb.version>2.16.1</commons-io.tesb.version>
@@ -508,6 +510,8 @@
                             <sshd.tesb.version>${sshd.tesb.version}</sshd.tesb.version>
                             <groovy.tesb.version>${groovy.tesb.version}</groovy.tesb.version>
                             <httpclient.tesb.version>${httpclient.tesb.version}</httpclient.tesb.version>
+                            <cbp.tesb.version>${cbp.tesb.version}</cbp.tesb.version>
+                            <cbpagent.tesb.version>${cbpagent.tesb.version}</cbpagent.tesb.version>
                             <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
                             <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
