@@ -158,7 +158,7 @@
         <spring.features.tesb.version>4.4.6.20250310</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20240820</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
-        <!-- <karaf.client.tesb.version>4.4.6.20240820</karaf.client.tesb.version> -->
+        <karaf.client.tesb.version>4.4.6.20250320</karaf.client.tesb.version>
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
         <karaf.jaas.spring-security-crypto.tesb.version>4.4.6.20240820</karaf.jaas.spring-security-crypto.tesb.version>
         <karaf.wrapper.tesb.version>4.4.6.20240820</karaf.wrapper.tesb.version>
@@ -508,7 +508,7 @@
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
-                            <!-- <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version> -->
+                            <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version>
                             <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
                             <karaf.jaas.spring-security-crypto.tesb.version>${karaf.jaas.spring-security-crypto.tesb.version}</karaf.jaas.spring-security-crypto.tesb.version>
                             <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
