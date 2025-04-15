@@ -21,7 +21,7 @@
     <!-- <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.tesb.version}/xml/features</repository> -->
 
     <feature name="karaf-specs-jakarta-servlet" version="6.1.0">
-        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/6.1.0$overwrite=merge&amp;Bundle-SymbolicName=jakarta.servlet-api-61</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/6.1.0$overwrite=merge&amp;Bundle-Name=Jakarta%20Servlet&amp;Bundle-SymbolicName=jakarta.servlet-api-61&amp;Bundle-Version=6.1.0</bundle>
         <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet5/9.99.0</bundle>
     </feature>
 

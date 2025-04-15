@@ -80,7 +80,7 @@
     <!-- Waiting https://issues.apache.org/jira/browse/SM-5703 fix
     <feature name="spring-oxm" description="Spring 6.1.x OXM support" version="${spring61.tesb.version}">
         <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-Name=Jakarta%20XML%20Binding%20API&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40&amp;Bundle-Version=4.0.2</bundle>
         <bundle start-level="30">wrap:mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-oxm/${spring61.tesb.version}</bundle>
     </feature>
     -->
@@ -118,7 +118,7 @@
         <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.12.4</bundle>
         <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.12.4</bundle>
         <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/2.1.1</bundle>
-        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/6.1.0$overwrite=merge&amp;Bundle-SymbolicName=jakarta.servlet-api-61</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/6.1.0$overwrite=merge&amp;Bundle-Name=Jakarta%20Servlet&amp;Bundle-SymbolicName=jakarta.servlet-api-61&amp;Bundle-Version=6.1.0</bundle>
         <bundle dependency="true">mvn:jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.1</bundle>
         <bundle dependency="true">mvn:jakarta.el/jakarta.el-api/5.0.1</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
