@@ -51,8 +51,8 @@
 
     <feature name="spring-jms" description="Spring 6.1.x JMS support" version="${spring61.tesb.version}">
         <feature version="[${spring61.tesb.version},6.2)">spring-tx</feature>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.12.4</bundle>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.12.4</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.13.11</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.13.11</bundle>
         <bundle dependency="true">mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring61.tesb.version}</bundle>
     </feature>
@@ -115,8 +115,8 @@
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.version}</bundle>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.12.4</bundle>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.12.4</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.13.11</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.13.11</bundle>
         <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/2.1.1</bundle>
         <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/6.1.0$overwrite=merge&amp;Bundle-Name=Jakarta%20Servlet&amp;Bundle-SymbolicName=jakarta.servlet-api-61&amp;Bundle-Version=6.1.0</bundle>
         <bundle dependency="true">mvn:jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.1</bundle>
