@@ -199,7 +199,7 @@
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
         <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
         <!-- <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version> -->
-        <commons-io.tesb.version>2.16.1</commons-io.tesb.version>
+        <commons-io.tesb.version>2.18.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
         <!-- <commons-lang3.tesb.version>3.14.0</commons-lang3.tesb.version> -->
         <!-- <xbean.tesb.version>4.24</xbean.tesb.version> -->
