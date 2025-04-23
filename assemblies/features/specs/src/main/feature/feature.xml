@@ -71,9 +71,9 @@
 
     <!-- jackson -->
     <feature name="jackson-base" version="${jackson.tesb.version}">
-        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}.spiprov</bundle>
         <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
-        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
+        <bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}.spiprov</bundle>
     </feature>
 
     <feature name="jackson-jaxrs" version="${jackson.tesb.version}">
