@@ -208,6 +208,7 @@
         <servlet.spec.tesb.artifactId>jakarta.servlet-api</servlet.spec.tesb.artifactId>
         <servlet.spec.tesb.version>6.1.0</servlet.spec.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
+        <nimbus-jose-jwt.tesb.version>9.40</nimbus-jose-jwt.tesb.version>
 
         <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
 
@@ -554,6 +555,7 @@
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
                             <!-- <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version> -->
                             <!-- <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version> -->
+                            <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
                         </properties>
                     </configuration>
                     <executions>

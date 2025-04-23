@@ -105,7 +105,7 @@
 
     <!-- Spring Security -->
 
-    <feature name="spring-security" description="Spring Security 6.2.x support" version="${spring.security62.version}">
+    <feature name="spring-security" description="Spring Security 6.2.x support" version="${spring.security62.tesb.version}">
         <feature>pax-web-jsp</feature>
         <feature>pax-web-war</feature>
         <feature version="[6.1,6.2)">spring-jdbc</feature>
@@ -122,6 +122,7 @@
         <bundle dependency="true">mvn:jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.1</bundle>
         <bundle dependency="true">mvn:jakarta.el/jakarta.el-api/5.0.1</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
+        <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-core/${spring.security62.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-config/${spring.security62.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-web/${spring.security62.tesb.version}</bundle>
