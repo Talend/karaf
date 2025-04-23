@@ -187,6 +187,7 @@
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.14</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
+        <spring.security62.tesb.version>6.2.7_1</spring.security62.tesb.version>
         <jackson.tesb.version>2.18.3</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>${jackson.tesb.version}</jackson-dataformat-yaml.tesb.version>
@@ -535,6 +536,7 @@
                             <springmessaging53.tesb.version>${springmessaging53.tesb.version}</springmessaging53.tesb.version>
                             <spring.security57.tesb.version>${spring.security57.tesb.version}</spring.security57.tesb.version>
                             <spring.security58.tesb.version>${spring.security58.tesb.version}</spring.security58.tesb.version>
+                            <spring.security62.tesb.version>${spring.security62.tesb.version}</spring.security62.tesb.version>
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
