@@ -25,9 +25,10 @@
         <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet5/9.99.0</bundle>
     </feature>
 
-    <feature version="${upstream.version}" description="OSGi Security for Karaf" name="framework-security">
+    <!-- Incompatible: Has fragment bundle for Felix OSGi but TESB uses Eclipse OSGi -->
+    <!-- <feature version="${upstream.version}" description="OSGi Security for Karaf" name="framework-security">
         <bundle start="false" start-level="1">mvn:org.apache.felix/org.apache.felix.framework.security/${felix.framework.security.version}</bundle>
-    </feature>
+    </feature> -->
 
     <feature version="${upstream.version}" description="Services Security for Karaf" name="service-security">
         <feature>jaas-boot</feature>
@@ -850,7 +851,8 @@ start-level = admin                           # admin can set any start level, i
         <capability>http-service;provider:=felix-httplite</capability>
     </feature>
 
-    <feature name="felix-http" version="${felix.http.version}" description="Felix HTTP Service">
+    <!-- Incompatible: Uses Jetty 9.4.x but TESB has Jetty 12 -->
+    <!-- <feature name="felix-http" version="${felix.http.version}" description="Felix HTTP Service">
         <config name="org.apache.felix.http">
 ################################################################################
 #
@@ -883,7 +885,7 @@ org.osgi.service.http.port=8181
             <condition>webconsole</condition>
             <bundle start-level="30">mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.http/${karaf.webconsole.tesb.version}</bundle>
         </conditional>
-    </feature>
+    </feature> -->
 
     <feature name="pax-web-http" description="Pax Web OSGi HTTP Service" version="${pax.web.tesb.version}">
         <feature>pax-web-http-jetty</feature>
