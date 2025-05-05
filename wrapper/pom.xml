@@ -92,6 +92,9 @@
                 <includes>
                     <include>**/*</include>
                 </includes>
+                <excludes>
+                    <exclude>**/karaf-wrapper-java11.conf</exclude>
+                </excludes>
             </resource>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
@@ -102,6 +105,35 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-resources-custom-filtering</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                            <delimiters>
+                                <delimiter>@@*@@</delimiter>
+                            </delimiters>
+                            <useDefaultDelimiters>false</useDefaultDelimiters>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/src/main/resources</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>**/karaf-wrapper-java11.conf</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -138,6 +170,12 @@
                             org.osgi.framework;version="[1,3)",
                             *
                         </Import-Package>
+                        <Include-Resource>
+                            {maven-resources},
+                            org/apache/karaf/wrapper/internal/unix/karaf-wrapper-java11.conf=${project.build.outputDirectory}/org/apache/karaf/wrapper/internal/unix/karaf-wrapper-java11.conf,
+                            org/apache/karaf/wrapper/internal/windows/karaf-wrapper-java11.conf=${project.build.outputDirectory}/org/apache/karaf/wrapper/internal/windows/karaf-wrapper-java11.conf,
+                            org/apache/karaf/wrapper/internal/windows64/karaf-wrapper-java11.conf=${project.build.outputDirectory}/org/apache/karaf/wrapper/internal/windows64/karaf-wrapper-java11.conf
+                        </Include-Resource>
                     </instructions>
                 </configuration>
             </plugin>
