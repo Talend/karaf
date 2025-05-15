@@ -20,17 +20,17 @@
 
     <!-- asm -->
     <feature name="asm" version="${asm.tesb.version}">
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-util/${asm.tesb.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-tree/${asm.tesb.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-analysis/${asm.tesb.version}</bundle>
-        <bundle dependency="false" start-level="20">mvn:org.ow2.asm/asm-commons/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-util/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-tree/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-analysis/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-commons/${asm.tesb.version}</bundle>
     </feature>
 
     <!-- spifly -->
     <feature name="spifly" version="${aries.spifly.version}">
         <feature>asm</feature>
-        <bundle>mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries.spifly.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries.spifly.version}</bundle>
     </feature>
 
     <!-- annotation -->

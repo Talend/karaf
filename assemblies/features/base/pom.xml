@@ -31,8 +31,10 @@
     <groupId>org.apache.karaf.features</groupId>
     <artifactId>base</artifactId>
     <name>Apache Karaf :: Assemblies :: Features :: Base</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${base.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

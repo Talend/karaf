@@ -22,7 +22,13 @@
               including the correct start-level for the generation of the startup.propertie file -->
 
     <feature version="${upstream.version}" description="Karaf core feature" name="framework" hidden="true">
-        <feature prerequisite="true">spifly</feature>
+        <!-- spifly -->
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-util/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-tree/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-analysis/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-commons/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries.spifly.version}</bundle>
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: url handlers -->
@@ -53,7 +59,13 @@
     </feature>
 
     <feature version="${upstream.version}" description="Karaf core feature" name="framework-logback" hidden="true">
-        <feature prerequisite="true">spifly</feature>
+        <!-- spifly -->
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-util/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-tree/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-analysis/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.ow2.asm/asm-commons/${asm.tesb.version}</bundle>
+        <bundle dependency="false" start-level="11">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${aries.spifly.version}</bundle>
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: url handlers -->
@@ -80,5 +92,4 @@
         <!-- features service -->
         <bundle start-level="15">mvn:org.apache.karaf.features/org.apache.karaf.features.core/${upstream.version}</bundle>
     </feature>
-
 </features>

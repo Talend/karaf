@@ -333,7 +333,7 @@
                         <configuration>
                             <invokerPropertiesFile>src/test/offline.properties</invokerPropertiesFile>
                             <pomExcludes>
-			        <!-- The following IT may fail as the SNAPSHOT is not on a remote repo -->
+                                <!-- The following IT may fail as the SNAPSHOT is not on a remote repo -->
                                 <!-- So, it requires to skip test for the early first build to populate the local repo -->
                                 <pomExclude>test-run/pom.xml</pomExclude>
                                 <pomExclude>test-assembly/pom.xml</pomExclude>
