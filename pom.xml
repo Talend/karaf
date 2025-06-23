@@ -539,6 +539,7 @@
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
                             <spring61.tesb.version>${spring61.tesb.version}</spring61.tesb.version>
+                            <springbundle61.tesb.version>${springbundle61.tesb.version}</springbundle61.tesb.version>
                             <springmessaging53.tesb.version>${springmessaging53.tesb.version}</springmessaging53.tesb.version>
                             <spring.security57.tesb.version>${spring.security57.tesb.version}</spring.security57.tesb.version>
                             <spring.security58.tesb.version>${spring.security58.tesb.version}</spring.security58.tesb.version>
