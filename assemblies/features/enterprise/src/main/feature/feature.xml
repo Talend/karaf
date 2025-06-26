@@ -41,7 +41,7 @@
 
     <feature name="jakarta-transaction-api" version="2.0.1">
         <bundle start-level="10" dependency="true">mvn:jakarta.transaction/jakarta.transaction-api/2.0.1</bundle>
-        <bundle start-level="10" dependency="true">mvn:jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1</bundle>
+        <bundle start-level="10" dependency="true">mvn:jakarta.enterprise/jakarta.enterprise.cdi-api/4.1.0</bundle>
         <bundle start-level="10" dependency="true">mvn:jakarta.enterprise/jakarta.enterprise.lang-model/4.0.1</bundle>
         <bundle start-level="10" dependency="true">mvn:jakarta.inject/jakarta.inject-api/2.0.1</bundle>
         <bundle start-level="10" dependency="true">mvn:jakarta.interceptor/jakarta.interceptor-api/2.1.0</bundle>
