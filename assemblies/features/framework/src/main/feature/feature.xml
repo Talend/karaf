@@ -32,7 +32,7 @@
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: url handlers -->
-        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax.url.version}</bundle>
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax.url.tesb.version}</bundle>
         <!-- logging -->
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-api/${pax.logging.tesb.version}</bundle>
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-log4j2/${pax.logging.tesb.version}</bundle>
@@ -70,7 +70,7 @@
         <!-- persistent wiring extension -->
         <bundle start-level="1">mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${upstream.version}</bundle>
         <!-- mvn: url handlers -->
-        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax.url.version}</bundle>
+        <bundle start-level="5">mvn:org.ops4j.pax.url/pax-url-aether/${pax.url.tesb.version}</bundle>
         <!-- logging -->
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-api/${pax.logging.tesb.version}</bundle>
         <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-logback/${pax.logging.tesb.version}</bundle>
