@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Features :: Core</name>
     <description>This bundle is the core implementation of the Karaf features support.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.features.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
@@ -132,6 +134,7 @@
         <dependency>
             <groupId>org.ops4j.pax.url</groupId>
             <artifactId>pax-url-aether</artifactId>
+            <!-- <version>${pax.url.tesb.version}</version> -->
         </dependency>
 
         <dependency>
