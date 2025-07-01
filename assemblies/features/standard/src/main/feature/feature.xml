@@ -1578,7 +1578,7 @@ org.jolokia.authMode=jaas
     <feature name="maven" description="Commands for Maven configuration of services from pax-url-aether" version="${upstream.version}">
         <feature>shell</feature>
         <bundle start-level="30">mvn:org.apache.karaf.maven/org.apache.karaf.maven.core/${upstream.version}</bundle>
-        <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang3.version}</bundle>
+        <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <config name="org.apache.karaf.command.acl.maven">
 ################################################################################
 #
