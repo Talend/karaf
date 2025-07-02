@@ -27,6 +27,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.karaf.util.jaas.JaasHelper;
@@ -76,6 +77,15 @@ public class KarafOsgiManager extends OsgiManager {
         res.setHeader("X-FRAME-OPTIONS", "SAMEORIGIN");
         res.setHeader("X-XSS-Protection", "1; mode=block");
         res.setHeader("X-Content-Type-Options", "nosniff");
-        super.service(req, res);
+        HttpServletRequest wrapper = new HttpServletRequestWrapper(req) {
+            public String getServletPath() {
+                return "";
+            }
+
+            public String getPathInfo() {
+                return super.getServletPath();
+            }
+        };
+        super.doService(wrapper, res);
     }
 }
