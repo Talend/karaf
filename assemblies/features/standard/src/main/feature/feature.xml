@@ -21,8 +21,13 @@
     <!-- <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.tesb.version}/xml/features</repository> -->
 
     <feature name="karaf-specs-jakarta-servlet" version="6.1.0">
-        <bundle dependency="true">wrap:mvn:jakarta.servlet/jakarta.servlet-api/6.1.0</bundle>
+        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/6.1.0</bundle>
         <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/11.0.0</bundle>
+    </feature>
+
+    <feature name="karaf-specs-javax-servlet" version="4.0.4">
+        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/4.0.4</bundle>
+        <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet31/11.0.0</bundle>
     </feature>
 
     <!-- Incompatible: Has fragment bundle for Felix OSGi but TESB uses Eclipse OSGi -->
@@ -989,6 +994,7 @@ realm=karaf
 role=admin
         </config>
         <feature version="[6,7)">karaf-specs-jakarta-servlet</feature>
+        <feature version="[4,5)">karaf-specs-javax-servlet</feature>
         <bundle start-level="30">mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.console/${karaf.webconsole.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.wrappers/1.1.8</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.webconsole.plugins.memoryusage/${felix.memoryusage.webconsole.plugin.tesb.version}</bundle>
