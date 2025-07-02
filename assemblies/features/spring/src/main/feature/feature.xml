@@ -113,7 +113,7 @@
         <feature version="[6.1,6.2)">spring-jdbc</feature>
         <feature version="[6.1,6.2)">spring-tx</feature>
         <feature version="[6.1,6.2)">spring-web</feature>
-        <bundle dependency="true">mvn:javax.annotation/javax.annotation-api/${javax.annotation.version}</bundle>
+        <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${javax.annotation.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}.spiprov</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}.spiprov</bundle>
