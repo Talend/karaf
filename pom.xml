@@ -211,7 +211,7 @@
         <commons-fileupload.tesb.version>1.6.0</commons-fileupload.tesb.version>
         <commons-io.tesb.version>2.19.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
-        <commons-lang3.tesb.version>3.17.0</commons-lang3.tesb.version>
+        <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
         <xbean.tesb.version>4.27</xbean.tesb.version>
         <servlet.spec.tesb.groupId>jakarta.servlet</servlet.spec.tesb.groupId>
         <servlet.spec.tesb.artifactId>jakarta.servlet-api</servlet.spec.tesb.artifactId>
