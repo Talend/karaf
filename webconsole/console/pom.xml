@@ -105,7 +105,7 @@
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>${commons-fileupload.version}</version>
+            <version>${commons-fileupload.tesb.version}</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
