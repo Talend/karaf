@@ -152,67 +152,72 @@
     <properties>
         <upstream.version>4.4.6</upstream.version>
         <base.features.tesb.version>4.4.6.20250420</base.features.tesb.version>
-        <specs.features.tesb.version>4.4.6.20250415</specs.features.tesb.version>
-        <framework.features.tesb.version>4.4.6.20240820</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.6.20250502</standard.features.tesb.version>
-        <enterprise.features.tesb.version>4.4.6.20250310</enterprise.features.tesb.version>
-        <spring.features.tesb.version>4.4.6.20250623</spring.features.tesb.version>
+        <specs.features.tesb.version>4.4.6.20250701</specs.features.tesb.version>
+        <framework.features.tesb.version>4.4.6.20250701</framework.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20250701</standard.features.tesb.version>
+        <enterprise.features.tesb.version>4.4.6.20250701</enterprise.features.tesb.version>
+        <spring.features.tesb.version>4.4.6.20250701</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20240820</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.6.20250320</karaf.client.tesb.version>
+        <karaf.features.core.tesb.version>${upstream.version}</karaf.features.core.tesb.version>
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
         <karaf.jaas.spring-security-crypto.tesb.version>4.4.6.20240820</karaf.jaas.spring-security-crypto.tesb.version>
         <karaf.wrapper.tesb.version>4.4.6.20250320</karaf.wrapper.tesb.version>
-        <karaf.http.core.tesb.version>4.4.6.20240820</karaf.http.core.tesb.version>
-        <karaf.web.core.tesb.version>4.4.6.20240820</karaf.web.core.tesb.version>
-        <karaf.webconsole.tesb.version>4.4.6.20240820</karaf.webconsole.tesb.version>
-        <felix.webconsole.tesb.version>5.0.10</felix.webconsole.tesb.version>
-        <felix.webconsole.api.tesb.version>5.0.0</felix.webconsole.api.tesb.version>
+        <karaf.http.core.tesb.version>4.4.6.20250701</karaf.http.core.tesb.version>
+        <karaf.web.core.tesb.version>4.4.6.20250701</karaf.web.core.tesb.version>
+        <karaf.webconsole.tesb.version>4.4.6.20250701</karaf.webconsole.tesb.version>
+        <felix.webconsole.tesb.version>5.0.12</felix.webconsole.tesb.version>
+        <felix.webconsole.api.tesb.version>5.0.10</felix.webconsole.api.tesb.version>
         <felix.eventadmin.webconsole.plugin.tesb.version>1.2.0</felix.eventadmin.webconsole.plugin.tesb.version>
         <felix.memoryusage.webconsole.plugin.tesb.version>1.1.0</felix.memoryusage.webconsole.plugin.tesb.version>
         <felix.scr.webconsole.plugin.tesb.version>2.3.0</felix.scr.webconsole.plugin.tesb.version>
+        <felix.scr.tesb.version>2.2.12</felix.scr.tesb.version>
         <geronimo.jms2-spec.tesb.version>1.0-alpha-2</geronimo.jms2-spec.tesb.version>
         <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
-        <pax.web.tesb.version>9.99.0</pax.web.tesb.version>
-        <pax.url.tesb.version>2.6.15</pax.url.tesb.version>
+        <pax.logging.tesb.version>2.3.0</pax.logging.tesb.version>
+        <pax.web.tesb.version>11.0.0</pax.web.tesb.version>
+        <pax.url.tesb.version>2.6.17</pax.url.tesb.version>
         <!-- <pax.jms.tesb.version>1.1.3</pax.jms.tesb.version> -->
         <!-- <pax.jdbc.tesb.version>1.5.7</pax.jdbc.tesb.version> -->
         <!-- <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version> -->
         <jetty9.tesb.version>9.4.56.v20240826</jetty9.tesb.version>
+        <jetty.tesb.version>12.0.22</jetty.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
-        <asm.tesb.version>9.7.1</asm.tesb.version>
+        <asm.tesb.version>9.8</asm.tesb.version>
         <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
-        <bouncycastle.tesb.version>1.78.1</bouncycastle.tesb.version>
+        <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.39</spring53.tesb.version>
-        <spring61.tesb.version>6.1.14_1</spring61.tesb.version>
-        <springbundle61.tesb.version>6.1.14</springbundle61.tesb.version>
+        <spring61.tesb.version>6.1.19_1</spring61.tesb.version>
+        <springbundle61.tesb.version>6.1.21</springbundle61.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.14</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
         <spring.security62.tesb.version>6.2.7_1</spring.security62.tesb.version>
-        <jackson.tesb.version>2.18.3</jackson.tesb.version>
+        <jackson.tesb.version>2.19.0</jackson.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
         <jackson-dataformat-yaml.tesb.version>${jackson.tesb.version}</jackson-dataformat-yaml.tesb.version>
+        <javax.annotation.tesb.version>1.3.5</javax.annotation.tesb.version>
         <javax.json.tesb.version>1.1.4</javax.json.tesb.version>
         <johnzon.core.tesb.version>1.2.21</johnzon.core.tesb.version>
-        <snakeyaml.tesb.version>2.3</snakeyaml.tesb.version>
+        <snakeyaml.tesb.version>2.4</snakeyaml.tesb.version>
         <cdi-api.tesb.version>2.0.SP1</cdi-api.tesb.version>
         <sshd.tesb.version>2.13.2</sshd.tesb.version>
         <groovy.tesb.version>3.0.8</groovy.tesb.version>
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
         <cbp.tesb.version>1.0.9</cbp.tesb.version>
         <cbpagent.tesb.version>1.0.2</cbpagent.tesb.version>
-        <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
-        <!-- <commons-fileupload.tesb.version>1.5</commons-fileupload.tesb.version> -->
-        <commons-io.tesb.version>2.18.0</commons-io.tesb.version>
+        <commons-codec.tesb.version>1.18.0</commons-codec.tesb.version>
+        <commons-fileupload.tesb.version>1.6.0</commons-fileupload.tesb.version>
+        <commons-io.tesb.version>2.19.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.12.1</commons-pool2.tesb.version>
-        <!-- <commons-lang3.tesb.version>3.14.0</commons-lang3.tesb.version> -->
-        <!-- <xbean.tesb.version>4.24</xbean.tesb.version> -->
+        <commons-lang3.tesb.version>3.18.0</commons-lang3.tesb.version>
+        <xbean.tesb.version>4.27</xbean.tesb.version>
         <servlet.spec.tesb.groupId>jakarta.servlet</servlet.spec.tesb.groupId>
         <servlet.spec.tesb.artifactId>jakarta.servlet-api</servlet.spec.tesb.artifactId>
         <servlet.spec.tesb.version>6.1.0</servlet.spec.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
-        <nimbus-jose-jwt.tesb.version>9.40</nimbus-jose-jwt.tesb.version>
+        <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
 
         <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
 
@@ -516,6 +521,7 @@
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
                             <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version>
+                            <karaf.features.core.tesb.version>${karaf.features.core.tesb.version}</karaf.features.core.tesb.version>
                             <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
                             <karaf.jaas.spring-security-crypto.tesb.version>${karaf.jaas.spring-security-crypto.tesb.version}</karaf.jaas.spring-security-crypto.tesb.version>
                             <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
@@ -525,14 +531,17 @@
                             <karaf.webconsole.tesb.version>${karaf.webconsole.tesb.version}</karaf.webconsole.tesb.version>
                             <felix.webconsole.tesb.version>${felix.webconsole.tesb.version}</felix.webconsole.tesb.version>
                             <felix.webconsole.api.tesb.version>${felix.webconsole.api.tesb.version}</felix.webconsole.api.tesb.version>
+                            <felix.scr.tesb.version>${felix.scr.tesb.version}</felix.scr.tesb.version>
                             <geronimo.jms2-spec.tesb.version>${geronimo.jms2-spec.tesb.version}</geronimo.jms2-spec.tesb.version>
                             <geronimo-jms2-bundle-override.tesb.version>${geronimo-jms2-bundle-override.tesb.version}</geronimo-jms2-bundle-override.tesb.version>
+                            <pax.logging.tesb.version>${pax.logging.tesb.version}</pax.logging.tesb.version>
                             <pax.web.tesb.version>${pax.web.tesb.version}</pax.web.tesb.version>
                             <pax.url.tesb.version>${pax.url.tesb.version}</pax.url.tesb.version>
                             <!-- <pax.jms.tesb.version>${pax.jms.tesb.version}</pax.jms.tesb.version> -->
                             <!-- <pax.jdbc.tesb.version>${pax.jdbc.tesb.version}</pax.jdbc.tesb.version> -->
                             <!-- <pax.transx.tesb.version>${pax.transx.tesb.version}</pax.transx.tesb.version> -->
                             <jetty9.tesb.version>${jetty9.tesb.version}</jetty9.tesb.version>
+                            <jetty.tesb.version>${jetty.tesb.version}</jetty.tesb.version>
                             <spec.mail.tesb.version>${spec.mail.tesb.version}</spec.mail.tesb.version>
                             <asm.tesb.version>${asm.tesb.version}</asm.tesb.version>
                             <aspectj.bundle.tesb.version>${aspectj.bundle.tesb.version}</aspectj.bundle.tesb.version>
@@ -547,6 +556,7 @@
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
                             <jackson-dataformat-yaml.tesb.version>${jackson-dataformat-yaml.tesb.version}</jackson-dataformat-yaml.tesb.version>
+                            <javax.annotation.tesb.version>${javax.annotation.tesb.version}</javax.annotation.tesb.version>
                             <javax.json.tesb.version>${javax.json.tesb.version}</javax.json.tesb.version>
                             <johnzon.core.tesb.version>${johnzon.core.tesb.version}</johnzon.core.tesb.version>
                             <jolokia.tesb.version>${jolokia.tesb.version}</jolokia.tesb.version>
@@ -558,11 +568,11 @@
                             <cbp.tesb.version>${cbp.tesb.version}</cbp.tesb.version>
                             <cbpagent.tesb.version>${cbpagent.tesb.version}</cbpagent.tesb.version>
                             <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
-                            <!-- <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version> -->
+                            <commons-fileupload.tesb.version>${commons-fileupload.tesb.version}</commons-fileupload.tesb.version>
                             <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version>
                             <commons-pool2.tesb.version>${commons-pool2.tesb.version}</commons-pool2.tesb.version>
-                            <!-- <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version> -->
-                            <!-- <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version> -->
+                            <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
+                            <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version>
                             <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
                         </properties>
                     </configuration>
