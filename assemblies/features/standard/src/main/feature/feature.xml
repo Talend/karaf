@@ -1509,6 +1509,7 @@ org.apache.felix.eventadmin.AddSubject=true
     <feature name="blueprint-web" description="Provides an OSGI-aware Servlet ContextListener for bootstrapping
         blueprint inside web-bundle containers" version="${upstream.version}">
         <feature>aries-blueprint</feature>
+        <feature>karaf-specs-javax-servlet</feature>
         <bundle>mvn:org.apache.aries.blueprint/org.apache.aries.blueprint.webosgi/${aries.blueprint.webosgi.version}</bundle>
         <requirement>osgi.implementation;osgi.implementation="osgi.http";version:Version="2.0"</requirement>
     </feature>
