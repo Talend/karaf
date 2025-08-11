@@ -20,14 +20,14 @@
 
     <!-- <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.tesb.version}/xml/features</repository> -->
 
-    <feature name="karaf-specs-jakarta-servlet" version="6.1.0">
-        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/6.1.0</bundle>
-        <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/11.0.0</bundle>
+    <feature name="karaf-specs-jakarta-servlet" version="${servlet.spec.tesb.version}">
+        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${servlet.spec.tesb.version}</bundle>
+        <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/${pax.web.tesb.version}</bundle>
     </feature>
 
     <feature name="karaf-specs-javax-servlet" version="4.0.4">
         <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/4.0.4</bundle>
-        <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet31/11.0.0</bundle>
+        <bundle dependency="true" start="false">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet31/${pax.web.tesb.version}</bundle>
     </feature>
 
     <!-- Incompatible: Has fragment bundle for Felix OSGi but TESB uses Eclipse OSGi -->
