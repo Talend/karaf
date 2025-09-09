@@ -188,8 +188,10 @@
         <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
         <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.39</spring53.tesb.version>
-        <spring61.tesb.version>6.1.19_1</spring61.tesb.version>
+        <spring61.tesb.version>6.1.21_1</spring61.tesb.version>
+        <spring62.tesb.version>6.2.8_1</spring62.tesb.version>
         <springbundle61.tesb.version>6.1.21</springbundle61.tesb.version>
+        <springbundle62.tesb.version>6.2.10</springbundle62.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.14</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
@@ -548,7 +550,9 @@
                             <bouncycastle.tesb.version>${bouncycastle.tesb.version}</bouncycastle.tesb.version>
                             <spring53.tesb.version>${spring53.tesb.version}</spring53.tesb.version>
                             <spring61.tesb.version>${spring61.tesb.version}</spring61.tesb.version>
+                            <spring62.tesb.version>${spring62.tesb.version}</spring62.tesb.version>
                             <springbundle61.tesb.version>${springbundle61.tesb.version}</springbundle61.tesb.version>
+                            <springbundle62.tesb.version>${springbundle62.tesb.version}</springbundle62.tesb.version>
                             <springmessaging53.tesb.version>${springmessaging53.tesb.version}</springmessaging53.tesb.version>
                             <spring.security57.tesb.version>${spring.security57.tesb.version}</spring.security57.tesb.version>
                             <spring.security58.tesb.version>${spring.security58.tesb.version}</spring.security58.tesb.version>
