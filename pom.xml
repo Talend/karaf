@@ -182,7 +182,7 @@
         <!-- <pax.jdbc.tesb.version>1.5.7</pax.jdbc.tesb.version> -->
         <!-- <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version> -->
         <jetty9.tesb.version>9.4.56.v20240826</jetty9.tesb.version>
-        <jetty.tesb.version>12.0.23</jetty.tesb.version>
+        <jetty.tesb.version>12.0.26</jetty.tesb.version>
         <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
         <asm.tesb.version>9.8</asm.tesb.version>
         <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
