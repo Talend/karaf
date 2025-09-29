@@ -91,13 +91,6 @@
     </feature>
 
     <feature name="spring-web" description="Spring 6.1.x Web support" version="${spring61.tesb.version}">
-        <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${servlet.spec.tesb.version}</bundle>
-        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/${pax.web.tesb.version}</bundle>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.13.11</bundle>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.13.11</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-web/${springbundle61.tesb.version}$Bundle-SymbolicName=spring-web&amp;Bundle-Version=${springbundle61.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle61.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-webmvc/${springbundle61.tesb.version}$Bundle-SymbolicName=spring-webmvc&amp;Bundle-Version=${springbundle61.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle61.tesb.version}</bundle>
     </feature>
 
     <feature name="spring-web" description="Spring 6.2.x Web support" version="${springbundle62.tesb.version}">
@@ -123,7 +116,7 @@
         <feature>pax-web-war</feature>
         <feature version="[6.1,6.2)">spring-jdbc</feature>
         <feature version="[6.1,6.2)">spring-tx</feature>
-        <feature version="[6.1,6.2)">spring-web</feature>
+        <feature version="[6.2,6.3)">spring-web</feature>
         <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${javax.annotation.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}.spiprov</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
