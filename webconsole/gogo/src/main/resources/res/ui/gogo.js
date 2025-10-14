@@ -57,11 +57,7 @@ gogo.Terminal_ctor = function(div, width, height) {
            while (keybuf.length > 0) {
                send += keybuf.pop();
            }
-           var query = query1 + send;
-           if (force) {
-               query = query + "&f=1";
-               force = 0;
-           }
+           var query = query1 + send + "&f=1";
            r.open("POST", "gogo", true);
            r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
            r.onreadystatechange = function () {
