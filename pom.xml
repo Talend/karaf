@@ -154,7 +154,7 @@
         <base.features.tesb.version>4.4.6.20250420</base.features.tesb.version>
         <specs.features.tesb.version>4.4.6.20250901</specs.features.tesb.version>
         <framework.features.tesb.version>4.4.6.20250901</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.6.20250901</standard.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20251013</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.6.20250901</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.6.20250901</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20240820</spring-legacy.features.tesb.version>
@@ -166,9 +166,10 @@
         <karaf.wrapper.tesb.version>4.4.6.20250320</karaf.wrapper.tesb.version>
         <karaf.http.core.tesb.version>4.4.6.20250901</karaf.http.core.tesb.version>
         <karaf.web.core.tesb.version>4.4.6.20250901</karaf.web.core.tesb.version>
-        <karaf.webconsole.tesb.version>4.4.6.20251001</karaf.webconsole.tesb.version>
+        <karaf.webconsole.tesb.version>4.4.6.20251013</karaf.webconsole.tesb.version>
         <felix.webconsole.tesb.version>5.0.12</felix.webconsole.tesb.version>
         <felix.webconsole.api.tesb.version>5.0.10</felix.webconsole.api.tesb.version>
+        <felix.webconsole.range.tesb.version>[5,6)</felix.webconsole.range.tesb.version>
         <felix.eventadmin.webconsole.plugin.tesb.version>1.2.0</felix.eventadmin.webconsole.plugin.tesb.version>
         <felix.memoryusage.webconsole.plugin.tesb.version>1.1.0</felix.memoryusage.webconsole.plugin.tesb.version>
         <felix.scr.webconsole.plugin.tesb.version>2.3.0</felix.scr.webconsole.plugin.tesb.version>
@@ -272,7 +273,7 @@
         <easymock.version>5.2.0</easymock.version>
         <equinox.groupId>org.eclipse.platform</equinox.groupId>
         <equinox.artifactId>org.eclipse.osgi</equinox.artifactId>
-        <equinox.version>3.18.0</equinox.version>
+        <equinox.version>3.18.400</equinox.version>
         <equinox.region.version>1.5.300</equinox.region.version>
         <equinox.coordinator.version>1.5.200</equinox.coordinator.version>
 

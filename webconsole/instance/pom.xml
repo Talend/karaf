@@ -126,8 +126,9 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            org.apache.felix.webconsole*;version="[8,9)",
+                            org.apache.felix.webconsole*;version="${felix.webconsole.range.tesb.version}",
                             jakarta.servlet*;version="[6,7)",
+                            !org.apache.karaf.util*,
                             *
                         </Import-Package>
                         <Private-Package>

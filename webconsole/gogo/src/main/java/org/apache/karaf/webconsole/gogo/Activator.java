@@ -41,6 +41,7 @@ public class Activator extends BaseActivator {
 
         Dictionary<String, String> props = new Hashtable<>();
         props.put("felix.webconsole.label", "gogo");
+        props.put("felix.webconsole.title", "gogo");
         register(Servlet.class, gogoPlugin, props);
     }
 

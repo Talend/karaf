@@ -154,9 +154,9 @@
                         </Bundle-Activator>
                         <Export-Package>
                             org.apache.felix.webconsole;version="${felix.webconsole.api.tesb.version}";provide:=true,
-                            org.apache.felix.webconsole.bundleinfo;version=1.0.0;provide:=true,
-                            org.apache.felix.webconsole.i18n;version=1.0.0;provide:=true,
-                            org.apache.felix.webconsole.servlet;version=1.0.0;provide:=true
+                            org.apache.felix.webconsole.bundleinfo;version="${felix.webconsole.api.tesb.version}";provide:=true,
+                            org.apache.felix.webconsole.i18n;version="${felix.webconsole.api.tesb.version}";provide:=true,
+                            org.apache.felix.webconsole.servlet;version="${felix.webconsole.api.tesb.version}";provide:=true
                         </Export-Package>
                         <Private-Package>
                             !org.apache.felix.webconsole,
@@ -164,7 +164,7 @@
                             org.apache.karaf.util.jaas
                         </Private-Package>
                         <Import-Package>
-                            jakarta.servlet.*;version="[5,7)",
+                            jakarta.servlet.*;version="[6,7)",
                             !javax.portlet,
                             !javax.servlet,
                             !javax.servlet.http,
@@ -180,6 +180,7 @@
                             !org.osgi.service.permissionadmin,
                             !org.osgi.service.prefs,
                             !org.osgi.service.wireadmin,
+                            !org.osgi.util,
                             org.apache.felix.inventory;resolution:="optional",
                             *
                         </Import-Package>
@@ -203,8 +204,9 @@
                             org.apache.felix.utils.json;inline=org/apache/felix/utils/json/**,
                             org.apache.felix.framework;inline=org/apache/felix/framework/util/VersionRange**,
 
-                            <!-- ServiceTracker -->
+                            <!-- ServiceTracker
                             osgi.core;inline=org/osgi/util/tracker/*,
+                             -->
 
                             <!-- File Upload -->
                             commons-fileupload,
