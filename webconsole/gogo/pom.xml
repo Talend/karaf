@@ -136,12 +136,12 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            org.apache.felix.webconsole*;version="[8,9)",
+                            org.apache.felix.webconsole*;version="${felix.webconsole.range.tesb.version}",
                             jakarta.servlet*;version="[6,7)",
                             *
                         </Import-Package>
                         <Private-Package>
-                            org.apache.felix.utils.json
+                            org.apache.karaf.util.tracker;-split-package:=first,
                         </Private-Package>
                     </instructions>
                 </configuration>

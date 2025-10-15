@@ -53,6 +53,7 @@ public class Activator extends BaseActivator {
 
         Dictionary<String, String> props = new Hashtable<>();
         props.put("felix.webconsole.label", "http");
+        props.put("felix.webconsole.title", "Http");
         register(Servlet.class, httpPlugin, props);
     }
 

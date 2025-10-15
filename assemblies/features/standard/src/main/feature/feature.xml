@@ -998,7 +998,9 @@ role=admin
         <bundle start-level="30">mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.console/${karaf.webconsole.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.owasp.encoder/encoder/1.3.1</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.wrappers/1.1.8</bundle>
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.inventory/${felix.inventory.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.webconsole.plugins.memoryusage/${felix.memoryusage.webconsole.plugin.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.apache.felix/org.apache.felix.webconsole.plugins.memoryusage/${felix.memoryusage.webconsole.plugin.tesb.version}$overwrite=merge&amp;Import-Package=javax.management,org.osgi.framework;version="[1.8,2)",org.osgi.service.cm;resolution:=optional;version="[1.2,2)",org.osgi.service.metatype;resolution:=optional;version="[1.1,2)",jakarta.servlet;resolution:=optional;version="[5,7)",jakarta.servlet.http;resolution:=optional;version="[5,7)",org.apache.felix.webconsole.servlet;resolution:=mandatory;version="${felix.webconsole.range.tesb.version}",org.apache.felix.inventory;resolution:=optional;version="[1.0,2)",org.apache.felix.shell;resolution:=optional;version="[1.0,1.1)",*</bundle>
         <conditional>
             <condition>instance</condition>
             <bundle start-level="30">mvn:org.apache.karaf.webconsole/org.apache.karaf.webconsole.instance/${karaf.webconsole.tesb.version}</bundle>
@@ -1494,7 +1496,7 @@ org.apache.felix.eventadmin.AddSubject=true
         <conditional>
             <condition>webconsole</condition>
             <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.inventory/${felix.inventory.version}</bundle>
-            <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.webconsole.plugins.ds/${felix.scr.webconsole.plugin.tesb.version}</bundle>
+            <bundle start-level="30">wrap:mvn:org.apache.felix/org.apache.felix.webconsole.plugins.ds/${felix.scr.webconsole.plugin.tesb.version}$overwrite=merge&amp;Import-Package=org.osgi.service.cm;resolution:=optional;version="[1.6,2)",org.osgi.service.metatype;resolution:=optional;version="[1.2,2)",jakarta.servlet*;version="[5,7)",org.apache.felix.inventory;version="[1.0,2)",org.apache.felix.webconsole.*;version="${felix.webconsole.range.tesb.version}",org.osgi.framework;version="[1.8,2)",org.osgi.framework.dto;version="[1.8,2)",org.osgi.service.component.runtime;version="[1.4,2)",org.osgi.service.component.runtime.dto;version="[1.4,2)",org.osgi.util.promise;version="[1.0,2)",org.osgi.util.tracker;version="[1.5,2)",*</bundle>
         </conditional>
         <conditional>
             <condition>bundle</condition>

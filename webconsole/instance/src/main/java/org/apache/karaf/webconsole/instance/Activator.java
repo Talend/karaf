@@ -41,6 +41,7 @@ public class Activator extends BaseActivator {
 
         Dictionary<String, String> props = new Hashtable<>();
         props.put("felix.webconsole.label", "instance");
+        props.put("felix.webconsole.title", "Instance");
         register(Servlet.class, instancePlugin, props);
     }
 
