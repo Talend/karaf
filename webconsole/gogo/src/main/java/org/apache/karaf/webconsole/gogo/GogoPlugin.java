@@ -157,10 +157,8 @@ public class GogoPlugin extends AbstractServlet {
             if (supportsGzip) {
                 response.setHeader("Content-Encoding", "gzip");
                 response.setHeader("Content-Type", "text/html");
-                try {
-                    GZIPOutputStream gzos = new GZIPOutputStream(response.getOutputStream());
+                try ( GZIPOutputStream gzos = new GZIPOutputStream(response.getOutputStream())) {
                     gzos.write(dump.getBytes());
-                    gzos.close();
                 } catch (IOException ie) {
                     // handle the error here
                     ie.printStackTrace();
@@ -177,7 +175,7 @@ public class GogoPlugin extends AbstractServlet {
         private Terminal terminal;
         private PipedOutputStream in;
         private PipedInputStream out;
-        private boolean closed;
+        private volatile boolean closed;
 
         public SessionTerminal() throws IOException {
             try {
@@ -196,7 +194,7 @@ public class GogoPlugin extends AbstractServlet {
                         pipedOut,
                         new WebTerminal(TERM_WIDTH, TERM_HEIGHT, input, pipedOut),
                         null,
-                        null);
+                        () -> closed = true);
                 new Thread(session, "Karaf web console user " + getCurrentUserName()).start();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -242,9 +240,10 @@ public class GogoPlugin extends AbstractServlet {
             }
         }
 
+        @Override
         public void run() {
             try {
-                for (; ; ) {
+                while (!closed) {
                     byte[] buf = new byte[8192];
                     int l = out.read(buf);
                     InputStreamReader r = new InputStreamReader(new ByteArrayInputStream(buf, 0, l));
@@ -269,6 +268,13 @@ public class GogoPlugin extends AbstractServlet {
             } catch (IOException e) {
                 closed = true;
                 e.printStackTrace();
+            } finally {
+                try {
+                    in.close();
+                } catch (IOException ignored) {}
+                try {
+                    out.close();
+                } catch (IOException ignored) {}
             }
         }
 
