@@ -62,6 +62,10 @@ public class GogoPlugin extends AbstractServlet {
     public static final String LABEL = "Gogo";
     public static final int TERM_WIDTH = 120;
     public static final int TERM_HEIGHT = 39;
+    private static final int TIMEOUT_MS = 60000;
+
+    private long lastAccessTime = System.currentTimeMillis();
+
 
     private BundleContext bundleContext;
     private SessionFactory sessionFactory;
@@ -150,6 +154,7 @@ public class GogoPlugin extends AbstractServlet {
             st = new SessionTerminal();
             request.getSession().setAttribute("terminal", st);
         }
+        st.refreshLastAccess();
         String str = request.getParameter("k");
         String f = request.getParameter("f");
         String dump = st.handle(str, f != null && f.length() > 0);
@@ -188,7 +193,7 @@ public class GogoPlugin extends AbstractServlet {
                 OutputStream output = new PipedOutputStream(out);
                 PrintStream pipedOut = new PrintStream(output, true);
                 
-                Session session = sessionFactory.create(
+                final Session session = sessionFactory.create(
                         input,
                         pipedOut,
                         pipedOut,
@@ -196,6 +201,21 @@ public class GogoPlugin extends AbstractServlet {
                         null,
                         () -> closed = true);
                 new Thread(session, "Karaf web console user " + getCurrentUserName()).start();
+
+                new Thread(() -> {
+                    while (!closed) {
+                        if (System.currentTimeMillis() - lastAccessTime > TIMEOUT_MS) {
+                            closed = true;
+                            session.close();
+                            break;
+                        }
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException ignored) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                }, "SessionTerminal-Watchdog").start();
             } catch (IOException e) {
                 e.printStackTrace();
                 throw e;
@@ -203,7 +223,7 @@ public class GogoPlugin extends AbstractServlet {
                 e.printStackTrace();
                 throw new IOException(e);
             }
-            new Thread(this).start();
+            new Thread(this, "Session Terminal" ).start();
         }
         
         private String getCurrentUserName() {
@@ -218,6 +238,10 @@ public class GogoPlugin extends AbstractServlet {
 
         public boolean isClosed() {
             return closed;
+        }
+
+        public void refreshLastAccess() {
+            lastAccessTime = System.currentTimeMillis();
         }
 
         public String handle(String str, boolean forceDump) throws IOException {
