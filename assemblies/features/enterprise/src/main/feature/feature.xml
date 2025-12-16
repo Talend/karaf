@@ -139,8 +139,8 @@ com.atomikos.icatch.log_base_dir=${karaf.data}/atomikos
         <bundle>mvn:org.apache.geronimo.components/geronimo-connector/3.1.4</bundle>
     </feature>
 
-    <feature name="hibernate" description="Hibernate JPA engine support" version="${hibernate.version}">
-        <!-- hibernate-orm feature installs osgi.core and osgi.compendium bundle (it should not), causing huge refresh -->
+    <!-- <feature name="hibernate" description="Hibernate JPA engine support" version="${hibernate.version}">
+        --><!-- hibernate-orm feature installs osgi.core and osgi.compendium bundle (it should not), causing huge refresh --><!--
         <feature prerequisite="true">pax-url-wrap</feature>
         <feature>transaction-api</feature>
         <feature>aries-blueprint</feature>
@@ -166,7 +166,7 @@ com.atomikos.icatch.log_base_dir=${karaf.data}/atomikos
         <feature version="${hibernate.version}">hibernate</feature>
         <bundle>mvn:org.jboss/jandex/2.2.3.Final</bundle>
         <bundle>mvn:org.hibernate/hibernate-envers/${hibernate.version}</bundle>
-    </feature>
+    </feature> -->
 
     <feature name="eclipselink" description="Eclipselink JPA persistence engine support" version="${eclipselink.version}">
         <details>Eclipselink persistence engine.</details>
