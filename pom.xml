@@ -176,7 +176,7 @@
         <felix.scr.tesb.version>2.2.12</felix.scr.tesb.version>
         <geronimo.jms2-spec.tesb.version>1.0-alpha-2</geronimo.jms2-spec.tesb.version>
         <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
-        <pax.logging.tesb.version>2.3.0</pax.logging.tesb.version>
+        <pax.logging.tesb.version>2.3.1.tesb1</pax.logging.tesb.version>
         <pax.web.tesb.version>11.0.1</pax.web.tesb.version>
         <pax.url.tesb.version>2.6.17</pax.url.tesb.version>
         <pax.url.aether.tesb.version>2.6.17.tesb1</pax.url.aether.tesb.version>
