@@ -563,6 +563,7 @@
                             <pax.logging.tesb.version>${pax.logging.tesb.version}</pax.logging.tesb.version>
                             <pax.web.tesb.version>${pax.web.tesb.version}</pax.web.tesb.version>
                             <pax.url.tesb.version>${pax.url.tesb.version}</pax.url.tesb.version>
+                            <pax.url.aether.tesb.version>${pax.url.aether.tesb.version}</pax.url.aether.tesb.version>
                             <!-- <pax.jms.tesb.version>${pax.jms.tesb.version}</pax.jms.tesb.version> -->
                             <!-- <pax.jdbc.tesb.version>${pax.jdbc.tesb.version}</pax.jdbc.tesb.version> -->
                             <!-- <pax.transx.tesb.version>${pax.transx.tesb.version}</pax.transx.tesb.version> -->
