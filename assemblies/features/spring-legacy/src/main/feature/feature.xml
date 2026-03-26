@@ -626,7 +626,7 @@
         <feature version="[5.2,6)">spring-web</feature>
         <bundle dependency="true">mvn:javax.annotation/javax.annotation-api/${javax.annotation.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson-annotations.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-core/${spring.security57.tesb.version}$Bundle-SymbolicName=spring-security-core&amp;Bundle-Version=${spring.security57.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.security57.tesb.version}</bundle>
@@ -644,7 +644,7 @@
         <feature version="[5.2,6)">spring-web</feature>
         <bundle dependency="true">mvn:javax.annotation/javax.annotation-api/${javax.annotation.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
-        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson-annotations.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-core/${spring.security58.tesb.version}$Bundle-SymbolicName=spring-security-core&amp;Bundle-Version=${spring.security58.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.security58.tesb.version}</bundle>
