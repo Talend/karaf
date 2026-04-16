@@ -111,7 +111,7 @@
 
     <!-- Spring Security -->
 
-    <feature name="spring-security" description="Spring Security 6.2.x support" version="${spring.security62.tesb.version}">
+    <feature name="spring-security" description="Spring Security 6.3.x support" version="${spring.security63.tesb.version}">
         <feature>pax-web-jsp</feature>
         <feature>pax-web-war</feature>
         <feature version="[6.1,6.2)">spring-jdbc</feature>
@@ -119,7 +119,7 @@
         <feature version="[6.2,6.3)">spring-web</feature>
         <bundle dependency="true">mvn:jakarta.annotation/jakarta.annotation-api/${javax.annotation.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}.spiprov</bundle>
-        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson-annotations.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}.spiprov</bundle>
         <bundle dependency="true">mvn:io.micrometer/micrometer-commons/1.13.11</bundle>
         <bundle dependency="true">mvn:io.micrometer/micrometer-observation/1.13.11</bundle>
@@ -129,11 +129,11 @@
         <bundle dependency="true">mvn:jakarta.el/jakarta.el-api/6.0.1</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
         <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-core/${spring.security62.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-config/${spring.security62.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-web/${spring.security62.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-acl/${spring.security62.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-taglibs/${spring.security62.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-core/${spring.security63.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-config/${spring.security63.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-web/${spring.security63.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-acl/${spring.security63.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-taglibs/${spring.security63.tesb.version}</bundle>
     </feature>
 
     <!-- Aries Blueprint Spring support -->
