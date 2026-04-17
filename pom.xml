@@ -211,7 +211,7 @@
         <sshd.tesb.version>2.13.2</sshd.tesb.version>
         <groovy.tesb.version>3.0.8</groovy.tesb.version>
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
-        <cbp.tesb.version>1.1.0</cbp.tesb.version>
+        <cbp.tesb.version>1.0.10</cbp.tesb.version>
         <cbpagent.tesb.version>1.0.2</cbpagent.tesb.version>
         <commons-codec.tesb.version>1.20.0</commons-codec.tesb.version>
         <commons-fileupload.tesb.version>1.6.0</commons-fileupload.tesb.version>
