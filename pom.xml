@@ -152,11 +152,11 @@
     <properties>
         <upstream.version>4.4.6</upstream.version>
         <base.features.tesb.version>4.4.6.20250420</base.features.tesb.version>
-        <specs.features.tesb.version>4.4.6.20260323</specs.features.tesb.version>
-        <framework.features.tesb.version>4.4.6.20260323</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.6.20260323</standard.features.tesb.version>
+        <specs.features.tesb.version>4.4.6.20260512</specs.features.tesb.version>
+        <framework.features.tesb.version>4.4.6.20260512</framework.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20260512</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.6.20260323</enterprise.features.tesb.version>
-        <spring.features.tesb.version>4.4.6.20260323</spring.features.tesb.version>
+        <spring.features.tesb.version>4.4.6.20260512</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20260323</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.6.20250320</karaf.client.tesb.version>
@@ -176,7 +176,7 @@
         <felix.scr.tesb.version>2.2.12</felix.scr.tesb.version>
         <geronimo.jms2-spec.tesb.version>1.0-alpha-2</geronimo.jms2-spec.tesb.version>
         <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
-        <pax.logging.tesb.version>2.3.1.tesb1</pax.logging.tesb.version>
+        <pax.logging.tesb.version>2.3.1.tesb2</pax.logging.tesb.version>
         <pax.web.tesb.version>11.0.1</pax.web.tesb.version>
         <pax.url.tesb.version>2.6.17</pax.url.tesb.version>
         <pax.url.aether.tesb.version>2.6.17.tesb2</pax.url.aether.tesb.version>
@@ -185,15 +185,15 @@
         <!-- <pax.transx.tesb.version>0.5.4</pax.transx.tesb.version> -->
         <jetty9.tesb.version>9.4.56.v20240826</jetty9.tesb.version>
         <jetty.tesb.version>12.0.33</jetty.tesb.version>
-        <spec.mail.tesb.version>1.6.7</spec.mail.tesb.version>
+        <spec.mail.tesb.version>1.6.8</spec.mail.tesb.version>
         <asm.tesb.version>9.8</asm.tesb.version>
         <aspectj.bundle.tesb.version>1.9.21.1_1</aspectj.bundle.tesb.version>
-        <bouncycastle.tesb.version>1.81</bouncycastle.tesb.version>
+        <bouncycastle.tesb.version>1.84</bouncycastle.tesb.version>
         <spring53.tesb.version>5.3.39</spring53.tesb.version>
         <spring61.tesb.version>6.1.21_1</spring61.tesb.version>
         <spring62.tesb.version>6.2.8_1</spring62.tesb.version>
         <springbundle61.tesb.version>6.1.21</springbundle61.tesb.version>
-        <springbundle62.tesb.version>6.2.17</springbundle62.tesb.version>
+        <springbundle62.tesb.version>6.2.18</springbundle62.tesb.version>
         <springmessaging53.tesb.version>${spring53.tesb.version}</springmessaging53.tesb.version>
         <spring.security57.tesb.version>5.7.14</spring.security57.tesb.version>
         <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
