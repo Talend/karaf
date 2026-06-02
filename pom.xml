@@ -197,6 +197,7 @@
         <spring.security58.tesb.version>5.8.16</spring.security58.tesb.version>
         <spring.security62.tesb.version>6.2.7_1</spring.security62.tesb.version>
         <spring.security63.tesb.version>6.3.9_2</spring.security63.tesb.version>
+        <micrometer.tesb.version>1.15.10</micrometer.tesb.version>
         <jackson.tesb.version>2.21.2</jackson.tesb.version>
         <jackson-annotations.tesb.version>2.21</jackson-annotations.tesb.version>
         <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
@@ -583,6 +584,7 @@
                             <spring.security58.tesb.version>${spring.security58.tesb.version}</spring.security58.tesb.version>
                             <spring.security62.tesb.version>${spring.security62.tesb.version}</spring.security62.tesb.version>
                             <spring.security63.tesb.version>${spring.security63.tesb.version}</spring.security63.tesb.version>
+                            <micrometer.tesb.version>${micrometer.tesb.version}</micrometer.tesb.version>
                             <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
                             <jackson-annotations.tesb.version>${jackson-annotations.tesb.version}</jackson-annotations.tesb.version>
                             <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
