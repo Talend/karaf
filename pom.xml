@@ -215,7 +215,7 @@
         <cbpagent.tesb.version>1.0.2</cbpagent.tesb.version>
         <commons-codec.tesb.version>1.20.0</commons-codec.tesb.version>
         <commons-fileupload.tesb.version>1.6.0</commons-fileupload.tesb.version>
-        <commons-io.tesb.version>2.21.0</commons-io.tesb.version>
+        <commons-io.tesb.version>2.22.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.13.1</commons-pool2.tesb.version>
         <commons-lang3.tesb.version>3.19.0</commons-lang3.tesb.version>
         <xbean.tesb.version>4.30</xbean.tesb.version>
