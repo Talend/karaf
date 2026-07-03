@@ -396,9 +396,9 @@ disableEofExit = false
         </conditional>
     </feature>
 
-    <feature name="jline" version="${jline.version}" hidden="true">
+    <feature name="jline" version="${jline.tesb.version}" hidden="true">
         <bundle dependency="true" start-level="30">mvn:org.fusesource.jansi/jansi/${jansi.version}</bundle>
-        <bundle start-level="30">mvn:org.jline/jline/${jline.version}</bundle>
+        <bundle start-level="30">mvn:org.jline/jline/${jline.tesb.version}</bundle>
     </feature>
 
     <feature name="shell-compat" description="Karaf Shell Compatibility" version="${upstream.version}">
