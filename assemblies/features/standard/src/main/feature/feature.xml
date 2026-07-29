@@ -966,6 +966,7 @@ uninstall = admin
     </feature>
 
     <feature name="webconsole" description="Base support of the Karaf WebConsole" version="${upstream.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature>jaas-boot</feature>
         <config name="org.apache.karaf.webconsole">
 ################################################################################
@@ -1477,10 +1478,13 @@ org.apache.felix.eventadmin.AddSubject=true
     </feature>
 
     <feature name="spring-security-crypto-encryption" description="Advanced encryption support for Karaf security" version="${upstream.version}">
+        <feature prerequisite="true">wrap</feature>
         <feature>jaas</feature>
         <bundle dependency="true" start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
-        <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-crypto/${spring.security63.tesb.version}</bundle>
-        <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-core/${spring61.tesb.version}</bundle>
+        <bundle dependency="true" start-level="30">wrap:mvn:org.springframework.security/spring-security-crypto/${spring.security65.tesb.version}$Bundle-SymbolicName=spring-security-crypto&amp;Bundle-Version=${spring.security65.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.security65.tesb.version}</bundle>
+        <bundle dependency="true" start-level="30">wrap:mvn:org.springframework/spring-core/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-core&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}</bundle>
+        <!-- <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-crypto/${spring.security63.tesb.version}</bundle> -->
+        <!-- <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-core/${spring61.tesb.version}</bundle> -->
         <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.spring-security-crypto/${karaf.jaas.spring-security-crypto.tesb.version}</bundle>
     </feature>
 
