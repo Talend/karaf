@@ -215,7 +215,7 @@
         <httpclient.tesb.version>4.5.14</httpclient.tesb.version>
         <cbp.tesb.version>1.0.10</cbp.tesb.version>
         <cbpagent.tesb.version>1.0.2</cbpagent.tesb.version>
-        <commons-codec.tesb.version>1.22.0</commons-codec.tesb.version>
+        <commons-codec.tesb.version>1.22.1</commons-codec.tesb.version>
         <commons-fileupload.tesb.version>1.6.0</commons-fileupload.tesb.version>
         <commons-io.tesb.version>2.22.0</commons-io.tesb.version>
         <commons-pool2.tesb.version>2.13.1</commons-pool2.tesb.version>
@@ -226,6 +226,7 @@
         <servlet.spec.tesb.version>6.1.0</servlet.spec.tesb.version>
         <jolokia.tesb.version>2.2.8</jolokia.tesb.version>
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
+        <micrometer.tesb.version>1.15.12</micrometer.tesb.version>
 
         <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
 
@@ -610,6 +611,7 @@
                             <commons-lang3.tesb.version>${commons-lang3.tesb.version}</commons-lang3.tesb.version>
                             <xbean.tesb.version>${xbean.tesb.version}</xbean.tesb.version>
                             <nimbus-jose-jwt.tesb.version>${nimbus-jose-jwt.tesb.version}</nimbus-jose-jwt.tesb.version>
+                            <micrometer.tesb.version>${micrometer.tesb.version}</micrometer.tesb.version>
                         </properties>
                     </configuration>
                     <executions>
