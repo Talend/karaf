@@ -212,7 +212,7 @@
         <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/6.1.0</bundle>
         <bundle dependency="true">mvn:jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.1</bundle>
         <bundle dependency="true">mvn:jakarta.el/jakarta.el-api/6.0.1</bundle>
-        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-core/${spring.security63.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-security-config/${spring.security63.tesb.version}</bundle>
@@ -239,7 +239,7 @@
         <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/6.1.0</bundle>
         <bundle dependency="true">mvn:jakarta.servlet.jsp/jakarta.servlet.jsp-api/3.1.1</bundle>
         <bundle dependency="true">mvn:jakarta.el/jakarta.el-api/6.0.1</bundle>
-        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.version}</bundle>
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/${aspectj.bundle.tesb.version}</bundle>
         <bundle dependency="true">mvn:com.nimbusds/nimbus-jose-jwt/${nimbus-jose-jwt.tesb.version}</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-core/${spring.security65.tesb.version}$Bundle-SymbolicName=spring-security-core&amp;Bundle-Version=${spring.security65.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.security65.tesb.version}&amp;SPI-Provider=*</bundle>
         <bundle start-level="30">wrap:mvn:org.springframework.security/spring-security-config/${spring.security65.tesb.version}$Bundle-SymbolicName=spring-security-config&amp;Bundle-Version=${spring.security65.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring.security65.tesb.version}</bundle>
