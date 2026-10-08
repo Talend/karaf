@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: ConfigAdmin :: Command</name>
     <description>This bundle provides Karaf Config shell commands</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.config.command.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

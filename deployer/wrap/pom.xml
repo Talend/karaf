@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Deployer :: Wrap Non OSGi Jar</name>
     <description>This deployer transforms non OSGi jar files to a deployable bundle.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.deployer.wrap.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

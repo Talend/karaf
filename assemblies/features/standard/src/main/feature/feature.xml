@@ -388,8 +388,8 @@ disableEofExit = false
 
         </config>
         <feature>jline</feature>
-        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.core/${upstream.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.commands/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.core/${karaf.shell.core.tesb.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.commands/${karaf.shell.commands.tesb.version}</bundle>
         <conditional>
             <condition>groovy</condition>
             <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.groovy/${upstream.version}</bundle>
@@ -409,14 +409,14 @@ disableEofExit = false
     </feature>
 
     <feature name="deployer" description="Karaf Deployer" version="${upstream.version}">
-        <bundle start-level="26">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.features/${upstream.version}</bundle>
+        <bundle start-level="26">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.features/${karaf.deployer.features.tesb.version}</bundle>
         <conditional>
             <condition>pax-url-wrap</condition>
-            <bundle start-level="24">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.wrap/${upstream.version}</bundle>
+            <bundle start-level="24">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.wrap/${karaf.deployer.wrap.tesb.version}</bundle>
         </conditional>
         <conditional>
             <condition>req:osgi.extender;filter:="(&amp;(osgi.extender=osgi.blueprint)(version>=1.0))"</condition>
-            <bundle start-level="24">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.blueprint/${upstream.version}</bundle>
+            <bundle start-level="24">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.blueprint/${karaf.deployer.blueprint.tesb.version}</bundle>
         </conditional>
         <conditional>
             <condition>kar</condition>
@@ -440,7 +440,7 @@ disableEofExit = false
 
     <feature name="bundle" description="Provide Bundle support" version="${upstream.version}">
         <feature>jaas-boot</feature>
-        <bundle start-level="30">mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.core/${karaf.bundle.core.tesb.version}</bundle>
         <conditional>
             <condition>management</condition>
             <config name="jmx.acl.org.apache.karaf.bundle">
@@ -641,19 +641,19 @@ property-set[/.*org[.]apache[.]karaf[.]command[.]acl[.].+/] = admin
 property-set[/.*org[.]apache[.]karaf[.]service[.]acl[.].+/] = admin
 update = manager
             </config>
-            <bundle start-level="30">mvn:org.apache.karaf.config/org.apache.karaf.config.command/${upstream.version}</bundle>
+            <bundle start-level="30">mvn:org.apache.karaf.config/org.apache.karaf.config.command/${karaf.config.command.tesb.version}</bundle>
         </conditional>
     </feature>
 
     <feature name="diagnostic" description="Provide Diagnostic support" version="${upstream.version}">
-        <bundle start-level="30">mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.core/${karaf.diagnostic.core.tesb.version}</bundle>
         <library export="true" type="boot">
             mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.boot/${upstream.version}
         </library>
     </feature>
 
     <feature name="instance" description="Provide Instance support" version="${upstream.version}">
-        <bundle start-level="30">mvn:org.apache.karaf.instance/org.apache.karaf.instance.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.instance/org.apache.karaf.instance.core/${karaf.instance.core.tesb.version}</bundle>
     </feature>
 
     <feature name="jaas-deployer" description="Allow support of blueprint JAAS configuration in the deploy folder" version="${upstream.version}">
@@ -727,7 +727,7 @@ encryption.encoding = hexadecimal
         </config>
         <feature>jaas-boot</feature>
         <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.config/${upstream.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/${karaf.jaas.modules.tesb.version}</bundle>
         <conditional>
             <condition>shell</condition>
             <config name="org.apache.karaf.command.acl.jaas">
@@ -930,7 +930,7 @@ org.osgi.service.http.port=8181
     </feature> -->
 
     <feature name="kar" description="Provide KAR (KARaf archive) support" version="${upstream.version}">
-        <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${karaf.kar.core.tesb.version}</bundle>
         <conditional>
             <condition>shell</condition>
             <config name="org.apache.karaf.command.acl.kar">
@@ -1026,7 +1026,7 @@ role=admin
         <bundle start-level="30">mvn:org.bouncycastle/bcutil-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.bouncycastle/bcprov-jdk18on/${bouncycastle.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.bouncycastle/bcpkix-jdk18on/${bouncycastle.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/${karaf.shell.ssh.tesb.version}</bundle>
     </feature>
 
     <feature name="management" description="Provide a JMX MBeanServer and a set of MBeans in Karaf" version="${upstream.version}">
@@ -1555,7 +1555,7 @@ org.apache.felix.eventadmin.AddSubject=true
 
 profilesDirectory = ${karaf.home}/profiles
         </config>
-        <bundle>mvn:org.apache.karaf.profile/org.apache.karaf.profile.core/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.karaf.profile/org.apache.karaf.profile.core/${karaf.profile.core.tesb.version}</bundle>
         <bundle>mvn:org.apache.karaf.tooling/org.apache.karaf.tools.utils/${upstream.version}</bundle>
         <bundle>mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle>
     </feature>

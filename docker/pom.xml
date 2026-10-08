@@ -32,8 +32,10 @@
     <artifactId>org.apache.karaf.docker.core</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Docker :: Core</name>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.docker.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

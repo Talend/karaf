@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: JDBC :: Core</name>
     <description>This bundle provides core implementation of the JDBC service.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.jdbc.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

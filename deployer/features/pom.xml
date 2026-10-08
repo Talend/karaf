@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Deployer :: Features</name>
     <description>This deployer can deploy features descriptor on the fly</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.deployer.features.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
