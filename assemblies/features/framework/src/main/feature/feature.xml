@@ -51,7 +51,7 @@
         <bundle dependency="true" start-level="11" start="false">mvn:org.ops4j.pax.web/pax-web-fragment-jsonp-javax-glassfish/${pax.web.tesb.version}</bundle>
         <bundle start-level="11">mvn:org.apache.johnzon/johnzon-core/${johnzon.core.tesb.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.configurator/${felix.configurator.version}</bundle>
-        <bundle start-level="11">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${upstream.version}</bundle>
+        <bundle start-level="11">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${karaf.config.core.tesb.version}</bundle>
         <!-- file install -->
         <bundle start-level="12">mvn:org.apache.felix/org.apache.felix.fileinstall/${felix.fileinstall.version}</bundle>
         <!-- features service -->
@@ -87,7 +87,7 @@
         <bundle dependency="true" start-level="11" start="false">mvn:org.ops4j.pax.web/pax-web-fragment-jsonp-javax-glassfish/${pax.web.tesb.version}</bundle>
         <bundle start-level="11">mvn:org.apache.johnzon/johnzon-core/${johnzon.core.tesb.version}</bundle>
         <bundle start-level="11">mvn:org.apache.felix/org.apache.felix.configurator/${felix.configurator.version}</bundle>
-        <bundle start-level="11">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${upstream.version}</bundle>
+        <bundle start-level="11">mvn:org.apache.karaf.config/org.apache.karaf.config.core/${karaf.config.core.tesb.version}</bundle>
         <!-- file install -->
         <bundle start-level="12">mvn:org.apache.felix/org.apache.felix.fileinstall/${felix.fileinstall.version}</bundle>
         <!-- features service -->

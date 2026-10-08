@@ -33,8 +33,10 @@
     <name>Apache Karaf :: Deployer :: Blueprint</name>
 
     <description>This deployer transforms a plain blueprint xml file to a deployable bundle</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.deployer.blueprint.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

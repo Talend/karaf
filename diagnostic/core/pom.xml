@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Diagnostic :: Core</name>
     <description>Core implementation using Karaf diagnostic using the diagnostic common services</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.diagnostic.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

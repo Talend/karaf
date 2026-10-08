@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: KAR :: Core</name>
     <description>This bundle provides core implementation of the KAR management service.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.kar.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

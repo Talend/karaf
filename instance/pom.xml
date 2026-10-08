@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Instance :: Core</name>
     <description>Core implementation of the instance feature to manipulate Karaf child instances.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.instance.core.tesb.version}</revision>
         <appendedResourcesDirectory>${project.basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: JMS :: Core</name>
     <description>This bundle provides core implementation of the JMS service.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.jms.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

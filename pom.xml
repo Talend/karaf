@@ -153,14 +153,31 @@
         <upstream.version>4.4.6</upstream.version>
         <base.features.tesb.version>4.4.6.20250420</base.features.tesb.version>
         <specs.features.tesb.version>4.4.6.20260909</specs.features.tesb.version>
-        <framework.features.tesb.version>4.4.6.20260909</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.6.20260909</standard.features.tesb.version>
-        <enterprise.features.tesb.version>4.4.6.20260801</enterprise.features.tesb.version>
+        <framework.features.tesb.version>4.4.6.20261007</framework.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20261007</standard.features.tesb.version>
+        <enterprise.features.tesb.version>4.4.6.20261007</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.6.20260909</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20260801</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.6.20250320</karaf.client.tesb.version>
-        <karaf.features.core.tesb.version>${upstream.version}</karaf.features.core.tesb.version>
+        <karaf.features.core.tesb.version>4.4.6.20261007</karaf.features.core.tesb.version>
+        <karaf.bundle.core.tesb.version>4.4.6.20261007</karaf.bundle.core.tesb.version>
+        <karaf.config.command.tesb.version>4.4.6.20261007</karaf.config.command.tesb.version>
+        <karaf.config.core.tesb.version>4.4.6.20261007</karaf.config.core.tesb.version>
+        <karaf.deployer.blueprint.tesb.version>4.4.6.20261007</karaf.deployer.blueprint.tesb.version>
+        <karaf.deployer.features.tesb.version>4.4.6.20261007</karaf.deployer.features.tesb.version>
+        <karaf.deployer.wrap.tesb.version>4.4.6.20261007</karaf.deployer.wrap.tesb.version>
+        <karaf.diagnostic.core.tesb.version>4.4.6.20261007</karaf.diagnostic.core.tesb.version>
+        <karaf.docker.core.tesb.version>4.4.6.20261007</karaf.docker.core.tesb.version>
+        <karaf.instance.core.tesb.version>4.4.6.20261007</karaf.instance.core.tesb.version>
+        <karaf.jaas.modules.tesb.version>4.4.6.20261007</karaf.jaas.modules.tesb.version>
+        <karaf.jdbc.core.tesb.version>4.4.6.20261007</karaf.jdbc.core.tesb.version>
+        <karaf.jms.core.tesb.version>4.4.6.20261007</karaf.jms.core.tesb.version>
+        <karaf.kar.core.tesb.version>4.4.6.20261007</karaf.kar.core.tesb.version>
+        <karaf.profile.core.tesb.version>4.4.6.20261007</karaf.profile.core.tesb.version>
+        <karaf.shell.commands.tesb.version>4.4.6.20261007</karaf.shell.commands.tesb.version>
+        <karaf.shell.core.tesb.version>4.4.6.20261007</karaf.shell.core.tesb.version>
+        <karaf.shell.ssh.tesb.version>4.4.6.20261007</karaf.shell.ssh.tesb.version>
         <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
         <karaf.jaas.spring-security-crypto.tesb.version>4.4.6.20240820</karaf.jaas.spring-security-crypto.tesb.version>
         <karaf.wrapper.tesb.version>4.4.6.20260601</karaf.wrapper.tesb.version>
@@ -549,14 +566,31 @@
                             -->
                             <base.features.tesb.version>${base.features.tesb.version}</base.features.tesb.version>
                             <specs.features.tesb.version>${specs.features.tesb.version}</specs.features.tesb.version>
-                            <framework.features.tesb.version>${framework.features.tesb.version}</framework.features.tesb.version>
-                            <standard.features.tesb.version>${standard.features.tesb.version}</standard.features.tesb.version>
-                            <enterprise.features.tesb.version>${enterprise.features.tesb.version}</enterprise.features.tesb.version>
+                            <framework.features.tesb.version>4.4.6.20261007</framework.features.tesb.version>
+                            <standard.features.tesb.version>4.4.6.20261007</standard.features.tesb.version>
+                            <enterprise.features.tesb.version>4.4.6.20261007</enterprise.features.tesb.version>
                             <spring.features.tesb.version>${spring.features.tesb.version}</spring.features.tesb.version>
                             <spring-legacy.features.tesb.version>${spring-legacy.features.tesb.version}</spring-legacy.features.tesb.version>
                             <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
                             <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version>
                             <karaf.features.core.tesb.version>${karaf.features.core.tesb.version}</karaf.features.core.tesb.version>
+                            <karaf.bundle.core.tesb.version>${karaf.bundle.core.tesb.version}</karaf.bundle.core.tesb.version>
+                            <karaf.config.command.tesb.version>${karaf.config.command.tesb.version}</karaf.config.command.tesb.version>
+                            <karaf.config.core.tesb.version>${karaf.config.core.tesb.version}</karaf.config.core.tesb.version>
+                            <karaf.deployer.blueprint.tesb.version>${karaf.deployer.blueprint.tesb.version}</karaf.deployer.blueprint.tesb.version>
+                            <karaf.deployer.features.tesb.version>${karaf.deployer.features.tesb.version}</karaf.deployer.features.tesb.version>
+                            <karaf.deployer.wrap.tesb.version>${karaf.deployer.wrap.tesb.version}</karaf.deployer.wrap.tesb.version>
+                            <karaf.diagnostic.core.tesb.version>${karaf.diagnostic.core.tesb.version}</karaf.diagnostic.core.tesb.version>
+                            <karaf.docker.core.tesb.version>${karaf.docker.core.tesb.version}</karaf.docker.core.tesb.version>
+                            <karaf.instance.core.tesb.version>${karaf.instance.core.tesb.version}</karaf.instance.core.tesb.version>
+                            <karaf.jaas.modules.tesb.version>${karaf.jaas.modules.tesb.version}</karaf.jaas.modules.tesb.version>
+                            <karaf.jdbc.core.tesb.version>${karaf.jdbc.core.tesb.version}</karaf.jdbc.core.tesb.version>
+                            <karaf.jms.core.tesb.version>${karaf.jms.core.tesb.version}</karaf.jms.core.tesb.version>
+                            <karaf.kar.core.tesb.version>${karaf.kar.core.tesb.version}</karaf.kar.core.tesb.version>
+                            <karaf.profile.core.tesb.version>${karaf.profile.core.tesb.version}</karaf.profile.core.tesb.version>
+                            <karaf.shell.commands.tesb.version>${karaf.shell.commands.tesb.version}</karaf.shell.commands.tesb.version>
+                            <karaf.shell.core.tesb.version>${karaf.shell.core.tesb.version}</karaf.shell.core.tesb.version>
+                            <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version>
                             <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
                             <karaf.jaas.spring-security-crypto.tesb.version>${karaf.jaas.spring-security-crypto.tesb.version}</karaf.jaas.spring-security-crypto.tesb.version>
                             <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>

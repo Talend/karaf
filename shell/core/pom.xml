@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Shell :: Core</name>
     <description>This bundle provides OSGi shell integration and console support.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.shell.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

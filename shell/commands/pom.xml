@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Shell :: Various Commands</name>
     <description>This bundles provides basic Karaf shell commands.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.shell.commands.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
