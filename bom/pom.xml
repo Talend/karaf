@@ -144,7 +144,7 @@
             <dependency>
                 <groupId>org.apache.karaf</groupId>
                 <artifactId>org.apache.karaf.util</artifactId>
-                <version>${upstream.version}</version>
+                <version>${karaf.util.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.karaf</groupId>

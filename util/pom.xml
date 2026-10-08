@@ -32,6 +32,7 @@
     <packaging>jar</packaging>
     <name>Apache Karaf :: Util</name>
     <description>Karaf Util contains utility classes used in different Karaf modules.</description>
+    <version>${revision}</version>
 
     <dependencyManagement>
         <dependencies>
@@ -77,6 +78,7 @@
     </dependencies>
     
     <properties>
+        <revision>${karaf.util.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

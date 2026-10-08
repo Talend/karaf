@@ -161,6 +161,7 @@
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.6.20250320</karaf.client.tesb.version>
         <karaf.features.core.tesb.version>4.4.6.20261007</karaf.features.core.tesb.version>
+        <karaf.util.tesb.version>4.4.6.20261007</karaf.util.tesb.version>
         <karaf.bundle.core.tesb.version>4.4.6.20261007</karaf.bundle.core.tesb.version>
         <karaf.config.command.tesb.version>4.4.6.20261007</karaf.config.command.tesb.version>
         <karaf.config.core.tesb.version>4.4.6.20261007</karaf.config.core.tesb.version>
@@ -574,6 +575,7 @@
                             <karaf.main.tesb.version>${karaf.main.tesb.version}</karaf.main.tesb.version>
                             <karaf.client.tesb.version>${karaf.client.tesb.version}</karaf.client.tesb.version>
                             <karaf.features.core.tesb.version>${karaf.features.core.tesb.version}</karaf.features.core.tesb.version>
+                            <karaf.util.tesb.version>${karaf.util.tesb.version}</karaf.util.tesb.version>
                             <karaf.bundle.core.tesb.version>${karaf.bundle.core.tesb.version}</karaf.bundle.core.tesb.version>
                             <karaf.config.command.tesb.version>${karaf.config.command.tesb.version}</karaf.config.command.tesb.version>
                             <karaf.config.core.tesb.version>${karaf.config.core.tesb.version}</karaf.config.core.tesb.version>
