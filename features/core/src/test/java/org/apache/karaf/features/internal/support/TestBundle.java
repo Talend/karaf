@@ -36,14 +36,20 @@ import org.osgi.framework.wiring.BundleCapability;
 import org.osgi.framework.wiring.BundleRequirement;
 import org.osgi.framework.wiring.BundleRevision;
 import org.osgi.framework.wiring.BundleWiring;
+import org.osgi.resource.Capability;
+import org.osgi.resource.Requirement;
+import org.osgi.resource.Resource;
 
 import static org.apache.karaf.features.internal.resolver.ResourceUtils.getUri;
 
-public class TestBundle extends ResourceImpl implements BundleRevision, Bundle, BundleStartLevel {
+public class TestBundle implements Bundle, BundleRevision, BundleStartLevel, Resource {
 
     private final long bundleId;
     private final String location;
     private final Hashtable<String, String> headers = new Hashtable<>();
+
+    private ResourceImpl resourceImpl;
+
     public int state;
 
     public TestBundle(long bundleId, String location, int state, Hashtable<String, String> headers) throws BundleException {
@@ -56,9 +62,8 @@ public class TestBundle extends ResourceImpl implements BundleRevision, Bundle, 
     public void update(Hashtable<String, String> headers) throws BundleException {
         this.headers.clear();
         this.headers.putAll(headers);
-        this.caps.clear();
-        this.reqs.clear();
-        ResourceBuilder.build(this, location, headers);
+        this.resourceImpl = new ResourceImpl();
+        ResourceBuilder.build(resourceImpl, location, headers);
     }
 
     @Override
@@ -260,4 +265,19 @@ public class TestBundle extends ResourceImpl implements BundleRevision, Bundle, 
     public boolean isActivationPolicyUsed() {
         return false;
     }
+
+    ////////////////////////////////////////////////
+    // Resource interface methods
+    ////////////////////////////////////////////////
+
+    @Override
+    public List<Capability> getCapabilities(String namespace) {
+        return resourceImpl.getCapabilities(namespace);
+    }
+
+    @Override
+    public List<Requirement> getRequirements(String namespace) {
+        return resourceImpl.getRequirements(namespace);
+    }
+
 }
