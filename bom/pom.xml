@@ -244,7 +244,7 @@
             <dependency>
                 <groupId>org.apache.karaf.config</groupId>
                 <artifactId>org.apache.karaf.config.core</artifactId>
-                <version>${karaf.bom.tesb.version}</version>
+                <version>${karaf.config.core.tesb.version}</version>
             </dependency>
 
             <dependency>
@@ -372,7 +372,7 @@
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.core</artifactId>
-                <version>${karaf.bom.tesb.version}</version>
+                <version>${karaf.shell.core.tesb.version}</version>
             </dependency>
 
             <dependency>
