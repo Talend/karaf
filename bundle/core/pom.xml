@@ -85,6 +85,7 @@
             <groupId>org.apache.karaf</groupId>
             <artifactId>org.apache.karaf.util</artifactId>
             <scope>provided</scope>
+            <version>${karaf.util.tesb.version}</version>
         </dependency>
 
         <dependency>
