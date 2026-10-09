@@ -44,7 +44,7 @@
             <dependency>
                 <groupId>org.apache.karaf</groupId>
                 <artifactId>karaf-bom</artifactId>
-                <version>${upstream.version}</version>
+                <version>4.4.6</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -52,12 +52,6 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.karaf</groupId>
-            <artifactId>org.apache.karaf.util</artifactId>
-            <version>${karaf.util.tesb.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.apache.karaf.shell</groupId>
             <artifactId>org.apache.karaf.shell.core</artifactId>
@@ -121,6 +115,12 @@
         <dependency>
             <groupId>org.apache.karaf.jaas</groupId>
             <artifactId>org.apache.karaf.jaas.modules</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.karaf</groupId>
+            <artifactId>org.apache.karaf.util</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
