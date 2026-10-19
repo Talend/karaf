@@ -33,6 +33,11 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Maven :: Core</name>
     <description>This bundle provides services and commands for Maven diagnostics.</description>
+    <version>${revision}</version>
+
+    <properties>
+        <revision>${karaf.maven.core.tesb.version}</revision>
+    </properties>
 
     <dependencyManagement>
         <dependencies>

@@ -404,7 +404,7 @@ disableEofExit = false
     <feature name="shell-compat" description="Karaf Shell Compatibility" version="${upstream.version}">
         <feature>aries-blueprint</feature>
         <feature>shell</feature>
-        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.console/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.console/${karaf.shell.console.tesb.version}</bundle>
         <bundle start-level="30">mvn:org.apache.karaf.shell/org.apache.karaf.shell.table/${upstream.version}</bundle>
     </feature>
 
@@ -808,7 +808,7 @@ pattern = "\u001b[90m%d{HH:mm:ss.SSS}\u001b[0m %h{%p}{FATAL=${color.fatal}, ERRO
     </feature>
 
     <feature name="package" version="${upstream.version}" description="Package commands and mbeans">
-        <bundle start-level="30">mvn:org.apache.karaf.package/org.apache.karaf.package.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.package/org.apache.karaf.package.core/${karaf.package.core.tesb.version}</bundle>
     </feature>
 
     <feature name="service" description="Provide Service support" version="${upstream.version}">
@@ -816,7 +816,7 @@ pattern = "\u001b[90m%d{HH:mm:ss.SSS}\u001b[0m %h{%p}{FATAL=${color.fatal}, ERRO
     </feature>
 
     <feature name="system" description="Provide System support" version="${upstream.version}">
-        <bundle start-level="30">mvn:org.apache.karaf.system/org.apache.karaf.system.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.system/org.apache.karaf.system.core/${karaf.system.core.tesb.version}</bundle>
         <conditional>
             <condition>shell</condition>
             <config name="org.apache.karaf.command.acl.system">
@@ -1591,7 +1591,7 @@ org.jolokia.authMode=jaas
 
     <feature name="maven" description="Commands for Maven configuration of services from pax-url-aether" version="${upstream.version}">
         <feature>shell</feature>
-        <bundle start-level="30">mvn:org.apache.karaf.maven/org.apache.karaf.maven.core/${upstream.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.karaf.maven/org.apache.karaf.maven.core/${karaf.maven.core.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang3.tesb.version}</bundle>
         <config name="org.apache.karaf.command.acl.maven">
 ################################################################################

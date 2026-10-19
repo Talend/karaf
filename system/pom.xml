@@ -35,8 +35,10 @@
     <description>
         This bundle provides services to manipulate the Karaf container itself (system).
     </description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.system.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

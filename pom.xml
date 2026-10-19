@@ -154,12 +154,12 @@
         <base.features.tesb.version>4.4.6.20250420</base.features.tesb.version>
         <specs.features.tesb.version>4.4.6.20261014</specs.features.tesb.version>
         <framework.features.tesb.version>4.4.6.20261007</framework.features.tesb.version>
-        <standard.features.tesb.version>4.4.6.20261014</standard.features.tesb.version>
+        <standard.features.tesb.version>4.4.6.20261019</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.6.20261007</enterprise.features.tesb.version>
         <spring.features.tesb.version>4.4.6.20261014</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20260801</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
-        <karaf.client.tesb.version>4.4.6.20250320</karaf.client.tesb.version>
+        <karaf.client.tesb.version>4.4.6.20261007</karaf.client.tesb.version>
         <karaf.features.core.tesb.version>4.4.6.20261007</karaf.features.core.tesb.version>
         <karaf.util.tesb.version>4.4.6.20261007</karaf.util.tesb.version>
         <karaf.bom.tesb.version>4.4.6.20261007</karaf.bom.tesb.version>
@@ -176,16 +176,19 @@
         <karaf.jdbc.core.tesb.version>4.4.6.20261007</karaf.jdbc.core.tesb.version>
         <karaf.jms.core.tesb.version>4.4.6.20261007</karaf.jms.core.tesb.version>
         <karaf.kar.core.tesb.version>4.4.6.20261007</karaf.kar.core.tesb.version>
+        <karaf.maven.core.tesb.version>4.4.6.20261007</karaf.maven.core.tesb.version>
+        <karaf.package.core.tesb.version>4.4.6.20261007</karaf.package.core.tesb.version>
         <karaf.profile.core.tesb.version>4.4.6.20261007</karaf.profile.core.tesb.version>
         <karaf.shell.commands.tesb.version>4.4.6.20261007</karaf.shell.commands.tesb.version>
+        <karaf.shell.console.tesb.version>4.4.6.20261007</karaf.shell.console.tesb.version>
         <karaf.shell.core.tesb.version>4.4.6.20261007</karaf.shell.core.tesb.version>
         <karaf.shell.ssh.tesb.version>4.4.6.20261007</karaf.shell.ssh.tesb.version>
-        <!-- <karaf.shell.ssh.tesb.version>4.4.6.20240820</karaf.shell.ssh.tesb.version> -->
+        <karaf.system.core.tesb.version>4.4.6.20261007</karaf.system.core.tesb.version>
         <karaf.jaas.spring-security-crypto.tesb.version>4.4.6.20240820</karaf.jaas.spring-security-crypto.tesb.version>
         <karaf.wrapper.tesb.version>4.4.6.20260601</karaf.wrapper.tesb.version>
-        <karaf.http.core.tesb.version>4.4.6.20250901</karaf.http.core.tesb.version>
+        <karaf.http.core.tesb.version>4.4.6.20261007</karaf.http.core.tesb.version>
         <karaf.web.core.tesb.version>4.4.6.20250901</karaf.web.core.tesb.version>
-        <karaf.webconsole.tesb.version>4.4.6.20251212</karaf.webconsole.tesb.version>
+        <karaf.webconsole.tesb.version>4.4.6.20261007</karaf.webconsole.tesb.version>
         <felix.webconsole.tesb.version>5.0.12</felix.webconsole.tesb.version>
         <felix.webconsole.api.tesb.version>5.0.10</felix.webconsole.api.tesb.version>
         <felix.webconsole.range.tesb.version>[5,6)</felix.webconsole.range.tesb.version>
@@ -251,7 +254,7 @@
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <micrometer.tesb.version>1.15.12</micrometer.tesb.version>
 
-        <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
+        <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>
 
         <scm.connection>scm:git:https://gitbox.apache.org/repos/asf/karaf.git</scm.connection>
         <scm.developerConnection>scm:git:https://gitbox.apache.org/repos/asf/karaf.git</scm.developerConnection>
@@ -323,7 +326,7 @@
         <felix.http.version>4.2.2</felix.http.version>
         <felix.inventory.version>2.0.0</felix.inventory.version>
         <felix.maven-bundle-plugin.version>5.1.9</felix.maven-bundle-plugin.version>
-        <felix.utils.version>1.11.8</felix.utils.version>
+        <felix.utils.version>1.11.10</felix.utils.version>
         <felix.webconsole.version>4.8.12</felix.webconsole.version>
         <felix.webconsole.api.version>3.4.0</felix.webconsole.api.version>
         <felix.memoryusage.webconsole.plugin.version>1.0.10</felix.memoryusage.webconsole.plugin.version>
@@ -591,11 +594,14 @@
                             <karaf.jdbc.core.tesb.version>${karaf.jdbc.core.tesb.version}</karaf.jdbc.core.tesb.version>
                             <karaf.jms.core.tesb.version>${karaf.jms.core.tesb.version}</karaf.jms.core.tesb.version>
                             <karaf.kar.core.tesb.version>${karaf.kar.core.tesb.version}</karaf.kar.core.tesb.version>
+                            <karaf.maven.core.tesb.version>${karaf.maven.core.tesb.version}</karaf.maven.core.tesb.version>
+                            <karaf.package.core.tesb.version>${karaf.package.core.tesb.version}</karaf.package.core.tesb.version>
                             <karaf.profile.core.tesb.version>${karaf.profile.core.tesb.version}</karaf.profile.core.tesb.version>
                             <karaf.shell.commands.tesb.version>${karaf.shell.commands.tesb.version}</karaf.shell.commands.tesb.version>
+                            <karaf.shell.console.tesb.version>${karaf.shell.console.tesb.version}</karaf.shell.console.tesb.version>
                             <karaf.shell.core.tesb.version>${karaf.shell.core.tesb.version}</karaf.shell.core.tesb.version>
                             <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version>
-                            <!-- <karaf.shell.ssh.tesb.version>${karaf.shell.ssh.tesb.version}</karaf.shell.ssh.tesb.version> -->
+                            <karaf.system.core.tesb.version>${karaf.system.core.tesb.version}</karaf.system.core.tesb.version>
                             <karaf.jaas.spring-security-crypto.tesb.version>${karaf.jaas.spring-security-crypto.tesb.version}</karaf.jaas.spring-security-crypto.tesb.version>
                             <karaf.wrapper.tesb.version>${karaf.wrapper.tesb.version}</karaf.wrapper.tesb.version>
                             <karaf.http.core.tesb.version>${karaf.http.core.tesb.version}</karaf.http.core.tesb.version>
@@ -1260,7 +1266,7 @@
             <properties>
                 <surefire.argLine>
                                   --add-opens java.base/java.security=ALL-UNNAMED
-                                  --add-opens java.base/java.net=ALL-UNNAMED 
+                                  --add-opens java.base/java.net=ALL-UNNAMED
                                   --add-opens java.base/java.lang=ALL-UNNAMED
                                   --add-opens java.base/java.util=ALL-UNNAMED
                                   --add-opens java.naming/javax.naming.spi=ALL-UNNAMED
