@@ -251,7 +251,7 @@
         <nimbus-jose-jwt.tesb.version>10.4</nimbus-jose-jwt.tesb.version>
         <micrometer.tesb.version>1.15.12</micrometer.tesb.version>
 
-        <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>        
+        <project.build.outputTimestamp>1712650974</project.build.outputTimestamp>
 
         <scm.connection>scm:git:https://gitbox.apache.org/repos/asf/karaf.git</scm.connection>
         <scm.developerConnection>scm:git:https://gitbox.apache.org/repos/asf/karaf.git</scm.developerConnection>
@@ -323,7 +323,7 @@
         <felix.http.version>4.2.2</felix.http.version>
         <felix.inventory.version>2.0.0</felix.inventory.version>
         <felix.maven-bundle-plugin.version>5.1.9</felix.maven-bundle-plugin.version>
-        <felix.utils.version>1.11.8</felix.utils.version>
+        <felix.utils.version>1.11.10</felix.utils.version>
         <felix.webconsole.version>4.8.12</felix.webconsole.version>
         <felix.webconsole.api.version>3.4.0</felix.webconsole.api.version>
         <felix.memoryusage.webconsole.plugin.version>1.0.10</felix.memoryusage.webconsole.plugin.version>
@@ -1260,7 +1260,7 @@
             <properties>
                 <surefire.argLine>
                                   --add-opens java.base/java.security=ALL-UNNAMED
-                                  --add-opens java.base/java.net=ALL-UNNAMED 
+                                  --add-opens java.base/java.net=ALL-UNNAMED
                                   --add-opens java.base/java.lang=ALL-UNNAMED
                                   --add-opens java.base/java.util=ALL-UNNAMED
                                   --add-opens java.naming/javax.naming.spi=ALL-UNNAMED
