@@ -197,7 +197,7 @@
             <dependency>
                 <groupId>org.apache.karaf.package</groupId>
                 <artifactId>org.apache.karaf.package.core</artifactId>
-                <version>${upstream.version}</version>
+                <version>${karaf.package.core.tesb.version}</version>
             </dependency>
 
             <dependency>
@@ -334,7 +334,7 @@
             <dependency>
                 <groupId>org.apache.karaf.system</groupId>
                 <artifactId>org.apache.karaf.system.core</artifactId>
-                <version>${upstream.version}</version>
+                <version>${karaf.system.core.tesb.version}</version>
             </dependency>
 
             <dependency>
@@ -352,17 +352,17 @@
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.console</artifactId>
-                <version>${upstream.version}</version>
+                <version>${karaf.shell.console.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.ssh</artifactId>
-                <version>${upstream.version}</version>
+                <version>${karaf.shell.ssh.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
                 <artifactId>org.apache.karaf.shell.commands</artifactId>
-                <version>${upstream.version}</version>
+                <version>${karaf.shell.commands.tesb.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.karaf.shell</groupId>
