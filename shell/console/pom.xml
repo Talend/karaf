@@ -32,8 +32,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Shell :: Console</name>
     <description>This bundle provides compatibility with the previous console.</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.shell.console.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 

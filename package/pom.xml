@@ -33,8 +33,10 @@
     <packaging>bundle</packaging>
     <name>Apache Karaf :: Package :: Core</name>
     <description>Package Services and API</description>
+    <version>${revision}</version>
 
     <properties>
+        <revision>${karaf.package.core.tesb.version}</revision>
         <appendedResourcesDirectory>${basedir}/../../etc/appended-resources</appendedResourcesDirectory>
     </properties>
 
