@@ -185,7 +185,7 @@
         <karaf.shell.ssh.tesb.version>4.4.6.20261007</karaf.shell.ssh.tesb.version>
         <karaf.system.core.tesb.version>4.4.6.20261007</karaf.system.core.tesb.version>
         <karaf.jaas.spring-security-crypto.tesb.version>4.4.6.20240820</karaf.jaas.spring-security-crypto.tesb.version>
-        <karaf.wrapper.tesb.version>4.4.6.20260601</karaf.wrapper.tesb.version>
+        <karaf.wrapper.tesb.version>4.4.6.20261020</karaf.wrapper.tesb.version>
         <karaf.http.core.tesb.version>4.4.6.20261007</karaf.http.core.tesb.version>
         <karaf.web.core.tesb.version>4.4.6.20250901</karaf.web.core.tesb.version>
         <karaf.webconsole.tesb.version>4.4.6.20261007</karaf.webconsole.tesb.version>
