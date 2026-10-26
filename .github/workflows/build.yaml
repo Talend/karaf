@@ -4,7 +4,7 @@
 # plus approval on the `global-artifacts-deploy` environment.
 # Packages are read from / published to GitHub Packages (Talend/global-artifacts) with the workflow GITHUB_TOKEN:
 # the repository must be granted access in the package settings of global-artifacts (read for build, write for deploy).
-name: Fork build
+name: Build
 
 on:
   push:
@@ -29,7 +29,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -40,10 +40,11 @@ env:
   GITHUB_ACTOR: ${{ github.actor }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GLOBAL_ARTIFACTS_URL: https://maven.pkg.github.com/Talend/global-artifacts
+  # ${GLOBAL_ARTIFACTS_URL} is expanded by the `Maven options` step (the env context is not available in a workflow-level env)
   MAVEN_CUSTOM_OPTIONS: >-
     -U -B
-    -DaltReleaseDeploymentRepository=global-artifacts::default::https://maven.pkg.github.com/Talend/global-artifacts
-    -DaltSnapshotDeploymentRepository=global-artifacts::default::https://maven.pkg.github.com/Talend/global-artifacts
+    -DaltReleaseDeploymentRepository=global-artifacts::default::${GLOBAL_ARTIFACTS_URL}
+    -DaltSnapshotDeploymentRepository=global-artifacts::default::${GLOBAL_ARTIFACTS_URL}
     -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS
 
 jobs:
@@ -54,17 +55,25 @@ jobs:
     outputs:
       modules: ${{ steps.modules.outputs.modules }}
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: '17'
-          cache: maven
           # writes ~/.m2/settings.xml with the `global-artifacts` server (same id as the repository in the poms)
           server-id: global-artifacts
-          server-username: GITHUB_ACTOR
-          server-password: GITHUB_TOKEN
+          server-username-env-var: GITHUB_ACTOR
+          server-password-env-var: GITHUB_TOKEN
+      - name: "Maven dependencies cache"
+        uses: actions/cache@v6
+        with:
+          path: "~/.m2/repository"
+          key: m2-${{ hashFiles('**/pom.xml') }}-build
+          restore-keys: |
+            m2-${{ hashFiles('**/pom.xml') }}
+            m2
+      - name: Maven options
+        run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
 
       - name: Resolve MVN_MODULES
         id: modules
@@ -96,16 +105,26 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: '17'
-          cache: maven
           server-id: global-artifacts
-          server-username: GITHUB_ACTOR
-          server-password: GITHUB_TOKEN
+          server-username-env-var: GITHUB_ACTOR
+          server-password-env-var: GITHUB_TOKEN
+
+      - name: "Maven dependencies cache"
+        uses: actions/cache@v6
+        with:
+          path: "~/.m2/repository"
+          key: m2-${{ hashFiles('**/pom.xml') }}-build
+          restore-keys: |
+            m2-${{ hashFiles('**/pom.xml') }}
+            m2
+      - name: Maven options
+        run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
 
       - name: mvn deploy
         env:
