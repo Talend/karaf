@@ -1,6 +1,7 @@
-# GitHub Actions replacement for Jenkinsfile.talend (shared-lib step `Fork`):
+# GitHub Actions replacement for the former Jenkinsfile.talend (shared-lib step `Fork`):
 #   Package distribution -> Sanity check (manual approval) -> Deploy distribution.
-# MVN_MODULES stays defined in Jenkinsfile.talend (single source of truth while both CI coexist).
+# Deployment never runs for pull requests: it needs a manual workflow_dispatch with `deploy` ticked,
+# plus approval on the `global-artifacts-deploy` environment.
 # Packages are read from / published to GitHub Packages (Talend/global-artifacts) with the workflow GITHUB_TOKEN:
 # the repository must be granted access in the package settings of global-artifacts (read for build, write for deploy).
 name: Fork build
@@ -12,7 +13,7 @@ on:
   workflow_dispatch:
     inputs:
       mvn_modules:
-        description: 'Modules to build (default: MVN_MODULES of Jenkinsfile.talend)'
+        description: 'Modules to build (default: MVN_MODULES below)'
         required: false
         type: string
       deploy:
@@ -35,6 +36,7 @@ permissions:
   packages: read
 
 env:
+  MVN_MODULES: ':karaf-bom,org.apache.karaf:org.apache.karaf.util,org.apache.karaf.bundle:org.apache.karaf.bundle.core,org.apache.karaf.config:org.apache.karaf.config.command,org.apache.karaf.config:org.apache.karaf.config.core,org.apache.karaf.deployer:org.apache.karaf.deployer.blueprint,org.apache.karaf.deployer:org.apache.karaf.deployer.features,org.apache.karaf.deployer:org.apache.karaf.deployer.wrap,org.apache.karaf.diagnostic:org.apache.karaf.diagnostic.core,org.apache.karaf.docker:org.apache.karaf.docker.core,org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.instance:org.apache.karaf.instance.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.jdbc:org.apache.karaf.jdbc.core,org.apache.karaf.jms:org.apache.karaf.jms.core,org.apache.karaf.kar:org.apache.karaf.kar.core,org.apache.karaf.maven:org.apache.karaf.maven.core,org.apache.karaf.package:org.apache.karaf.package.core,org.apache.karaf.profile:org.apache.karaf.profile.core,org.apache.karaf.shell:org.apache.karaf.shell.commands,org.apache.karaf.shell:org.apache.karaf.shell.console,org.apache.karaf.shell:org.apache.karaf.shell.core,org.apache.karaf.shell:org.apache.karaf.shell.ssh,org.apache.karaf.system:org.apache.karaf.system.core,org.apache.karaf.wrapper:org.apache.karaf.wrapper.core,org.apache.karaf:org.apache.karaf.main,org.apache.karaf:org.apache.karaf.client,org.apache.karaf.features:base,org.apache.karaf.features:specs,org.apache.karaf.features:framework,org.apache.karaf.features:standard,org.apache.karaf.features:enterprise,org.apache.karaf.features:spring,org.apache.karaf.features:spring-legacy,org.apache.karaf.jaas:org.apache.karaf.jaas.spring-security-crypto,org.apache.karaf.http:org.apache.karaf.http.core,org.apache.karaf.web:org.apache.karaf.web.core,org.apache.karaf.webconsole:org.apache.karaf.webconsole.console,org.apache.karaf.webconsole:org.apache.karaf.webconsole.features,org.apache.karaf.webconsole:org.apache.karaf.webconsole.gogo,org.apache.karaf.webconsole:org.apache.karaf.webconsole.http,org.apache.karaf.webconsole:org.apache.karaf.webconsole.instance'
   GITHUB_ACTOR: ${{ github.actor }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GLOBAL_ARTIFACTS_URL: https://maven.pkg.github.com/Talend/global-artifacts
@@ -68,20 +70,7 @@ jobs:
         id: modules
         env:
           INPUT_MODULES: ${{ inputs.mvn_modules }}
-        run: |
-          if [ -n "$INPUT_MODULES" ]; then
-            MODULES="$INPUT_MODULES"
-          else
-            MODULES=$(python3 -I - <<'PY'
-          import re
-          t = open('Jenkinsfile.talend').read()
-          m = re.search(r"MVN_MODULES:\s*('''|')(.*?)\1", t, re.S)
-          print(m.group(2).replace('\\\n', '').replace('\n', '').strip().strip(',') if m else '')
-          PY
-            )
-          fi
-          [ -n "$MODULES" ] || { echo "::error::MVN_MODULES not found in Jenkinsfile.talend"; exit 1; }
-          echo "modules=$MODULES" >> "$GITHUB_OUTPUT"
+        run: echo "modules=${INPUT_MODULES:-$MVN_MODULES}" >> "$GITHUB_OUTPUT"
 
       - name: mvn install
         env:
@@ -99,7 +88,7 @@ jobs:
     needs: build
     # Jenkins: `input 'Do you want to proceed to the Deployment?'`. Here: required reviewers on the
     # `global-artifacts-deploy` environment (Settings > Environments). Never on pull requests.
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     environment: global-artifacts-deploy
