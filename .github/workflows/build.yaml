@@ -75,6 +75,25 @@ jobs:
       - name: Maven options
         run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
 
+      - name: Debug global-artifacts access
+        continue-on-error: true
+        run: |
+          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GITHUB_TOKEN" ] && echo yes || echo no)"
+          echo "--- ~/.m2/settings.xml (password masked)"
+          sed -E 's#(<password>).*(</password>)#\1***\2#' ~/.m2/settings.xml
+          echo "--- repository root and a sample path (401 = bad credentials, 403 = no package access, 404 = authenticated but not found)"
+          for path in "" "org/apache/karaf/karaf-bom/maven-metadata.xml"; do
+            code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GITHUB_TOKEN" "$GLOBAL_ARTIFACTS_URL/$path")
+            echo "GET $GLOBAL_ARTIFACTS_URL/$path -> HTTP $code"
+            head -c 300 /tmp/resp.txt; echo
+          done
+          echo "--- token permissions / rate limit"
+          curl -s -D - -o /dev/null -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)'
+          echo "--- mvn dependency:get with debug"
+          mvn -B -U -X dependency:get -Dartifact=org.apache.maven.shared:maven-filtering:3.3.0 \
+            -DremoteRepositories=global-artifacts::default::$GLOBAL_ARTIFACTS_URL 2>&1 \
+            | grep -iE 'global-artifacts|maven.pkg.github.com|Authorization|401|403|404|BUILD' | sed -E 's#(Authorization: ).*#\1***#' | head -50
+
       - name: Resolve MVN_MODULES
         id: modules
         env:
@@ -125,6 +144,15 @@ jobs:
             m2
       - name: Maven options
         run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
+
+      - name: Debug global-artifacts access
+        continue-on-error: true
+        run: |
+          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GITHUB_TOKEN" ] && echo yes || echo no)"
+          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GITHUB_TOKEN" "$GLOBAL_ARTIFACTS_URL/")
+          echo "GET $GLOBAL_ARTIFACTS_URL/ -> HTTP $code (401 = bad credentials, 403 = no package access)"
+          head -c 300 /tmp/resp.txt; echo
+          curl -s -D - -o /dev/null -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-accepted-github-permissions)'
 
       - name: mvn deploy
         env:
