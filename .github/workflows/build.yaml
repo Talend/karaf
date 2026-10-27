@@ -2,7 +2,7 @@
 #   Package distribution -> Sanity check (manual approval) -> Deploy distribution.
 # Deployment never runs for pull requests: it needs a manual workflow_dispatch with `deploy` ticked,
 # plus approval on the `global-artifacts-deploy` environment.
-# Packages are read from / published to GitHub Packages (Talend/global-artifacts) with the workflow GITHUB_TOKEN:
+# Packages are read from / published to GitHub Packages (Talend/global-artifacts) with the CI_BUILD_DPE_PAT secret (read:packages, plus write:packages for deploy):
 # the repository must be granted access in the package settings of global-artifacts (read for build, write for deploy).
 name: Build
 
@@ -37,8 +37,8 @@ permissions:
 
 env:
   MVN_MODULES: ':karaf-bom,org.apache.karaf:org.apache.karaf.util,org.apache.karaf.bundle:org.apache.karaf.bundle.core,org.apache.karaf.config:org.apache.karaf.config.command,org.apache.karaf.config:org.apache.karaf.config.core,org.apache.karaf.deployer:org.apache.karaf.deployer.blueprint,org.apache.karaf.deployer:org.apache.karaf.deployer.features,org.apache.karaf.deployer:org.apache.karaf.deployer.wrap,org.apache.karaf.diagnostic:org.apache.karaf.diagnostic.core,org.apache.karaf.docker:org.apache.karaf.docker.core,org.apache.karaf.features:org.apache.karaf.features.core,org.apache.karaf.instance:org.apache.karaf.instance.core,org.apache.karaf.jaas:org.apache.karaf.jaas.modules,org.apache.karaf.jdbc:org.apache.karaf.jdbc.core,org.apache.karaf.jms:org.apache.karaf.jms.core,org.apache.karaf.kar:org.apache.karaf.kar.core,org.apache.karaf.maven:org.apache.karaf.maven.core,org.apache.karaf.package:org.apache.karaf.package.core,org.apache.karaf.profile:org.apache.karaf.profile.core,org.apache.karaf.shell:org.apache.karaf.shell.commands,org.apache.karaf.shell:org.apache.karaf.shell.console,org.apache.karaf.shell:org.apache.karaf.shell.core,org.apache.karaf.shell:org.apache.karaf.shell.ssh,org.apache.karaf.system:org.apache.karaf.system.core,org.apache.karaf.wrapper:org.apache.karaf.wrapper.core,org.apache.karaf:org.apache.karaf.main,org.apache.karaf:org.apache.karaf.client,org.apache.karaf.features:base,org.apache.karaf.features:specs,org.apache.karaf.features:framework,org.apache.karaf.features:standard,org.apache.karaf.features:enterprise,org.apache.karaf.features:spring,org.apache.karaf.features:spring-legacy,org.apache.karaf.jaas:org.apache.karaf.jaas.spring-security-crypto,org.apache.karaf.http:org.apache.karaf.http.core,org.apache.karaf.web:org.apache.karaf.web.core,org.apache.karaf.webconsole:org.apache.karaf.webconsole.console,org.apache.karaf.webconsole:org.apache.karaf.webconsole.features,org.apache.karaf.webconsole:org.apache.karaf.webconsole.gogo,org.apache.karaf.webconsole:org.apache.karaf.webconsole.http,org.apache.karaf.webconsole:org.apache.karaf.webconsole.instance'
-  GITHUB_ACTOR: ${{ github.actor }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_ACTOR: ci-build-dpe
+  GLOBAL_ARTIFACTS_TOKEN: ${{ secrets.CI_BUILD_DPE_PAT }}
   GLOBAL_ARTIFACTS_URL: https://maven.pkg.github.com/Talend/global-artifacts
   # ${GLOBAL_ARTIFACTS_URL} is expanded by the `Maven options` step (the env context is not available in a workflow-level env)
   MAVEN_CUSTOM_OPTIONS: >-
@@ -63,7 +63,7 @@ jobs:
           # writes ~/.m2/settings.xml with the `global-artifacts` server (same id as the repository in the poms)
           server-id: global-artifacts
           server-username-env-var: GITHUB_ACTOR
-          server-password-env-var: GITHUB_TOKEN
+          server-password-env-var: GLOBAL_ARTIFACTS_TOKEN
       - name: "Maven dependencies cache"
         uses: actions/cache@v6
         with:
@@ -79,17 +79,18 @@ jobs:
         env:
           TEST_PATH: org/talend/esb/esb-parent/8.0.2.R2026-10-RT/esb-parent-8.0.2.R2026-10-RT.pom
         run: |
-          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GITHUB_TOKEN" ] && echo yes || echo no)"
-          [ -n "$GITHUB_TOKEN" ] || { echo "::error::GITHUB_TOKEN is empty"; exit 1; }
+          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GLOBAL_ARTIFACTS_TOKEN" ] && echo yes || echo no)"
+          [ -n "$GLOBAL_ARTIFACTS_TOKEN" ] || { echo "::error::CI_BUILD_DPE_PAT secret is empty or not available"; exit 1; }
           echo "--- ~/.m2/settings.xml (password masked)"
           sed -E 's#(<password>).*(</password>)#\1***\2#' ~/.m2/settings.xml
           echo "--- known artifact org.talend.esb:esb-parent:8.0.2.R2026-10-RT (401 = bad credentials, 403 = no package access, 404 = not found)"
-          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GITHUB_TOKEN" "$GLOBAL_ARTIFACTS_URL/$TEST_PATH")
+          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GLOBAL_ARTIFACTS_TOKEN" "$GLOBAL_ARTIFACTS_URL/$TEST_PATH")
           echo "GET $GLOBAL_ARTIFACTS_URL/$TEST_PATH -> HTTP $code"
           [ "$code" = 200 ] || head -c 300 /tmp/resp.txt; echo
           echo "--- token permissions / rate limit"
-          curl -s -D - -o /dev/null -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)' || true
+          curl -s -D - -o /dev/null -H "Authorization: Bearer $GLOBAL_ARTIFACTS_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)' || true
           echo "--- mvn dependency:get from an empty local repository"
+          cd "$RUNNER_TEMP"
           mvn -B -U -X dependency:get -Dartifact=org.talend.esb:esb-parent:8.0.2.R2026-10-RT:pom -Dtransitive=false \
             -Dmaven.repo.local="$RUNNER_TEMP/m2-debug" \
             -DremoteRepositories=global-artifacts::default::$GLOBAL_ARTIFACTS_URL > "$RUNNER_TEMP/mvn-debug.log" 2>&1 && mvn_rc=0 || mvn_rc=$?
@@ -137,7 +138,7 @@ jobs:
           java-version: '17'
           server-id: global-artifacts
           server-username-env-var: GITHUB_ACTOR
-          server-password-env-var: GITHUB_TOKEN
+          server-password-env-var: GLOBAL_ARTIFACTS_TOKEN
 
       - name: "Maven dependencies cache"
         uses: actions/cache@v6
@@ -154,17 +155,18 @@ jobs:
         env:
           TEST_PATH: org/talend/esb/esb-parent/8.0.2.R2026-10-RT/esb-parent-8.0.2.R2026-10-RT.pom
         run: |
-          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GITHUB_TOKEN" ] && echo yes || echo no)"
-          [ -n "$GITHUB_TOKEN" ] || { echo "::error::GITHUB_TOKEN is empty"; exit 1; }
+          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GLOBAL_ARTIFACTS_TOKEN" ] && echo yes || echo no)"
+          [ -n "$GLOBAL_ARTIFACTS_TOKEN" ] || { echo "::error::CI_BUILD_DPE_PAT secret is empty or not available"; exit 1; }
           echo "--- ~/.m2/settings.xml (password masked)"
           sed -E 's#(<password>).*(</password>)#\1***\2#' ~/.m2/settings.xml
           echo "--- known artifact org.talend.esb:esb-parent:8.0.2.R2026-10-RT (401 = bad credentials, 403 = no package access, 404 = not found)"
-          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GITHUB_TOKEN" "$GLOBAL_ARTIFACTS_URL/$TEST_PATH")
+          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GLOBAL_ARTIFACTS_TOKEN" "$GLOBAL_ARTIFACTS_URL/$TEST_PATH")
           echo "GET $GLOBAL_ARTIFACTS_URL/$TEST_PATH -> HTTP $code"
           [ "$code" = 200 ] || head -c 300 /tmp/resp.txt; echo
           echo "--- token permissions / rate limit"
-          curl -s -D - -o /dev/null -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)' || true
+          curl -s -D - -o /dev/null -H "Authorization: Bearer $GLOBAL_ARTIFACTS_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)' || true
           echo "--- mvn dependency:get from an empty local repository"
+          cd "$RUNNER_TEMP"
           mvn -B -U -X dependency:get -Dartifact=org.talend.esb:esb-parent:8.0.2.R2026-10-RT:pom -Dtransitive=false \
             -Dmaven.repo.local="$RUNNER_TEMP/m2-debug" \
             -DremoteRepositories=global-artifacts::default::$GLOBAL_ARTIFACTS_URL > "$RUNNER_TEMP/mvn-debug.log" 2>&1 && mvn_rc=0 || mvn_rc=$?
