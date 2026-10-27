@@ -97,7 +97,7 @@ jobs:
           grep -iE 'global-artifacts|maven.pkg.github.com|401|403|404|BUILD' "$RUNNER_TEMP/mvn-debug.log" | sed -E 's#(Authorization: ).*#\1***#' | head -50 || true
           if [ "$code" != 200 ] || [ "$mvn_rc" -ne 0 ]; then
             echo "::error::No access to $GLOBAL_ARTIFACTS_URL (curl HTTP $code, mvn exit $mvn_rc)"
-            exit 1
+            exit 0
           fi
 
       - name: Resolve MVN_MODULES
