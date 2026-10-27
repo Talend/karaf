@@ -75,31 +75,6 @@ jobs:
       - name: Maven options
         run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
 
-      - name: Debug global-artifacts access
-        env:
-          TEST_PATH: org/talend/esb/esb-parent/8.0.2.R2026-10-RT/esb-parent-8.0.2.R2026-10-RT.pom
-        run: |
-          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GLOBAL_ARTIFACTS_TOKEN" ] && echo yes || echo no)"
-          [ -n "$GLOBAL_ARTIFACTS_TOKEN" ] || { echo "::error::CI_BUILD_DPE_PAT secret is empty or not available"; exit 1; }
-          echo "--- ~/.m2/settings.xml (password masked)"
-          sed -E 's#(<password>).*(</password>)#\1***\2#' ~/.m2/settings.xml
-          echo "--- known artifact org.talend.esb:esb-parent:8.0.2.R2026-10-RT (401 = bad credentials, 403 = no package access, 404 = not found)"
-          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GLOBAL_ARTIFACTS_TOKEN" "$GLOBAL_ARTIFACTS_URL/$TEST_PATH")
-          echo "GET $GLOBAL_ARTIFACTS_URL/$TEST_PATH -> HTTP $code"
-          [ "$code" = 200 ] || head -c 300 /tmp/resp.txt; echo
-          echo "--- token permissions / rate limit"
-          curl -s -D - -o /dev/null -H "Authorization: Bearer $GLOBAL_ARTIFACTS_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)' || true
-          echo "--- mvn dependency:get from an empty local repository"
-          cd "$RUNNER_TEMP"
-          mvn -B -U -X dependency:get -Dartifact=org.talend.esb:esb-parent:8.0.2.R2026-10-RT:pom -Dtransitive=false \
-            -Dmaven.repo.local="$RUNNER_TEMP/m2-debug" \
-            -DremoteRepositories=global-artifacts::default::$GLOBAL_ARTIFACTS_URL > "$RUNNER_TEMP/mvn-debug.log" 2>&1 && mvn_rc=0 || mvn_rc=$?
-          grep -iE 'global-artifacts|maven.pkg.github.com|401|403|404|BUILD' "$RUNNER_TEMP/mvn-debug.log" | sed -E 's#(Authorization: ).*#\1***#' | head -50 || true
-          if [ "$code" != 200 ] || [ "$mvn_rc" -ne 0 ]; then
-            echo "::error::No access to $GLOBAL_ARTIFACTS_URL (curl HTTP $code, mvn exit $mvn_rc)"
-            exit 0
-          fi
-
       - name: Resolve MVN_MODULES
         id: modules
         env:
@@ -150,31 +125,6 @@ jobs:
             m2
       - name: Maven options
         run: echo "MAVEN_CUSTOM_OPTIONS=${MAVEN_CUSTOM_OPTIONS//'${GLOBAL_ARTIFACTS_URL}'/$GLOBAL_ARTIFACTS_URL}" >> "$GITHUB_ENV"
-
-      - name: Debug global-artifacts access
-        env:
-          TEST_PATH: org/talend/esb/esb-parent/8.0.2.R2026-10-RT/esb-parent-8.0.2.R2026-10-RT.pom
-        run: |
-          echo "actor=$GITHUB_ACTOR token_set=$([ -n "$GLOBAL_ARTIFACTS_TOKEN" ] && echo yes || echo no)"
-          [ -n "$GLOBAL_ARTIFACTS_TOKEN" ] || { echo "::error::CI_BUILD_DPE_PAT secret is empty or not available"; exit 1; }
-          echo "--- ~/.m2/settings.xml (password masked)"
-          sed -E 's#(<password>).*(</password>)#\1***\2#' ~/.m2/settings.xml
-          echo "--- known artifact org.talend.esb:esb-parent:8.0.2.R2026-10-RT (401 = bad credentials, 403 = no package access, 404 = not found)"
-          code=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -u "$GITHUB_ACTOR:$GLOBAL_ARTIFACTS_TOKEN" "$GLOBAL_ARTIFACTS_URL/$TEST_PATH")
-          echo "GET $GLOBAL_ARTIFACTS_URL/$TEST_PATH -> HTTP $code"
-          [ "$code" = 200 ] || head -c 300 /tmp/resp.txt; echo
-          echo "--- token permissions / rate limit"
-          curl -s -D - -o /dev/null -H "Authorization: Bearer $GLOBAL_ARTIFACTS_TOKEN" https://api.github.com/repos/Talend/global-artifacts | grep -iE '^(HTTP|x-oauth-scopes|x-accepted-github-permissions|x-ratelimit-remaining)' || true
-          echo "--- mvn dependency:get from an empty local repository"
-          cd "$RUNNER_TEMP"
-          mvn -B -U -X dependency:get -Dartifact=org.talend.esb:esb-parent:8.0.2.R2026-10-RT:pom -Dtransitive=false \
-            -Dmaven.repo.local="$RUNNER_TEMP/m2-debug" \
-            -DremoteRepositories=global-artifacts::default::$GLOBAL_ARTIFACTS_URL > "$RUNNER_TEMP/mvn-debug.log" 2>&1 && mvn_rc=0 || mvn_rc=$?
-          grep -iE 'global-artifacts|maven.pkg.github.com|401|403|404|BUILD' "$RUNNER_TEMP/mvn-debug.log" | sed -E 's#(Authorization: ).*#\1***#' | head -50 || true
-          if [ "$code" != 200 ] || [ "$mvn_rc" -ne 0 ]; then
-            echo "::error::No access to $GLOBAL_ARTIFACTS_URL (curl HTTP $code, mvn exit $mvn_rc)"
-            exit 1
-          fi
 
       - name: mvn deploy
         env:
