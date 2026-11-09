@@ -25,98 +25,105 @@
     <!-- Spring 6.1.x support -->
 
     <feature name="spring" description="Spring 6.1.x support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring</feature>
-        <!--
-        <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/${aopalliance.bundle.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-core/${spring61.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-expression/${spring61.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-beans/${spring61.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aop/${spring61.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-context/${spring61.tesb.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-context-support/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring</feature>
     </feature>
 
-    <feature name="spring" description="Spring 6.2.x support" version="${springbundle62.tesb.version}">
+    <feature name="spring" description="Spring 6.2.x compatibility" version="${spring629.tesb.version}">
         <feature prerequisite="true">wrap</feature>
         <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/${aopalliance.bundle.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-core/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-core&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-expression/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-expressionc&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-beans&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-aop/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-aop&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=org.aopalliance.aop,org.aopalliance.intercept,${springbundle62.import.packages},*;resolution:=optional</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-context/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-context&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-context-support/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-context-support&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-core/${spring70.tesb.version}$Bundle-SymbolicName=spring-core&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-expression/${spring70.tesb.version}$Bundle-SymbolicName=spring-expressionc&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${spring70.tesb.version}$Bundle-SymbolicName=spring-beans&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-aop/${spring70.tesb.version}$Bundle-SymbolicName=spring-aop&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=org.aopalliance.aop,org.aopalliance.intercept,${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-context/${spring70.tesb.version}$Bundle-SymbolicName=spring-context&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-context-support/${spring70.tesb.version}$Bundle-SymbolicName=spring-context-support&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring" description="Spring 7.0.x support" version="${spring70.tesb.version}">
+        <feature prerequisite="true">wrap</feature>
+        <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/${aopalliance.bundle.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-core/${spring70.tesb.version}$Bundle-SymbolicName=spring-core&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-expression/${spring70.tesb.version}$Bundle-SymbolicName=spring-expressionc&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-beans/${spring70.tesb.version}$Bundle-SymbolicName=spring-beans&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-aop/${spring70.tesb.version}$Bundle-SymbolicName=spring-aop&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=org.aopalliance.aop,org.aopalliance.intercept,${spring70.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-context/${spring70.tesb.version}$Bundle-SymbolicName=spring-context&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-context-support/${spring70.tesb.version}$Bundle-SymbolicName=spring-context-support&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-aspects" description="Spring 6.1.x AOP support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-aspects</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aspects/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-aspects</feature>
     </feature>
 
-    <feature name="spring-aspects" description="Spring 6.2.x AOP support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-aspects/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-aspects&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+    <feature name="spring-aspects" description="Spring 6.2.x AOP support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-aspects/${spring70.tesb.version}$Bundle-SymbolicName=spring-aspects&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-aspects" description="Spring 7.0.x AOP support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-aspects/${spring70.tesb.version}$Bundle-SymbolicName=spring-aspects&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-instrument" description="Spring 6.1.x Instrument support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-instrument</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-instrument/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-instrument</feature>
     </feature>
 
-    <feature name="spring-instrument" description="Spring 6.2.x Instrument support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-instrument/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-instrument&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+    <feature name="spring-instrument" description="Spring 6.2.x Instrument support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-instrument/${spring70.tesb.version}$Bundle-SymbolicName=spring-instrument&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-instrument" description="Spring 7.0.x Instrument support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-instrument/${spring70.tesb.version}$Bundle-SymbolicName=spring-instrument&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-jdbc" description="Spring 6.1.x JDBC support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-jdbc</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring-tx</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jdbc/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-jdbc</feature>
     </feature>
 
-    <feature name="spring-jdbc" description="Spring 6.2.x JDBC support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring-tx</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-jdbc/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-jdbc&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+    <feature name="spring-jdbc" description="Spring 6.2.x JDBC support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring-tx</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-jdbc/${spring70.tesb.version}$Bundle-SymbolicName=spring-jdbc&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-jdbc" description="Spring 7.0.x JDBC support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring-tx</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-jdbc/${spring70.tesb.version}$Bundle-SymbolicName=spring-jdbc&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-jms" description="Spring 6.1.x JMS support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-jms</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring-tx</feature>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
-        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
-        <bundle dependency="true">mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-jms</feature>
     </feature>
 
-    <feature name="spring-jms" description="Spring 6.2.x JMS support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring-tx</feature>
+    <feature name="spring-jms" description="Spring 6.2.x JMS support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring-tx</feature>
         <bundle dependency="true">mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
         <bundle dependency="true">mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
         <bundle dependency="true">mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-jms&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${spring70.tesb.version}$Bundle-SymbolicName=spring-jms&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-jms" description="Spring 7.0.x JMS support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring-tx</feature>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
+        <bundle dependency="true">mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-jms/${spring70.tesb.version}$Bundle-SymbolicName=spring-jms&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-messaging" description="Spring 6.1.x Messaging support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-messaging</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-messaging/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-messaging</feature>
     </feature>
 
-    <feature name="spring-messaging" description="Spring 6.2.x Messaging support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-messaging/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-messaging&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+    <feature name="spring-messaging" description="Spring 6.2.x Messaging support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-messaging/${spring70.tesb.version}$Bundle-SymbolicName=spring-messaging&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-messaging" description="Spring 7.0.x Messaging support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-messaging/${spring70.tesb.version}$Bundle-SymbolicName=spring-messaging&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <!-- Waiting https://issues.apache.org/jira/browse/SM-5703 fix
@@ -130,16 +137,17 @@
     -->
 
     <feature name="spring-orm" description="Spring 6.1.x ORM support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-orm</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring-jdbc</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-orm/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-orm</feature>
     </feature>
 
-    <feature name="spring-orm" description="Spring 6.2.x ORM support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring-jdbc</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-orm/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-orm&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+    <feature name="spring-orm" description="Spring 6.2.x ORM support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring-jdbc</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-orm/${spring70.tesb.version}$Bundle-SymbolicName=spring-orm&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-orm" description="Spring 7.0.x ORM support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring-jdbc</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-orm/${spring70.tesb.version}$Bundle-SymbolicName=spring-orm&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <!-- Waiting https://issues.apache.org/jira/browse/SM-5703 fix
@@ -151,45 +159,57 @@
     -->
 
     <feature name="spring-tx" description="Spring 6.1.x Transaction (TX) support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-tx</feature>
-        <!--
-        <feature version="[${spring61.tesb.version},6.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-tx</feature>
     </feature>
 
-    <feature name="spring-tx" description="Spring 6.2.x Transaction (TX) support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-tx/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-tx&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+    <feature name="spring-tx" description="Spring 6.2.x Transaction (TX) support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-tx/${spring70.tesb.version}$Bundle-SymbolicName=spring-tx&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-tx" description="Spring 7.0.x Transaction (TX) support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-tx/${spring70.tesb.version}$Bundle-SymbolicName=spring-tx&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-web" description="Spring 6.1.x Web support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-web</feature>
+        <feature version="${spring62.tesb.version.range}">spring-web</feature>
     </feature>
 
-    <feature name="spring-web" description="Spring 6.2.x Web support" version="${springbundle62.tesb.version}">
-        <feature version="[6.2,6.3)">spring</feature>
+    <feature name="spring-web" description="Spring 6.2.x Web support" version="${spring629.tesb.version}">
+        <feature version="${spring62.tesb.version.range}">spring</feature>
         <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${servlet.spec.tesb.version}</bundle>
         <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/${pax.web.tesb.version}</bundle>
         <bundle dependency="true">mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
         <bundle dependency="true">mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-web/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-web&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-webmvc/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-webmvc&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-web/${spring70.tesb.version}$Bundle-SymbolicName=spring-web&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-webmvc/${spring70.tesb.version}$Bundle-SymbolicName=spring-webmvc&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-web" description="Spring 7.0.x Web support" version="${spring70.tesb.version}">
+        <feature version="${spring70.tesb.version.range}">spring</feature>
+        <bundle dependency="true">mvn:jakarta.servlet/jakarta.servlet-api/${servlet.spec.tesb.version}</bundle>
+        <bundle dependency="true">mvn:org.ops4j.pax.web/pax-web-compatibility-servlet/${pax.web.tesb.version}</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-commons/${micrometer.tesb.version}</bundle>
+        <bundle dependency="true">mvn:io.micrometer/micrometer-observation/${micrometer.tesb.version}</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-web/${spring70.tesb.version}$Bundle-SymbolicName=spring-web&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-webmvc/${spring70.tesb.version}$Bundle-SymbolicName=spring-webmvc&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <feature name="spring-websocket" description="Spring 6.1.x WebSocket support" version="${spring61.tesb.version}">
-        <feature version="[6.2,6.3)">spring-websocket</feature>
-        <!--
-        <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
-        <feature version="[${spring61.tesb.version},6.2)">spring-web</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/${spring61.tesb.version}</bundle>
-        -->
+        <feature version="${spring62.tesb.version.range}">spring-websocket</feature>
     </feature>
 
-    <feature name="spring-websocket" description="Spring 6.2.x WebSocket support" version="${springbundle62.tesb.version}">
+    <feature name="spring-websocket" description="Spring 6.2.x WebSocket support" version="${spring629.tesb.version}">
         <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
-        <feature version="[6.2,6.3)">spring-web</feature>
-        <bundle start-level="30">wrap:mvn:org.springframework/spring-websocket/${springbundle62.tesb.version}$Bundle-SymbolicName=spring-websocket&amp;Bundle-Version=${springbundle62.tesb.version}&amp;Export-Package=org.springframework.*;version=${springbundle62.tesb.version}&amp;Import-Package=${springbundle62.import.packages},*;resolution:=optional</bundle>
+        <feature version="${spring62.tesb.version.range}">spring-web</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-websocket/${spring70.tesb.version}$Bundle-SymbolicName=spring-websocket&amp;Bundle-Version=${spring629.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring629.tesb.version}&amp;Import-Package=${spring62.tesb.import.packages},*;resolution:=optional</bundle>
+    </feature>
+
+    <feature name="spring-websocket" description="Spring 7.0.x WebSocket support" version="${spring70.tesb.version}">
+        <bundle dependency="true">mvn:javax.websocket/javax.websocket-api/1.1</bundle>
+        <feature version="${spring70.tesb.version.range}">spring-web</feature>
+        <bundle start-level="30">wrap:mvn:org.springframework/spring-websocket/${spring70.tesb.version}$Bundle-SymbolicName=spring-websocket&amp;Bundle-Version=${spring70.tesb.version}&amp;Export-Package=org.springframework.*;version=${spring70.tesb.version}&amp;Import-Package=${spring70.tesb.import.packages},*;resolution:=optional</bundle>
     </feature>
 
     <!-- Spring Security -->
