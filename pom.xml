@@ -156,7 +156,7 @@
         <framework.features.tesb.version>4.4.6.20261019</framework.features.tesb.version>
         <standard.features.tesb.version>4.4.6.20261111</standard.features.tesb.version>
         <enterprise.features.tesb.version>4.4.6.20261007</enterprise.features.tesb.version>
-        <spring.features.tesb.version>4.4.6.20261031</spring.features.tesb.version>
+        <spring.features.tesb.version>4.4.6.20261111</spring.features.tesb.version>
         <spring-legacy.features.tesb.version>4.4.6.20260801</spring-legacy.features.tesb.version>
         <karaf.main.tesb.version>4.4.6.20240820</karaf.main.tesb.version>
         <karaf.client.tesb.version>4.4.6.20261007</karaf.client.tesb.version>
